@@ -31,14 +31,14 @@ Material:
     m_Floats:
     - _MaxLight: 0.798
     - _Offset: 0.23
-    - _OtlWidth: 4.74
+    - _OtlWidth: 0.39
     - _ShnIntense: 0.244
     - _ShnRange: 0.258
     - _Steps: 2.7
     - _StpSmooth: 0.205
     m_Colors:
     - _Color: {r: 0.2216981, g: 0.8853903, b: 1, a: 1}
-    - _OtlColor: {r: 0.1882353, g: 0.1781615, b: 0.078431375, a: 1}
+    - _OtlColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShnColor: {r: 0.9406834, g: 1, b: 0.7294118, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

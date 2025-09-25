@@ -3,9 +3,9 @@ using UnityEngine;
 public class CarObject : MonoBehaviour, IInteractable
 {
     public float damageCollision;
-    private bool hasHit;
     public bool isThrown = false;
     public AttackHandler attackHandler;
+
 
     public void Interacting()
     {
@@ -29,12 +29,12 @@ public class CarObject : MonoBehaviour, IInteractable
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (hasHit) return;
+        if (!isThrown) return;
 
         if (collision.gameObject.CompareTag("Enemy") && isThrown)
         {
-            //collision.gameObject.GetComponent<IDamageable>().Damage();
-            hasHit = true;// cambiar a destroy tal vez?
+            collision.gameObject.GetComponent<IDamageable>().TakeDamage(damageCollision);
+            isThrown = false;// cambiar a destroy tal vez?
         }
 
         else if (collision.gameObject.CompareTag("Untagged"))//Cambiar a Ground cuando este

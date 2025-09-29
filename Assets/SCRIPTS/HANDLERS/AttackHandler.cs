@@ -31,6 +31,8 @@ public class AttackHandler : MonoBehaviour
     public int maxMissiles;
     public float missileForce;
     public float missileDuration;
+    public float missileDamage;
+    public float explosionRadius;
     public float missileCooldown;
     private bool canShootMissile = true;
     [SerializeField]private int currentMissiles;
@@ -40,16 +42,24 @@ public class AttackHandler : MonoBehaviour
     //private Animator anim;
     private Camera mainCamera;
 
+    private Ray ray;
+    private Vector3 direccionRayo;
+    private Vector3 puntoObjetivo;
+
+
     private void Start()
     {
         //animator = GetComponent<Animator>();
         mainCamera = Camera.main;
         currentMissiles = maxMissiles;
+        
+        
     }
 
     private void Update()
     {
         AttackType();
+        ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
     }
 
     private void AttackType()
@@ -138,6 +148,7 @@ public class AttackHandler : MonoBehaviour
             Rigidbody rbL = missileL.GetComponent<Rigidbody>();
             Rigidbody rbR = missileR.GetComponent<Rigidbody>();
 
+
             if(rbL != null && rbR != null)
             {
                 rbL.AddForce(mainCamera.transform.forward * missileForce, ForceMode.Impulse);
@@ -164,19 +175,15 @@ public class AttackHandler : MonoBehaviour
         float timer = 0f;
         while (timer < laserDuration)
         {
+            ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+            puntoObjetivo =  ray.origin + ray.direction * laserRange;
+
+
+            laserOrigin.LookAt(puntoObjetivo);
+
             laser.SetPosition(0, Vector3.zero);
             laser.SetPosition(1, new Vector3(0,0,50f));
 
-            RaycastHit hit;
-            if (Physics.Raycast(laserOrigin.position, mainCamera.transform.forward, out hit, laserRange))
-            {
-                if (hit.collider.CompareTag("Enemy"))
-                {
-                    hit.collider.GetComponent<IDamageable>().TakeDamage(laserDamage * Time.deltaTime);
-                    Debug.Log("Recibiendo Daño");
-                    
-                }
-            }
 
             timer += Time.deltaTime;
             yield return null;
@@ -194,7 +201,10 @@ public class AttackHandler : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawRay(laserOrigin.position, Camera.main.transform.forward * laserRange);
+        Gizmos.DrawRay(laserOrigin.position, direccionRayo * laserRange);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawRay(ray.origin, ray.direction * laserRange);
     }
 
 }

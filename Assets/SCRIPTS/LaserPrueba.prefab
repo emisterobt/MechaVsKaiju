@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4898124811305192211}
   - component: {fileID: 878252584431941055}
+  - component: {fileID: 810064604106091838}
+  - component: {fileID: 4647731373699256382}
   m_Layer: 0
   m_Name: LaserPrueba
-  m_TagString: Untagged
+  m_TagString: Destruction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,19 +78,19 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 50}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 2
+    widthMultiplier: 7
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.47403336
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -96,8 +98,17 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.4206349
-        value: 0.33136088
+        time: 0.23330653
+        value: 0.89629656
+        inSlope: 1.7341957
+        outSlope: 1.7341957
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0.13221282
+      - serializedVersion: 3
+        time: 1
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -109,17 +120,17 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0.7860211, b: 0.8773585, a: 0.9843137}
+      key0: {r: 0, g: 0.4876738, b: 0.8784314, a: 0.9843137}
       key1: {r: 0, g: 0.7860211, b: 0.8773585, a: 0.9843137}
-      key2: {r: 0.38581347, g: 0.6652646, b: 0.9622642, a: 1}
+      key2: {r: 0.5835262, g: 0.84587646, b: 0.8773585, a: 1}
       key3: {r: 0, g: 0, b: 0, a: 1}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 65535
-      ctime2: 30069
+      ctime1: 31611
+      ctime2: 65535
       ctime3: 0
       ctime4: 0
       ctime5: 0
@@ -135,10 +146,10 @@ LineRenderer:
       atime7: 0
       m_Mode: 0
       m_ColorSpace: 0
-      m_NumColorKeys: 2
+      m_NumColorKeys: 3
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 0
+    numCapVertices: 4
     alignment: 0
     textureMode: 0
     textureScale: {x: 1, y: 1}
@@ -147,4 +158,38 @@ LineRenderer:
   m_MaskInteraction: 0
   m_UseWorldSpace: 0
   m_Loop: 0
-  m_ApplyActiveColorSpace: 1
+  m_ApplyActiveColorSpace: 0
+--- !u!65 &810064604106091838
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794553768547945193}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 50.584362}
+  m_Center: {x: 0, y: 0, z: 25.46387}
+--- !u!114 &4647731373699256382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794553768547945193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8108b5c31f7cd4c8f318eb519202fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0

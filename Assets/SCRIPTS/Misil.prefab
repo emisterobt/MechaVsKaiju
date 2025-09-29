@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4392328494008115412}
   - component: {fileID: 7595906366103189149}
   - component: {fileID: 4873930445845962186}
+  - component: {fileID: -8529653851903074366}
   m_Layer: 0
   m_Name: Misil
   m_TagString: Untagged
@@ -136,3 +137,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8529653851903074366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8894753666335653636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d04703edcccc6da4a81f465c6b01fdea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackHndlr: {fileID: 0}
+  explosionEffect: {fileID: 7928642050422716393, guid: 5b8a7654815a0e74cb69ccd7db6ad1be, type: 3}

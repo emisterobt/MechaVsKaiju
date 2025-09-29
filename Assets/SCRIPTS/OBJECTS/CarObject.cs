@@ -15,6 +15,7 @@ public class CarObject : MonoBehaviour, IInteractable
         }
         else
         {
+            isThrown = false;
             attackHandler.objectInHand = this.gameObject;
             transform.SetParent(attackHandler.mechaHand);
             transform.position = attackHandler.mechaHand.position;

@@ -6,6 +6,7 @@ public class PlayerDash : MonoBehaviour
     [Header("Dash Modifiers")]
     [SerializeField] private float dashForce;
     [SerializeField] private float dashCooldown;
+    [SerializeField] private float dashDuration;
 
     [Header("Dash Direction")]
     [SerializeField] private bool useMoveDirection;
@@ -33,12 +34,21 @@ public class PlayerDash : MonoBehaviour
     private IEnumerator DashCoroutine()
     {
         canDash = false;
+        float elapsedTime = 0f;
+
 
         CalculateDirection();
 
+        while (elapsedTime < dashDuration)
+        {
+            rb.useGravity = false;
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x,0,rb.linearVelocity.z);
+            rb.AddForce(dashDirection * dashForce, ForceMode.Force);
+            elapsedTime += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
 
-        rb.AddForce(dashDirection * dashForce, ForceMode.Impulse);
-
+        rb.useGravity = true;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }

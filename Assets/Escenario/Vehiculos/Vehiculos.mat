@@ -7,16 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mecha_Material
+  m_Name: Vehiculos
   m_Shader: {fileID: 4800000, guid: 128c5f1edaefa4c4fb3f9f7a4615edb2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - _RIMLIMIT_ON
-  - _RIMOVERLAP_ON
   - _SEGMENTED_ON
-  - _SPCOVERLAP_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -48,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d3362540aa62b7f42b70c33060ac8027, type: 3}
+        m_Texture: {fileID: 2800000, guid: ce3e4d3b7604fc740ad736c4475b9b72, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -77,46 +74,30 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Lumin: 0
-    - _MaxAtten: 0.342
-    - _MaxLight: 0.822
+    - _MaxLight: 0.923
     - _Metallic: 0
-    - _MinLight: 0.528
+    - _MinLight: 0.545
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: -0.22
-    - _OtlWidth: 3
+    - _Offset: 0.586
+    - _OtlWidth: 0.04
     - _Parallax: 0.02
-    - _PostAtten: 0
-    - _RimIntense: 0.552
-    - _RimLimit: 1
-    - _RimOverlap: 1
-    - _RimSmooth: 1
-    - _RimTolerc: 1
     - _Segmented: 1
     - _ShnIntense: 0
     - _ShnOverlap: 0
-    - _ShnRange: 0
+    - _ShnRange: 0.15
     - _ShnSmooth: 0
     - _SmoothnessTextureChannel: 0
-    - _SpcIntence: 0
-    - _SpcLimit: 0
-    - _SpcOverlap: 1
-    - _SpcSmooth: 0
-    - _SpcTolerc: 0.015
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 2.5
+    - _Steps: 5
     - _StpSmooth: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MaxColor: {r: 0, g: 0.76902664, b: 0.8113208, a: 1}
-    - _MinColor: {r: 0, g: 0, b: 0, a: 1}
     - _OtlColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimColor: {r: 1, g: 0.9904847, b: 0.8160377, a: 1}
-    - _ShnColor: {r: 0.9574096, g: 1, b: 0.7294118, a: 1}
-    - _SpcColor: {r: 1, g: 1, b: 1, a: 1}
+    - _ShnColor: {r: 1, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

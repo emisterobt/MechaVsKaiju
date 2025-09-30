@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mecha_Material
+  m_Name: Mecha_Material 1
   m_Shader: {fileID: 4800000, guid: 128c5f1edaefa4c4fb3f9f7a4615edb2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -48,7 +48,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d3362540aa62b7f42b70c33060ac8027, type: 3}
+        m_Texture: {fileID: 2800000, guid: 440401415ad267547a462a4987d0f83c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -78,13 +78,13 @@ Material:
     - _GlossyReflections: 1
     - _Lumin: 0
     - _MaxAtten: 0.342
-    - _MaxLight: 0.822
+    - _MaxLight: 0.818
     - _Metallic: 0
-    - _MinLight: 0.528
+    - _MinLight: 0.511
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: -0.22
-    - _OtlWidth: 3
+    - _Offset: 0.402
+    - _OtlWidth: 0.02
     - _Parallax: 0.02
     - _PostAtten: 0
     - _RimIntense: 0.552

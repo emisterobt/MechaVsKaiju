@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class FallingAnimation : MonoBehaviour
 {
- 
+
     public Animator anim;
+    public ParticleSystem particula;
     void Start()
     {
         anim = GetComponent<Animator>();
+        particula = GetComponent<ParticleSystem>();
     }
 
 
@@ -14,6 +16,7 @@ public class FallingAnimation : MonoBehaviour
     {
         if (col.CompareTag("Destruction"))
         {
+            particula.Play();
             anim.SetBool("isFalling", true);
         }
     }

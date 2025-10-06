@@ -22,6 +22,8 @@ public class PlayerAnimationController : MonoBehaviour
     void Update()
     {
         BasicAnimations();
+        Dash();
+        Attack();
 
     }
 
@@ -35,6 +37,17 @@ public class PlayerAnimationController : MonoBehaviour
     public void TriggerJump()
     {
         anim.SetTrigger("isImpulsing");
+    }
+
+    public void Dash()
+    {
+
+        anim.SetBool("isDashing", pDash.isDashing);
+    }
+
+    public void Attack()
+    {
+        anim.SetBool("isPunching", attackHandler.isAttacking);
     }
 
 

@@ -37,7 +37,7 @@ public class AttackHandler : MonoBehaviour
     private bool canShootMissile = true;
     [SerializeField]private int currentMissiles;
 
-    private bool isAttacking = false;
+    public bool isAttacking = false;
 
     //private Animator anim;
     private Camera mainCamera;

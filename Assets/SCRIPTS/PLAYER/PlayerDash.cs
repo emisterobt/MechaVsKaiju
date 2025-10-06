@@ -14,18 +14,21 @@ public class PlayerDash : MonoBehaviour
 
     private Vector3 dashDirection;
     private bool canDash = true;
+    public bool isDashing = false;
 
     private CheckGround grndCheck;
+    private PlayerMovement pM;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         grndCheck = GetComponent<CheckGround>();
+        pM = GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
-        if (InputController.Instance.Dash() && !grndCheck.IsGrounded() && canDash)
+        if (InputController.Instance.Dash() && !grndCheck.IsGrounded() && canDash && pM.lockMovement == false)
         {
             StartCoroutine(DashCoroutine());
         }
@@ -34,6 +37,7 @@ public class PlayerDash : MonoBehaviour
     private IEnumerator DashCoroutine()
     {
         canDash = false;
+        isDashing = true;
         float elapsedTime = 0f;
 
 
@@ -49,6 +53,7 @@ public class PlayerDash : MonoBehaviour
         }
 
         rb.useGravity = true;
+        isDashing=false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }

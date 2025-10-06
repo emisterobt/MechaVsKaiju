@@ -12,19 +12,24 @@ public class PlayerMovement : MonoBehaviour
     public float crouchYScale;
 
     public Rigidbody rb;
-
+    private PlayerAnimationController playerAnims;
     public CheckGround grndChk;
-
+    public bool lockMovement = false;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         grndChk = GetComponent<CheckGround>();
+        playerAnims = GetComponent<PlayerAnimationController>();
     }
 
     void Update()
     {
-        Movement();
-        Jump();
+        if (lockMovement != true)
+        {
+            Movement();
+            Jump();
+        }
+
     }
 
 
@@ -38,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         if (InputController.Instance.Jump() && grndChk.IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerAnims.TriggerJump();
         }
     }
 

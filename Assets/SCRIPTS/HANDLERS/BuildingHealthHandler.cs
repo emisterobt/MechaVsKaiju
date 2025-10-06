@@ -30,5 +30,7 @@ public class BuildingHealthHandler : MonoBehaviour , IDamageable
         particle.Play();
         particle2.Play();
         anim.SetBool("isFalling", true);
+        Collider collider = GetComponent<Collider>();
+        collider.enabled = false;
     }
 }

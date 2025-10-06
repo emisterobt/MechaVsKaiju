@@ -41,6 +41,8 @@ public class AttackHandler : MonoBehaviour
 
     //private Animator anim;
     private Camera mainCamera;
+    private PlayerMovement pM;
+    private PlayerDash pDash;
 
     private Ray ray;
     private Vector3 direccionRayo;
@@ -52,7 +54,10 @@ public class AttackHandler : MonoBehaviour
         //animator = GetComponent<Animator>();
         mainCamera = Camera.main;
         currentMissiles = maxMissiles;
-        
+        pM = GetComponent<PlayerMovement>();
+        pDash = GetComponent<PlayerDash>();
+
+        StartCoroutine(ChargeLaser());
         
     }
 
@@ -66,7 +71,7 @@ public class AttackHandler : MonoBehaviour
     {
         if (isAttacking) return;
 
-        if (InputController.Instance.MainAttack())
+        if (InputController.Instance.MainAttack() && pDash.isDashing == false)
         {
             if (objectInHand != null)
             {
@@ -80,13 +85,13 @@ public class AttackHandler : MonoBehaviour
             }
         }
 
-        if (InputController.Instance.SecondaryAttack() && canShootMissile)
+        if (InputController.Instance.SecondaryAttack() && canShootMissile && pDash.isDashing == false)
         {
             StartCoroutine(ShootMissiles());
             Debug.Log("Missile");
         }
 
-        if (InputController.Instance.SpecialAttack())
+        if (InputController.Instance.SpecialAttack() && pDash.isDashing == false && canUseLaser)
         {
             StartCoroutine(UseLaser());
             Debug.Log("Laser");
@@ -122,7 +127,7 @@ public class AttackHandler : MonoBehaviour
             carObject.isThrown = true;
 
             rb.AddForce(mainCamera.transform.forward * throwForce, ForceMode.Impulse);
-            rb.AddForce(mainCamera.transform.up * throwForce/2, ForceMode.Impulse);
+            rb.AddForce(mainCamera.transform.up * throwForce/3, ForceMode.Impulse);
         }
 
         if(collider != null)
@@ -138,6 +143,7 @@ public class AttackHandler : MonoBehaviour
     {
         isAttacking = true;
         canShootMissile = false;
+        pM.lockMovement = true;
         //animator
         yield return new WaitForSeconds(0.2f);
 
@@ -158,7 +164,7 @@ public class AttackHandler : MonoBehaviour
             currentMissiles -= 2;
         }
         isAttacking = false;
-
+        pM.lockMovement = false;
         yield return new WaitForSeconds(missileCooldown);
         canShootMissile = true;
     }
@@ -167,8 +173,9 @@ public class AttackHandler : MonoBehaviour
     {
         isAttacking = true;
         canUseLaser = false;
+        StartCoroutine(ChargeLaser());
         //animator
-
+        pM.lockMovement = true;
         LineRenderer laser = Instantiate(laserPrefab, laserOrigin.position, laserOrigin.rotation);
         laser.transform.SetParent(laserOrigin);
 
@@ -191,12 +198,21 @@ public class AttackHandler : MonoBehaviour
 
         Destroy(laser.gameObject);
         isAttacking = false;
+        pM.lockMovement = false;
 
-        yield return new WaitForSeconds(laserCooldown);
-        canUseLaser = true;
+        
+        //yield return new WaitForSeconds(laserCooldown);
+        //canUseLaser = true;
 
 
     }
+
+    public IEnumerator ChargeLaser()
+    {
+        yield return new WaitForSeconds(laserCooldown);
+        canUseLaser = true;
+    }
+
 
     private void OnDrawGizmos()
     {

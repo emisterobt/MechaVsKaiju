@@ -14,10 +14,13 @@ public class AttackHandler : MonoBehaviour
 
     [Header("Melee Attack")]
     public float meleeDamage;
+    public bool isPunching;
+    public int hitType;
 
     [Header("Throw Attack")]
     public float throwForce;
     public GameObject objectInHand;
+    public bool isThrowing;//probablemente use triigetr en animation
 
     [Header("Laser Attack")]
     public float laserRange;
@@ -26,6 +29,7 @@ public class AttackHandler : MonoBehaviour
     public float laserCooldown;
     public bool canUseLaser = false;
     public LineRenderer laserPrefab;
+    public bool isUsingLaser;
 
     [Header("Missiles")]
     public int maxMissiles;
@@ -35,9 +39,10 @@ public class AttackHandler : MonoBehaviour
     public float explosionRadius;
     public float missileCooldown;
     private bool canShootMissile = true;
+    public bool isShootMissile;
     [SerializeField]private int currentMissiles;
 
-    public bool isAttacking = false;
+    private bool isAttacking = false;
 
     //private Animator anim;
     private Camera mainCamera;
@@ -80,6 +85,22 @@ public class AttackHandler : MonoBehaviour
             }
             else
             {
+                if (Input.GetKey(KeyCode.S))
+                {
+                    hitType = 1;
+                    Debug.Log("Kick");
+                }
+                else if (Input.GetKey(KeyCode.Space))
+                {
+                    hitType = 2;
+                    Debug.Log("Upper");
+                }
+                else
+                {
+                    hitType = 0;
+                    Debug.Log("Normal");
+                }
+
                 StartCoroutine(MeleeAttack());
                 Debug.Log("Melee");
             }
@@ -101,12 +122,14 @@ public class AttackHandler : MonoBehaviour
     private IEnumerator MeleeAttack()
     {
         isAttacking = true;
+        isPunching = true;
         attackCollider.gameObject.SetActive(true);
         //animator attack
 
         yield return new WaitForSeconds(0.5f);
         attackCollider.gameObject.SetActive(false);
         isAttacking = false ;
+        isPunching = false ;
     }
 
     private IEnumerator ThrowObject()

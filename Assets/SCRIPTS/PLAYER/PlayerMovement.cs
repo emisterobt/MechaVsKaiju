@@ -42,8 +42,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (InputController.Instance.Jump() && grndChk.IsGrounded())
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             playerAnims.TriggerJump();
+
+            Invoke("JumpDelay", 0.3f);
         }
     }
 
@@ -53,5 +54,10 @@ public class PlayerMovement : MonoBehaviour
 
         return InputController.Instance.RunInput() ? runSpeed : InputController.Instance.CrouchInput() ? crouchSpeed : walkSpeed;
 
+    }
+
+    public void JumpDelay()
+    {
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 }

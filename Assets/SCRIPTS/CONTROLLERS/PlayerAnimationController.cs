@@ -47,7 +47,8 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void Attack()
     {
-        anim.SetBool("isPunching", attackHandler.isAttacking);
+        anim.SetBool("isPunching", attackHandler.isPunching);
+        anim.SetInteger("Attack", attackHandler.hitType);
     }
 
 

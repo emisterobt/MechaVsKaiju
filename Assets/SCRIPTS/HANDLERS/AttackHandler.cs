@@ -30,6 +30,7 @@ public class AttackHandler : MonoBehaviour
     public bool canUseLaser = false;
     public LineRenderer laserPrefab;
     public bool isUsingLaser;
+    public float timer;
 
     [Header("Missiles")]
     public int maxMissiles;
@@ -40,7 +41,7 @@ public class AttackHandler : MonoBehaviour
     public float missileCooldown;
     private bool canShootMissile = true;
     public bool isShootMissile;
-    [SerializeField]private int currentMissiles;
+    public int currentMissiles;
 
     private bool isAttacking = false;
 
@@ -232,7 +233,13 @@ public class AttackHandler : MonoBehaviour
 
     public IEnumerator ChargeLaser()
     {
-        yield return new WaitForSeconds(laserCooldown);
+        timer = 0;
+
+        while (timer < laserCooldown)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
         canUseLaser = true;
     }
 

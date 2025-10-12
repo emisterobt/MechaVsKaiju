@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ public class Missile : MonoBehaviour
     private void Start()
     {
         attackHndlr = FindAnyObjectByType<AttackHandler>();
+        StartCoroutine(DestroyTimer());
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -35,6 +37,12 @@ public class Missile : MonoBehaviour
             }
 
         }
+        Destroy(this.gameObject);
+    }
+
+    public IEnumerator DestroyTimer()
+    {
+        yield return new WaitForSeconds(attackHndlr.missileDuration);
         Destroy(this.gameObject);
     }
 

@@ -552,8 +552,8 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.6383406
-      minScalar: 0.017453292
+      scalar: 3.1415925
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1374,7 +1374,7 @@ ParticleSystem:
     fps: 30
     frameOverTime:
       serializedVersion: 2
-      minMaxState: 3
+      minMaxState: 1
       scalar: 0.9999
       minScalar: 0
       maxCurve:
@@ -1428,7 +1428,7 @@ ParticleSystem:
     startFrame:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.25
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1483,7 +1483,7 @@ ParticleSystem:
     tilesY: 2
     animationType: 0
     rowIndex: 0
-    cycles: 1
+    cycles: 3
     uvChannelMask: -1
     rowMode: 1
     sprites:

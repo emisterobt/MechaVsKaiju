@@ -71,7 +71,9 @@ public class HudController : MonoBehaviour
         laserCharge.maxValue = attackHandler.laserCooldown;
         laserCharge.value = attackHandler.timer;
 
-        int percentageCharge = (int)attackHandler.timer * 10;
+        
+
+        int percentageCharge = (int)((attackHandler.timer * 100)/attackHandler.laserCooldown);
 
         laserChargeCount.text = $"{percentageCharge}%";
     }

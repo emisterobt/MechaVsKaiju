@@ -64,4 +64,9 @@ public class InputController : MonoBehaviour
     {
         return new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
     }
+
+    public bool Blocking()
+    {
+        return Input.GetKey(actualInputConfig.block);
+    }
 }

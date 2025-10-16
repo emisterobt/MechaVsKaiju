@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jump: 32
   dash: 32
-  run: 304
+  run: 306
   crouch: 99
   pickup: 324
   mainAttack: 323
   secondaryAttack: 102
   specialAttack: 101
+  block: 304

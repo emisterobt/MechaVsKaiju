@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerAnimationController playerAnims;
     public CheckGround grndChk;
     public bool lockMovement = false;
+    [SerializeField] private bool isJumping = false;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -40,10 +41,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        if (InputController.Instance.Jump() && grndChk.IsGrounded())
+        if (InputController.Instance.Jump() && grndChk.IsGrounded() && isJumping == false)
         {
             playerAnims.TriggerJump();
-
+            isJumping = true;
             Invoke("JumpDelay", 0.3f);
         }
     }
@@ -59,5 +60,6 @@ public class PlayerMovement : MonoBehaviour
     public void JumpDelay()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        isJumping = false;
     }
 }

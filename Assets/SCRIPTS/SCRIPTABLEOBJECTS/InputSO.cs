@@ -11,4 +11,5 @@ public class InputSO : ScriptableObject
     public KeyCode mainAttack;
     public KeyCode secondaryAttack;
     public KeyCode specialAttack;
+    public KeyCode block;
 }

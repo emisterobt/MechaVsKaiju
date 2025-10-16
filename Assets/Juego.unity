@@ -6769,7 +6769,7 @@ MonoBehaviour:
   grndMasks:
     serializedVersion: 2
     m_Bits: 256
-  detectionDistance: 2
+  detectionDistance: 0.4
   rayDraw: 0
 --- !u!114 &1062786604
 MonoBehaviour:
@@ -6792,6 +6792,7 @@ MonoBehaviour:
   rb: {fileID: 1062786601}
   grndChk: {fileID: 0}
   lockMovement: 0
+  isJumping: 0
 --- !u!114 &1062786605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6853,7 +6854,7 @@ MonoBehaviour:
   laserRange: 50
   laserDamage: 1
   laserDuration: 2
-  laserCooldown: 5
+  laserCooldown: 40
   canUseLaser: 0
   laserPrefab: {fileID: 878252584431941055, guid: a1f2fb086413f9046937de394582fcd0, type: 3}
   isUsingLaser: 0
@@ -6866,6 +6867,8 @@ MonoBehaviour:
   missileCooldown: 1
   isShootMissile: 0
   currentMissiles: 0
+  damageReduction: 0.5
+  isBlocking: 0
 --- !u!114 &1062786608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24413,6 +24416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AutoBusEscolar
       objectReference: {fileID: 0}
+    - target: {fileID: 4797567254226984836, guid: 02a3d5733e6cadb40afa11ebb28062b7, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9127594554288752925, guid: 02a3d5733e6cadb40afa11ebb28062b7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 302.25
@@ -24561,6 +24568,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1304895713644672147, guid: 02e26d287cfab0f419c857e36d91975d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506516553381130527, guid: 02e26d287cfab0f419c857e36d91975d, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3571330499705064055, guid: 02e26d287cfab0f419c857e36d91975d, type: 3}
@@ -35998,6 +36009,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7761741674520922496, guid: 570a5a28445b25b428a1f64586baf8ae, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36196,6 +36211,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4061457058269008506, guid: f27e76e4920c7724abd48175866f0e13, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509884679139018379, guid: f27e76e4920c7724abd48175866f0e13, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}

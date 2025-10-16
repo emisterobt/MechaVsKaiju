@@ -43,6 +43,12 @@ public class AttackHandler : MonoBehaviour
     public bool isShootMissile;
     public int currentMissiles;
 
+    [Header("Blocking/Defense")]
+    [Range(0f, 1f)]
+    public float damageReduction;
+    public bool isBlocking = false;
+
+
     private bool isAttacking = false;
 
     //private Animator anim;
@@ -76,6 +82,17 @@ public class AttackHandler : MonoBehaviour
     private void AttackType()
     {
         if (isAttacking) return;
+
+        if (InputController.Instance.Blocking())
+        {
+            isBlocking = true;
+            Debug.Log("Is Blocking");
+            return;
+        }
+        else
+        {
+            isBlocking = false;
+        }
 
         if (InputController.Instance.MainAttack() && pDash.isDashing == false)
         {
@@ -123,8 +140,8 @@ public class AttackHandler : MonoBehaviour
     private IEnumerator MeleeAttack()
     {
         isAttacking = true;
-        isPunching = true;
         attackCollider.gameObject.SetActive(true);
+        isPunching = true;
         //animator attack
 
         yield return new WaitForSeconds(0.5f);
@@ -188,6 +205,8 @@ public class AttackHandler : MonoBehaviour
             currentMissiles -= 2;
         }
         isAttacking = false;
+
+        yield return new WaitForSeconds(0.5f);
         pM.lockMovement = false;
         yield return new WaitForSeconds(missileCooldown);
         canShootMissile = true;
@@ -197,7 +216,6 @@ public class AttackHandler : MonoBehaviour
     {
         isAttacking = true;
         canUseLaser = false;
-        StartCoroutine(ChargeLaser());
         //animator
         pM.lockMovement = true;
         LineRenderer laser = Instantiate(laserPrefab, laserOrigin.position, laserOrigin.rotation);
@@ -221,6 +239,7 @@ public class AttackHandler : MonoBehaviour
         }
 
         Destroy(laser.gameObject);
+        StartCoroutine(ChargeLaser());
         isAttacking = false;
         pM.lockMovement = false;
 

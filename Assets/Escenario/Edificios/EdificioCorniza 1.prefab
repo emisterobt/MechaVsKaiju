@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8811359483114154417}
   - component: {fileID: 7035435903614472348}
   - component: {fileID: 7632968207758633161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3602944067473543187}
   - component: {fileID: 615751622554202070}
   - component: {fileID: 3445538145065419601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 2066096828669477066}
   - component: {fileID: 6139055556644632829}
   - component: {fileID: 5792457693377923779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Techo1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 2406017251928440616}
   - component: {fileID: 8628437909446297610}
   - component: {fileID: 1246822483152370127}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 3559379796444061276}
   - component: {fileID: 4873538411179708732}
   - component: {fileID: 4558106139215031848}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 2590844779363151661}
   - component: {fileID: 3058112457422136884}
   - component: {fileID: 6095757989208642273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 8414912553676118788}
   - component: {fileID: 2740700358711361273}
   - component: {fileID: 6843376682748260661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 3137712563795309562}
   - component: {fileID: 6823751356220427792}
   - component: {fileID: 1713499797063016605}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TechoCorniza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 7857319418176223481}
   - component: {fileID: 8588547852830586534}
   - component: {fileID: 1957831139987461472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 1189673906132589712}
   - component: {fileID: 8598756304716143571}
   - component: {fileID: 601215347844419242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SalidaTecho (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 2017235822067095384}
   - component: {fileID: 7888476512075116308}
   - component: {fileID: 3451369750263874163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -959,6 +959,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   particle: {fileID: 7672939713588260054}
   particle2: {fileID: 1110463954232027715}
+  escombros: {fileID: 6025910492822954512, guid: aa704640db9ff8242b550d5250b65a22, type: 3}
 --- !u!65 &3451369750263874163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -991,7 +992,7 @@ GameObject:
   - component: {fileID: 1578639966240346174}
   - component: {fileID: 2676274692718643557}
   - component: {fileID: 1893624405196049995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1077,7 +1078,7 @@ GameObject:
   - component: {fileID: 1594790519902890573}
   - component: {fileID: 1684068494578429675}
   - component: {fileID: 1464618866650080604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,7 +1164,7 @@ GameObject:
   - component: {fileID: 1078407815721139099}
   - component: {fileID: 3029415441499481816}
   - component: {fileID: 1682915049989785537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1249,7 +1250,7 @@ GameObject:
   - component: {fileID: 4386335683952020409}
   - component: {fileID: 2432483170648905931}
   - component: {fileID: 798478169885263922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1335,7 +1336,7 @@ GameObject:
   - component: {fileID: 3171457328216586506}
   - component: {fileID: 1412339644462802827}
   - component: {fileID: 5539508057367238981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1421,7 +1422,7 @@ GameObject:
   - component: {fileID: 4357355853825803459}
   - component: {fileID: 6911269135185755669}
   - component: {fileID: 5393395143902614090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1507,7 +1508,7 @@ GameObject:
   - component: {fileID: 7923226591144669931}
   - component: {fileID: 1452128360087787480}
   - component: {fileID: 8491533277680129277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1593,7 +1594,7 @@ GameObject:
   - component: {fileID: 287673807850091642}
   - component: {fileID: 8722702765474560675}
   - component: {fileID: 4201311096731519097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1679,7 +1680,7 @@ GameObject:
   - component: {fileID: 3097988778343175239}
   - component: {fileID: 3998304277948172744}
   - component: {fileID: 6269865024533317390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1763,7 +1764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 352928327317355154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1796,7 +1797,7 @@ GameObject:
   - component: {fileID: 8446326020971432637}
   - component: {fileID: 3307795779174789926}
   - component: {fileID: 1855677085589712925}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1882,7 +1883,7 @@ GameObject:
   - component: {fileID: 7240661288996750174}
   - component: {fileID: 6943142128431685112}
   - component: {fileID: 360453399285280185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1968,7 +1969,7 @@ GameObject:
   - component: {fileID: 4590106863661368312}
   - component: {fileID: 8119349277679958110}
   - component: {fileID: 8811437540360490736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2054,7 +2055,7 @@ GameObject:
   - component: {fileID: 294375949828976974}
   - component: {fileID: 984853528167776450}
   - component: {fileID: 8371797418014533039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2139,7 +2140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7775476495145062393}
   - component: {fileID: 6274791900060799454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdCorniza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2221,7 +2222,7 @@ GameObject:
   - component: {fileID: 3322975282617738014}
   - component: {fileID: 1366060629575337708}
   - component: {fileID: 7277940925547094683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2307,7 +2308,7 @@ GameObject:
   - component: {fileID: 5629363132253189428}
   - component: {fileID: 6146992011520172958}
   - component: {fileID: 2441226008508297987}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2393,7 +2394,7 @@ GameObject:
   - component: {fileID: 8996870865361909932}
   - component: {fileID: 1121306440851200283}
   - component: {fileID: 9062900851616482050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2479,7 +2480,7 @@ GameObject:
   - component: {fileID: 6819176386009528567}
   - component: {fileID: 3151173444991512922}
   - component: {fileID: 4328583312387269411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioCorniza (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2566,6 +2567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Derrumbe
       objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.7164917
@@ -2632,6 +2637,10 @@ PrefabInstance:
     - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_Name
       value: Derrumbe 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_LocalPosition.x

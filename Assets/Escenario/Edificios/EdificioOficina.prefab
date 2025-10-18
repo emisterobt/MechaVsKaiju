@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6391568681466173706}
   - component: {fileID: 8017674541371441436}
   - component: {fileID: 5772778112804999643}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SalidaTecho (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6474769734775873329}
   - component: {fileID: 5467638280742806918}
   - component: {fileID: 3268590656261120751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 9002552961232238288}
   - component: {fileID: 6213725950206543576}
   - component: {fileID: 9090983589517596043}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 875397320857142079}
   - component: {fileID: 8523212430763093192}
   - component: {fileID: 7536348082201461731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioOficina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,6 +312,7 @@ MonoBehaviour:
   anim: {fileID: 8523212430763093192}
   particle: {fileID: 1991040267733678453}
   particle2: {fileID: 7234319885065139030}
+  escombros: {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
 --- !u!95 &8523212430763093192
 Animator:
   serializedVersion: 7
@@ -366,7 +367,7 @@ GameObject:
   - component: {fileID: 6878162898301473360}
   - component: {fileID: 3665240351096134138}
   - component: {fileID: 7614634967083242527}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioNPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +453,7 @@ GameObject:
   - component: {fileID: 2785442072321461974}
   - component: {fileID: 2111029246628467948}
   - component: {fileID: 6519010810077366509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +539,7 @@ GameObject:
   - component: {fileID: 5563288081086940061}
   - component: {fileID: 2382269073602796564}
   - component: {fileID: 2921109882912339345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Techo1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +625,7 @@ GameObject:
   - component: {fileID: 3641854745300889509}
   - component: {fileID: 4329343201617753426}
   - component: {fileID: 6555608387845597221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +711,7 @@ GameObject:
   - component: {fileID: 4249591682082949348}
   - component: {fileID: 8163641496767870564}
   - component: {fileID: 3952904900330369351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +797,7 @@ GameObject:
   - component: {fileID: 6219705551299034278}
   - component: {fileID: 4819651426298440122}
   - component: {fileID: 1554002552011928078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3797550903808721799}
   - component: {fileID: 3374333033514560781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioOficina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,6 +945,10 @@ PrefabInstance:
     - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_Name
       value: Derrumbe 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1011,6 +1016,10 @@ PrefabInstance:
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_Name
       value: Derrumbe
+      objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_LocalPosition.x

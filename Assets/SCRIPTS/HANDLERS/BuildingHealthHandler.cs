@@ -7,6 +7,8 @@ public class BuildingHealthHandler : MonoBehaviour , IDamageable
     public Animator anim;
     public ParticleSystem particle;
     public ParticleSystem particle2;
+
+    public GameObject escombros;
     private void Start()
     {
         actualHealth = maxHealth;
@@ -30,6 +32,7 @@ public class BuildingHealthHandler : MonoBehaviour , IDamageable
         particle.Play();
         particle2.Play();
         anim.SetBool("isFalling", true);
+        Instantiate(escombros,particle.transform.position,Quaternion.Euler(0,0,0));
         Collider collider = GetComponent<Collider>();
         collider.enabled = false;
     }

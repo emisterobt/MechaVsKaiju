@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1772145280972638859}
   - component: {fileID: 9184732441969319714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioModerno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 3233968123743582011}
   - component: {fileID: 1290792499963736803}
   - component: {fileID: 6575093385272612738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioModerno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,6 +134,7 @@ MonoBehaviour:
   anim: {fileID: 6575093385272612738}
   particle: {fileID: 1399164044629933433}
   particle2: {fileID: 8300975691237946953}
+  escombros: {fileID: 6175640715059847185, guid: cb3cea6190b051340834b6613f352adb, type: 3}
 --- !u!95 &6575093385272612738
 Animator:
   serializedVersion: 7
@@ -167,7 +168,7 @@ GameObject:
   - component: {fileID: 3043366404848937141}
   - component: {fileID: 4804006355721089939}
   - component: {fileID: 2315478750322121302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Futurista (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +254,7 @@ GameObject:
   - component: {fileID: 4957847542370746202}
   - component: {fileID: 2197391430230438547}
   - component: {fileID: 2682032297511477816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Futurista (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +340,7 @@ GameObject:
   - component: {fileID: 6363732979465119357}
   - component: {fileID: 7931045384280322544}
   - component: {fileID: 8619944666510812551}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Techo_Futurista
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +426,7 @@ GameObject:
   - component: {fileID: 4918166803083369618}
   - component: {fileID: 6278985160130884167}
   - component: {fileID: 1277873815402804831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Futurista (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +512,7 @@ GameObject:
   - component: {fileID: 3825789787914730929}
   - component: {fileID: 4818144876237831940}
   - component: {fileID: 5397550004924910393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Futurista
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +598,7 @@ GameObject:
   - component: {fileID: 7056087243234226737}
   - component: {fileID: 2716964803834546632}
   - component: {fileID: 913133644363400232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Futurista (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -684,6 +685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Derrumbe 1
       objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.97
@@ -758,6 +763,10 @@ PrefabInstance:
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_Name
       value: Derrumbe
+      objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_LocalPosition.x

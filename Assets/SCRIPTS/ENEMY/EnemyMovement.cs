@@ -12,8 +12,7 @@ public class EnemyMovement : MonoBehaviour
 
     public LayerMask playerLayer;
 
-    [SerializeField]
-    private bool followPlayer = false;
+    public bool followPlayer = false;
 
     private float distanceToEnd;
     public float initialDistance;

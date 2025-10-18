@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5374538039516647634}
   - component: {fileID: 2008887974266324756}
   - component: {fileID: 7516811742769510892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 2693762472747479347}
   - component: {fileID: 8145744586441937826}
   - component: {fileID: 3309404206141545648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 5922640536681772704}
   - component: {fileID: 6416646017817512870}
   - component: {fileID: 3785650190669328141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 9123854028350417844}
   - component: {fileID: 1723015013341783345}
   - component: {fileID: 1833719363258150106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 5305970307460977088}
   - component: {fileID: 9119870743837939783}
   - component: {fileID: 1022475752991073552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 763033550288936903}
   - component: {fileID: 3749795889756594035}
   - component: {fileID: 2969132437019909054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 1547820217871082960}
   - component: {fileID: 7877042455785354494}
   - component: {fileID: 6002102246032121517}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Techo1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 8949906278475931890}
   - component: {fileID: 3357366807338444989}
   - component: {fileID: 7156542677016544781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 6491796864648113124}
   - component: {fileID: 6894697365677051793}
   - component: {fileID: 3979150704623738852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Derrumbe 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5532,7 +5532,7 @@ GameObject:
   - component: {fileID: 8517558443231725150}
   - component: {fileID: 5174045511812476922}
   - component: {fileID: 1926012420533842216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5618,7 +5618,7 @@ GameObject:
   - component: {fileID: 6392806515457728658}
   - component: {fileID: 6705388999633126631}
   - component: {fileID: 3861969747283711122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Derrumbe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10451,7 +10451,7 @@ GameObject:
   - component: {fileID: 7707467142920344472}
   - component: {fileID: 2662099853760101134}
   - component: {fileID: 3618273564658121391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10537,7 +10537,7 @@ GameObject:
   - component: {fileID: 1599199508680605210}
   - component: {fileID: 7993013955252750123}
   - component: {fileID: 8233704970946993520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10623,7 +10623,7 @@ GameObject:
   - component: {fileID: 2598840654373021702}
   - component: {fileID: 8574429500795900971}
   - component: {fileID: 98007342801983069}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10709,7 +10709,7 @@ GameObject:
   - component: {fileID: 660592887399391028}
   - component: {fileID: 9144655016612203437}
   - component: {fileID: 6661705102326233979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10795,7 +10795,7 @@ GameObject:
   - component: {fileID: 6561506544133897143}
   - component: {fileID: 9174733889513489409}
   - component: {fileID: 8873794344914161120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10882,7 +10882,7 @@ GameObject:
   - component: {fileID: 7491871507757162641}
   - component: {fileID: 6476849847934725943}
   - component: {fileID: 2187731512094607761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10924,6 +10924,7 @@ MonoBehaviour:
   anim: {fileID: 2187731512094607761}
   particle: {fileID: 6705388999633126631}
   particle2: {fileID: 6894697365677051793}
+  escombros: {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
 --- !u!65 &6476849847934725943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10978,7 +10979,7 @@ GameObject:
   - component: {fileID: 1438289250311836868}
   - component: {fileID: 878762605268501334}
   - component: {fileID: 4397230074741130660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11064,7 +11065,7 @@ GameObject:
   - component: {fileID: 4690091646509883669}
   - component: {fileID: 6894268688264279587}
   - component: {fileID: 4870862817261576579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11150,7 +11151,7 @@ GameObject:
   - component: {fileID: 6257717678736038699}
   - component: {fileID: 2924928690261296386}
   - component: {fileID: 8208153827846472319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SalidaTecho (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11236,7 +11237,7 @@ GameObject:
   - component: {fileID: 8054573876435201168}
   - component: {fileID: 3113778466422343949}
   - component: {fileID: 6560590146853386535}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11322,7 +11323,7 @@ GameObject:
   - component: {fileID: 6723693320567389374}
   - component: {fileID: 1579402417219260597}
   - component: {fileID: 4939335479404064593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Techo1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11408,7 +11409,7 @@ GameObject:
   - component: {fileID: 1557914820741736384}
   - component: {fileID: 763416450903176331}
   - component: {fileID: 4621264234620204597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11494,7 +11495,7 @@ GameObject:
   - component: {fileID: 6306879112654464574}
   - component: {fileID: 5927497737971278494}
   - component: {fileID: 8474066933652889121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11580,7 +11581,7 @@ GameObject:
   - component: {fileID: 6628652093435205104}
   - component: {fileID: 1737936628017621841}
   - component: {fileID: 969687733522805968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TechoGigante
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11666,7 +11667,7 @@ GameObject:
   - component: {fileID: 4887814493008382787}
   - component: {fileID: 7255280066315543753}
   - component: {fileID: 5836732103743695580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Techo1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11751,7 +11752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9039112026410186278}
   - component: {fileID: 571777315772913480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edgigante 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11834,7 +11835,7 @@ GameObject:
   - component: {fileID: 4443484578081635950}
   - component: {fileID: 549376257347653785}
   - component: {fileID: 8472494987574428063}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11920,7 +11921,7 @@ GameObject:
   - component: {fileID: 4463446955862227488}
   - component: {fileID: 4849006014213301880}
   - component: {fileID: 7594783659985360393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12006,7 +12007,7 @@ GameObject:
   - component: {fileID: 4563162683640675253}
   - component: {fileID: 9222699883673286257}
   - component: {fileID: 572976853056170481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12092,7 +12093,7 @@ GameObject:
   - component: {fileID: 6741506702982102593}
   - component: {fileID: 1231014078461999788}
   - component: {fileID: 1457040025701322079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12178,7 +12179,7 @@ GameObject:
   - component: {fileID: 3039587158771512196}
   - component: {fileID: 3824472301034452846}
   - component: {fileID: 2363067175363853469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12264,7 +12265,7 @@ GameObject:
   - component: {fileID: 5989235936047045596}
   - component: {fileID: 7075397092827610990}
   - component: {fileID: 1818810690781910575}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioGigante (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

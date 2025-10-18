@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2229451321268260573}
   - component: {fileID: 5629961933388181894}
   - component: {fileID: 2929886451300954458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5535071457676763595}
   - component: {fileID: 4153308519217057169}
   - component: {fileID: 1918639255872876250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 3563072201007871871}
   - component: {fileID: 7766510348223663553}
   - component: {fileID: 4950026498803139816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioInclinado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,6 +247,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   particle: {fileID: 9152282541623619526}
   particle2: {fileID: 2827782371427827446}
+  escombros: {fileID: 6175640715059847185, guid: cb3cea6190b051340834b6613f352adb, type: 3}
 --- !u!95 &4950026498803139816
 Animator:
   serializedVersion: 7
@@ -280,7 +281,7 @@ GameObject:
   - component: {fileID: 5904738961225979646}
   - component: {fileID: 1549135029481405577}
   - component: {fileID: 6535553561805877656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +367,7 @@ GameObject:
   - component: {fileID: 3302662303560623478}
   - component: {fileID: 4357265630222749515}
   - component: {fileID: 5147365030832813815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +454,7 @@ GameObject:
   - component: {fileID: 1383703335979131448}
   - component: {fileID: 8701472752138955624}
   - component: {fileID: 3833678599167210624}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Techo_Inclinado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +562,7 @@ GameObject:
   - component: {fileID: 1818385178537221435}
   - component: {fileID: 1074488281755974706}
   - component: {fileID: 4988740965893205731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -647,7 +648,7 @@ GameObject:
   - component: {fileID: 8314952473728230912}
   - component: {fileID: 644746893107268461}
   - component: {fileID: 5415895787831786565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +734,7 @@ GameObject:
   - component: {fileID: 5952129415417076608}
   - component: {fileID: 722496426358135649}
   - component: {fileID: 9203257294851262291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -819,7 +820,7 @@ GameObject:
   - component: {fileID: 1775177987652468145}
   - component: {fileID: 5139971265374847806}
   - component: {fileID: 1826858573883181854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -905,7 +906,7 @@ GameObject:
   - component: {fileID: 8984312116680076368}
   - component: {fileID: 7245636306633543711}
   - component: {fileID: 9022243155988924163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -990,7 +991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2686676777082089412}
   - component: {fileID: 6234342545695108245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioMochado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1062,7 @@ GameObject:
   - component: {fileID: 5084457718674514862}
   - component: {fileID: 6206560470420134325}
   - component: {fileID: 1049529076738270285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1148,7 @@ GameObject:
   - component: {fileID: 6936153766958977561}
   - component: {fileID: 3177950519682329752}
   - component: {fileID: 1010234118733273687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1233,7 +1234,7 @@ GameObject:
   - component: {fileID: 8062073681520505253}
   - component: {fileID: 1852857542393250724}
   - component: {fileID: 5743937311267095495}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1319,7 +1320,7 @@ GameObject:
   - component: {fileID: 8844173663351606807}
   - component: {fileID: 2108377610543196454}
   - component: {fileID: 4357294537004489061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1405,7 +1406,7 @@ GameObject:
   - component: {fileID: 5407494421867244946}
   - component: {fileID: 6628420606981726037}
   - component: {fileID: 4908946704610361647}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1491,7 +1492,7 @@ GameObject:
   - component: {fileID: 3056099221780128445}
   - component: {fileID: 5941280313515038782}
   - component: {fileID: 7461659613014666532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1577,7 +1578,7 @@ GameObject:
   - component: {fileID: 3584905041872469753}
   - component: {fileID: 5946772872997330642}
   - component: {fileID: 2215399587052158071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio_Inclinado_Edificios2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1664,6 +1665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Derrumbe
       objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.99
@@ -1730,6 +1735,10 @@ PrefabInstance:
     - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_Name
       value: Derrumbe 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_LocalPosition.x

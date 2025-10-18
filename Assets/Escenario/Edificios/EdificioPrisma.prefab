@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3296177477394470574}
   - component: {fileID: 5335470941833086914}
   - component: {fileID: 5368241666735154269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4704688253853871126}
   - component: {fileID: 321813538402348905}
   - component: {fileID: 6517303867085128466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 2986852751720588470}
   - component: {fileID: 3263560960266789889}
   - component: {fileID: 5314125371801701579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 4838745942003350250}
   - component: {fileID: 5247143558510728715}
   - component: {fileID: 7258766148633843853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Techo_Circular
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 3169005876603890858}
   - component: {fileID: 3544716675571858938}
   - component: {fileID: 6613722516257448633}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 7405169336965092416}
   - component: {fileID: 2573065452223444331}
   - component: {fileID: 2488420855353982160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 1193783594547768180}
   - component: {fileID: 3961553689186035211}
   - component: {fileID: 5459585924242498751}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 3786675356829364780}
   - component: {fileID: 6106986103385787544}
   - component: {fileID: 8005244803118859041}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 1866748606051798429}
   - component: {fileID: 7296550067677082502}
   - component: {fileID: 7791473078801704903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 2234141433056910088}
   - component: {fileID: 778635755009236693}
   - component: {fileID: 1672060674170379559}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -871,7 +871,7 @@ GameObject:
   - component: {fileID: 3564142771163620806}
   - component: {fileID: 3499173513471632395}
   - component: {fileID: 7466125517178801529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +957,7 @@ GameObject:
   - component: {fileID: 3512352869749564799}
   - component: {fileID: 5512890739347232075}
   - component: {fileID: 9203744005730370109}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1043,7 +1043,7 @@ GameObject:
   - component: {fileID: 3364706253607284862}
   - component: {fileID: 3142885190780480068}
   - component: {fileID: 5110378079700529834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 202940724007105}
   - component: {fileID: 3298879064334698039}
   - component: {fileID: 7486520632779204412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1215,7 +1215,7 @@ GameObject:
   - component: {fileID: 4773959591521074256}
   - component: {fileID: 85799383445455720}
   - component: {fileID: 7649261956907847184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1301,7 +1301,7 @@ GameObject:
   - component: {fileID: 6330590405097968989}
   - component: {fileID: 771957086822274634}
   - component: {fileID: 7208931693424869967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1386,7 +1386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5739788753069332426}
   - component: {fileID: 8585152018398571944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPrisma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1463,7 +1463,7 @@ GameObject:
   - component: {fileID: 2575724288674200866}
   - component: {fileID: 1148924886998985281}
   - component: {fileID: 2790535993688566827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1549,7 +1549,7 @@ GameObject:
   - component: {fileID: 3251590572902229400}
   - component: {fileID: 1492291267619402316}
   - component: {fileID: 707405451890570565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 4256598114224715872}
   - component: {fileID: 847440810417493586}
   - component: {fileID: 8208739504674721395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1721,7 +1721,7 @@ GameObject:
   - component: {fileID: 126990201937942632}
   - component: {fileID: 5693326926492642387}
   - component: {fileID: 5466889158345945010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1807,7 +1807,7 @@ GameObject:
   - component: {fileID: 5565370382865812706}
   - component: {fileID: 1024740906297647090}
   - component: {fileID: 7415607164171227662}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1894,7 +1894,7 @@ GameObject:
   - component: {fileID: 7567674214671037166}
   - component: {fileID: 4328645928837299211}
   - component: {fileID: 3434824821591359833}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPrisma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,6 +1957,7 @@ MonoBehaviour:
   anim: {fileID: 3434824821591359833}
   particle: {fileID: 1562326283841308296}
   particle2: {fileID: 3232206255741019351}
+  escombros: {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
 --- !u!95 &3434824821591359833
 Animator:
   serializedVersion: 7
@@ -1990,7 +1991,7 @@ GameObject:
   - component: {fileID: 8053886121968456504}
   - component: {fileID: 8520991428736112281}
   - component: {fileID: 3297503578373880219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2076,7 +2077,7 @@ GameObject:
   - component: {fileID: 2941266720449571880}
   - component: {fileID: 1415760230258819309}
   - component: {fileID: 617649998696766000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Edificio_Circular
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2163,6 +2164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Derrumbe 1
       objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.0799866
@@ -2229,6 +2234,10 @@ PrefabInstance:
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_Name
       value: Derrumbe
+      objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_LocalPosition.x

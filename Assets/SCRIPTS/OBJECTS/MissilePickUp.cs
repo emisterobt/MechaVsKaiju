@@ -8,7 +8,7 @@ public class MissilePickUp : MonoBehaviour
         {
             AttackHandler aHandler = other.GetComponent<AttackHandler>();
 
-            if (aHandler != null)
+            if (aHandler != null && aHandler.currentMissiles < aHandler.maxMissiles)
             {
                 aHandler.currentMissiles = aHandler.maxMissiles;
                 Destroy(this.gameObject);

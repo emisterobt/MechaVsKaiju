@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5607692311031131728}
   - component: {fileID: 4498942415200475814}
   - component: {fileID: 3538137124942406696}
+  - component: {fileID: 6674144630643251824}
   m_Layer: 0
   m_Name: "Se\xF1al Azul"
   m_TagString: Untagged
@@ -109,6 +110,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.154947, y: 0.71184, z: 0.020144}
   m_Center: {x: 0.0000004991889, y: 0.33586898, z: 0}
+--- !u!114 &6674144630643251824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6338579249207805365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d5d8df0ca3fe4da5dee39f3f788ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  actualHealth: 0
+  particle: {fileID: 7540214142621956763}
 --- !u!1001 &1323521675695730791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -166,6 +182,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30166275c422c6a41affaeb55473736a, type: 3}
+--- !u!198 &7540214142621956763 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8861447047279282940, guid: 30166275c422c6a41affaeb55473736a, type: 3}
+  m_PrefabInstance: {fileID: 1323521675695730791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8707291910361349569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7676548465931308454, guid: 30166275c422c6a41affaeb55473736a, type: 3}

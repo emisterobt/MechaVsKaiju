@@ -4,11 +4,11 @@ public class PropsHealthHandler : MonoBehaviour, IDamageable
 {
     public float maxHealth;
     public float actualHealth;
-    //public ParticleSystem particle;
+    public ParticleSystem particle;
     private void Start()
     {
         actualHealth = maxHealth;
-        //particle.Stop();
+        particle.Stop();
     }
 
     public void TakeDamage(float damage)
@@ -17,7 +17,7 @@ public class PropsHealthHandler : MonoBehaviour, IDamageable
 
         if (actualHealth <= 0)
         {
-            //particle.Play();
+            particle.Play();
             Invoke("OnDeath", 0.5f);
         }
     }
@@ -31,7 +31,7 @@ public class PropsHealthHandler : MonoBehaviour, IDamageable
 
     private void OnTriggerEnter(Collider other)
     {
-        //particle.Play();
+        particle.Play();
         Invoke("OnDeath", 0.5f);
     }
 }

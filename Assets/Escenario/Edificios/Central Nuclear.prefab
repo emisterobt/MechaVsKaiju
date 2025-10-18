@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4035635125187067605}
   - component: {fileID: 7133104626793835284}
   - component: {fileID: 3650502352505703322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Techo_Nuclear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6003344200719255177}
   - component: {fileID: 796441303166729116}
   - component: {fileID: 2961592407235501615}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Central Nuclear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2886651719522475256}
   - component: {fileID: 8819662541178576083}
   - component: {fileID: 1588630339748291397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5013,7 +5013,7 @@ GameObject:
   - component: {fileID: 5831805093870579455}
   - component: {fileID: 2600820994189662705}
   - component: {fileID: 1140654727120119668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Central Nuclear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5076,6 +5076,7 @@ MonoBehaviour:
   anim: {fileID: 1140654727120119668}
   particle: {fileID: 1337096056966065360}
   particle2: {fileID: 527923452134755751}
+  escombros: {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
 --- !u!95 &1140654727120119668
 Animator:
   serializedVersion: 7
@@ -5109,7 +5110,7 @@ GameObject:
   - component: {fileID: 1230009716178563700}
   - component: {fileID: 8524942926855905171}
   - component: {fileID: 6506922057609919373}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Chimenea_Nuclear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5195,7 +5196,7 @@ GameObject:
   - component: {fileID: 6461302639011844719}
   - component: {fileID: 3250594081004899085}
   - component: {fileID: 2569067092173524441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_Chimenea_Nuclear (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5281,7 +5282,7 @@ GameObject:
   - component: {fileID: 1768768734829900742}
   - component: {fileID: 4633402630588971893}
   - component: {fileID: 1062834363116909674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_FabricaNuclear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5367,7 +5368,7 @@ GameObject:
   - component: {fileID: 2362508798600702827}
   - component: {fileID: 7066996230330439184}
   - component: {fileID: 7742857255421150864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_FabricaNuclear (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5453,7 +5454,7 @@ GameObject:
   - component: {fileID: 4073733835848429717}
   - component: {fileID: 206695261290264560}
   - component: {fileID: 5150681935108955404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10287,6 +10288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Derrumbe 1
       objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.7000122
@@ -10361,6 +10366,10 @@ PrefabInstance:
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_Name
       value: Derrumbe
+      objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_LocalPosition.x

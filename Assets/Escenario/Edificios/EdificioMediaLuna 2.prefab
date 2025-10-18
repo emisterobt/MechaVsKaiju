@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7163847699773793897}
   - component: {fileID: 5896766722199525080}
   - component: {fileID: 6021477038122911235}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 976911695153889386}
   - component: {fileID: 8942327920756111561}
   - component: {fileID: 8452983667735414991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 2393572344360836705}
   - component: {fileID: 4754996657723591990}
   - component: {fileID: 9190115484234965073}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 6546005737063572525}
   - component: {fileID: 5775651222433984980}
   - component: {fileID: 4131010834765885948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TechoPizza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 7965339666825654332}
   - component: {fileID: 3752009211606679530}
   - component: {fileID: 103136322211725489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 2511556650987610075}
   - component: {fileID: 1051650701781063290}
   - component: {fileID: 4568410392722918716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 3304400356333947327}
   - component: {fileID: 3832753291331085156}
   - component: {fileID: 4098745875238446458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 6419167762093226637}
   - component: {fileID: 2323796420420526149}
   - component: {fileID: 4297062434115554991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 2855611313721955238}
   - component: {fileID: 5031006236577224116}
   - component: {fileID: 7431198996802725308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 5667023152175253733}
   - component: {fileID: 6371590542508028892}
   - component: {fileID: 8705500784420854793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7377016627759948342}
   - component: {fileID: 6045548065334421870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edpizza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -943,7 +943,7 @@ GameObject:
   - component: {fileID: 7864136770038916979}
   - component: {fileID: 752281474598335644}
   - component: {fileID: 390039633749063515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1029,7 @@ GameObject:
   - component: {fileID: 7949574055491570390}
   - component: {fileID: 301525002843124962}
   - component: {fileID: 544862276295654727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,7 +1116,7 @@ GameObject:
   - component: {fileID: 4288200674385574061}
   - component: {fileID: 1986777621444978394}
   - component: {fileID: 5422036307238169169}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioMediaLuna 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,6 +1158,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   particle: {fileID: 2455091407201625258}
   particle2: {fileID: 2922170265617003924}
+  escombros: {fileID: 1124342847030804506, guid: 41fb2ff0b32df1840a3f93ca6348198e, type: 3}
 --- !u!95 &1986777621444978394
 Animator:
   serializedVersion: 7
@@ -1212,7 +1213,7 @@ GameObject:
   - component: {fileID: 1964985785002510316}
   - component: {fileID: 1042009004677477281}
   - component: {fileID: 8302526486380199285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ventilacion (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1298,7 +1299,7 @@ GameObject:
   - component: {fileID: 6297146992464018805}
   - component: {fileID: 5915783755378735243}
   - component: {fileID: 3703532677730091861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1384,7 +1385,7 @@ GameObject:
   - component: {fileID: 5620247691131003509}
   - component: {fileID: 4298767565325601720}
   - component: {fileID: 1401783834395786217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tinaco (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1470,7 +1471,7 @@ GameObject:
   - component: {fileID: 3042884611955292404}
   - component: {fileID: 1245458011114448782}
   - component: {fileID: 2782347207305617780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SalidaTecho (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1556,7 +1557,7 @@ GameObject:
   - component: {fileID: 2092896435167715245}
   - component: {fileID: 7870258893262138939}
   - component: {fileID: 1244040588080163552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1642,7 +1643,7 @@ GameObject:
   - component: {fileID: 2694062363141806287}
   - component: {fileID: 9076015852881797292}
   - component: {fileID: 7697049442507232090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1728,7 +1729,7 @@ GameObject:
   - component: {fileID: 9155915395564172967}
   - component: {fileID: 8875642179406756272}
   - component: {fileID: 336268119733170414}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EdificioPizza (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1815,6 +1816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Derrumbe 1
       objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.87
@@ -1881,6 +1886,10 @@ PrefabInstance:
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_Name
       value: Derrumbe
+      objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_LocalPosition.x

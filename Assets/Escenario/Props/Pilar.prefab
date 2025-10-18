@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7134415628216261103}
   - component: {fileID: 7239676057567586420}
   - component: {fileID: 8692154272578872476}
+  - component: {fileID: -7313475562016124411}
   m_Layer: 0
   m_Name: Pilar
   m_TagString: Untagged
@@ -109,6 +110,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.743356, y: 0.435353, z: 0.118562}
   m_Center: {x: 0, y: 0.2176765, z: 0}
+--- !u!114 &-7313475562016124411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9200351703763083544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d5d8df0ca3fe4da5dee39f3f788ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  actualHealth: 0
+  particle: {fileID: 8198302378454213857}
 --- !u!1001 &809548078171614749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,5 +185,10 @@ PrefabInstance:
 --- !u!4 &7040396807433823163 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7676548465931308454, guid: 30166275c422c6a41affaeb55473736a, type: 3}
+  m_PrefabInstance: {fileID: 809548078171614749}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8198302378454213857 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8861447047279282940, guid: 30166275c422c6a41affaeb55473736a, type: 3}
   m_PrefabInstance: {fileID: 809548078171614749}
   m_PrefabAsset: {fileID: 0}

@@ -58,6 +58,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   actualHealth: 0
+  particle: {fileID: 2028061782452638457}
 --- !u!23 &5236423174208768357
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -186,5 +187,10 @@ PrefabInstance:
 --- !u!4 &889360294386685347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7676548465931308454, guid: 30166275c422c6a41affaeb55473736a, type: 3}
+  m_PrefabInstance: {fileID: 7412696638619555845}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2028061782452638457 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8861447047279282940, guid: 30166275c422c6a41affaeb55473736a, type: 3}
   m_PrefabInstance: {fileID: 7412696638619555845}
   m_PrefabAsset: {fileID: 0}

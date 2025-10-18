@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public CheckGround grndChk;
     public bool lockMovement = false;
     [SerializeField] private bool isJumping = false;
+
+    public bool inGround;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,6 +33,15 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
+
+        if (grndChk.IsGrounded())
+        {
+            inGround = true;
+        }
+        else
+        {
+            inGround = false;
+        }
     }
 
 
@@ -62,4 +73,7 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isJumping = false;
     }
+
+
+
 }

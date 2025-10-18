@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2319742413943682902}
   - component: {fileID: 2986202225147888700}
   - component: {fileID: 2968204214169669378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,6 +75,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   particle: {fileID: 1159728200347653794}
   particle2: {fileID: 5235646569190626699}
+  escombros: {fileID: 6025910492822954512, guid: aa704640db9ff8242b550d5250b65a22, type: 3}
 --- !u!95 &2968204214169669378
 Animator:
   serializedVersion: 7
@@ -108,7 +109,7 @@ GameObject:
   - component: {fileID: 9190384306099883196}
   - component: {fileID: 6774512408877116212}
   - component: {fileID: 3518782142521171581}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +195,7 @@ GameObject:
   - component: {fileID: 3072094917500609635}
   - component: {fileID: 1718330647734123976}
   - component: {fileID: 67931059261186481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +281,7 @@ GameObject:
   - component: {fileID: 6796512587311656398}
   - component: {fileID: 6115158699069637191}
   - component: {fileID: 3039278024326046695}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificio X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +373,7 @@ GameObject:
   - component: {fileID: 1113361614359641502}
   - component: {fileID: 9083370799193340191}
   - component: {fileID: 3303217550186651701}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +459,7 @@ GameObject:
   - component: {fileID: 4768217353401370941}
   - component: {fileID: 3711683838716899154}
   - component: {fileID: 1705424816899727228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +545,7 @@ GameObject:
   - component: {fileID: 7854724931058562122}
   - component: {fileID: 3964499377767534559}
   - component: {fileID: 415133632476834048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +631,7 @@ GameObject:
   - component: {fileID: 6793392213189003738}
   - component: {fileID: 9217043372460389240}
   - component: {fileID: 1702371279664354655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +717,7 @@ GameObject:
   - component: {fileID: 395978856701293674}
   - component: {fileID: 8031696891824742438}
   - component: {fileID: 520739413802889365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -802,7 +803,7 @@ GameObject:
   - component: {fileID: 6369528606436763825}
   - component: {fileID: 3565809903916677620}
   - component: {fileID: 7202467693730983258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -888,7 +889,7 @@ GameObject:
   - component: {fileID: 5497557988632625613}
   - component: {fileID: 5618153610474159800}
   - component: {fileID: 5783629135074981538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -974,7 +975,7 @@ GameObject:
   - component: {fileID: 4955792874333078187}
   - component: {fileID: 5846488291607261710}
   - component: {fileID: 8977799026971563461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1060,7 +1061,7 @@ GameObject:
   - component: {fileID: 2989117510032701377}
   - component: {fileID: 5573286252198081243}
   - component: {fileID: 3388999241793849029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1147,7 @@ GameObject:
   - component: {fileID: 9192486867959993557}
   - component: {fileID: 1565538930293275854}
   - component: {fileID: 2550112194094054722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1232,7 +1233,7 @@ GameObject:
   - component: {fileID: 5394502945881025350}
   - component: {fileID: 4090767921421648325}
   - component: {fileID: 929835093552953750}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1318,7 +1319,7 @@ GameObject:
   - component: {fileID: 7670440043993027175}
   - component: {fileID: 2611401883866828712}
   - component: {fileID: 585529288305573184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1404,7 +1405,7 @@ GameObject:
   - component: {fileID: 1878556137842296915}
   - component: {fileID: 289903162903063803}
   - component: {fileID: 1250755546296199970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1490,7 +1491,7 @@ GameObject:
   - component: {fileID: 4322770420595516087}
   - component: {fileID: 419442180926126391}
   - component: {fileID: 2469684024509265580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1576,7 +1577,7 @@ GameObject:
   - component: {fileID: 7455342650265719167}
   - component: {fileID: 128816598614538489}
   - component: {fileID: 4838734905069039984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Edificios2_X_techo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1663,6 +1664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Derrumbe 1
       objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3200073
@@ -1729,6 +1734,10 @@ PrefabInstance:
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_Name
       value: Derrumbe
+      objectReference: {fileID: 0}
+    - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7730542163261795948, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_LocalPosition.x

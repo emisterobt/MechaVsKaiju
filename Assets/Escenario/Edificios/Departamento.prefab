@@ -607,7 +607,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   particle: {fileID: 8650705496348760812}
   particle2: {fileID: 9101616970039260977}
-  escombros: {fileID: 6025910492822954512, guid: aa704640db9ff8242b550d5250b65a22, type: 3}
+  escombros:
+  - {fileID: 6175640715059847185, guid: cb3cea6190b051340834b6613f352adb, type: 3}
+  - {fileID: 6025910492822954512, guid: aa704640db9ff8242b550d5250b65a22, type: 3}
+  - {fileID: 1124342847030804506, guid: 41fb2ff0b32df1840a3f93ca6348198e, type: 3}
 --- !u!95 &1229986130449385201
 Animator:
   serializedVersion: 7

@@ -873,7 +873,10 @@ MonoBehaviour:
   anim: {fileID: 0}
   particle: {fileID: 7672939713588260054}
   particle2: {fileID: 1110463954232027715}
-  escombros: {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
+  escombros:
+  - {fileID: 6175640715059847185, guid: cb3cea6190b051340834b6613f352adb, type: 3}
+  - {fileID: 6025910492822954512, guid: aa704640db9ff8242b550d5250b65a22, type: 3}
+  - {fileID: 1124342847030804506, guid: 41fb2ff0b32df1840a3f93ca6348198e, type: 3}
 --- !u!65 &3451369750263874163
 BoxCollider:
   m_ObjectHideFlags: 0

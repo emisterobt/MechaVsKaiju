@@ -39,7 +39,11 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             agent.SetDestination(endPoint.position);
-            
+
+            if (agent.hasPath && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance <= agent.stoppingDistance)
+            {
+                Debug.Log("llego a la central nuclear");
+            }
         }
     }
 
@@ -62,6 +66,7 @@ public class EnemyMovement : MonoBehaviour
     {
         return distanceToEnd = Vector3.Distance(transform.position, endPoint.position);
     }
+
 
     private void OnDrawGizmosSelected()
     {

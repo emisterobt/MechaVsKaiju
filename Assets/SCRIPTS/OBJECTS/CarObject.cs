@@ -6,6 +6,10 @@ public class CarObject : MonoBehaviour, IInteractable
     public bool isThrown = false;
     public AttackHandler attackHandler;
 
+    private void Start()
+    {
+        attackHandler = GameObject.FindFirstObjectByType<AttackHandler>();
+    }
 
     public void Interacting()
     {

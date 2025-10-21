@@ -13,11 +13,15 @@ public class EnemyAttackDamage : MonoBehaviour
         {
             other.GetComponent<IDamageable>().TakeDamage(mAttack.tailDamage);
             Rigidbody pRb = other.GetComponent<Rigidbody>();
-            
+
         }
         else if (!other.CompareTag("Enemy"))
         {
-            other.GetComponent<IDamageable>().TakeDamage(mAttack.tailDamage);
+            if (other.GetComponent<IDamageable>() != null)
+            {
+                other.GetComponent<IDamageable>().TakeDamage(mAttack.tailDamage);
+
+            }
 
         }
     }

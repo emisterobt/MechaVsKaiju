@@ -1957,7 +1957,10 @@ MonoBehaviour:
   anim: {fileID: 3434824821591359833}
   particle: {fileID: 1562326283841308296}
   particle2: {fileID: 3232206255741019351}
-  escombros: {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
+  escombros:
+  - {fileID: 6175640715059847185, guid: cb3cea6190b051340834b6613f352adb, type: 3}
+  - {fileID: 6025910492822954512, guid: aa704640db9ff8242b550d5250b65a22, type: 3}
+  - {fileID: 1124342847030804506, guid: 41fb2ff0b32df1840a3f93ca6348198e, type: 3}
 --- !u!95 &3434824821591359833
 Animator:
   serializedVersion: 7

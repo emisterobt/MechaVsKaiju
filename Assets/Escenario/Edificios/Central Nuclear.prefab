@@ -5076,7 +5076,8 @@ MonoBehaviour:
   anim: {fileID: 1140654727120119668}
   particle: {fileID: 1337096056966065360}
   particle2: {fileID: 527923452134755751}
-  escombros: {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
+  escombros:
+  - {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
 --- !u!95 &1140654727120119668
 Animator:
   serializedVersion: 7

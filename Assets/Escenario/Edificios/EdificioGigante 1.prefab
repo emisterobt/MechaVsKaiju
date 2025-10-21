@@ -10467,7 +10467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4543566706439801646}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.419159, y: 6.7348185, z: -10.965729}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10494,7 +10494,8 @@ MonoBehaviour:
   anim: {fileID: 2187731512094607761}
   particle: {fileID: 6705388999633126631}
   particle2: {fileID: 6894697365677051793}
-  escombros: {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
+  escombros:
+  - {fileID: 8600734877495330882, guid: 25bf0c135177d164688b43d3eb7f2cd4, type: 3}
 --- !u!65 &6476849847934725943
 BoxCollider:
   m_ObjectHideFlags: 0

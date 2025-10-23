@@ -42,7 +42,6 @@ public class EnemyMovement : MonoBehaviour
 
             if (agent.hasPath && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance <= agent.stoppingDistance)
             {
-                Debug.Log("llego a la central nuclear");
             }
         }
     }
@@ -54,7 +53,6 @@ public class EnemyMovement : MonoBehaviour
             followPlayer = true;
             transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
             agent.SetDestination(player.position);
-            Debug.Log("En rango del Jugador");
         }
         else
         {

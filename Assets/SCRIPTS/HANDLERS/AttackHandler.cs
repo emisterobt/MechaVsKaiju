@@ -55,12 +55,15 @@ public class AttackHandler : MonoBehaviour
     private Camera mainCamera;
     private PlayerMovement pM;
     private PlayerDash pDash;
+    private CameraController camController;
 
     private Ray ray;
     private Vector3 direccionRayo;
     private Vector3 puntoObjetivo;
 
-
+    private Coroutine coroutine;
+    
+    private WaitForSeconds waitFor = new WaitForSeconds(1f);
     private void Start()
     {
         //animator = GetComponent<Animator>();
@@ -68,9 +71,10 @@ public class AttackHandler : MonoBehaviour
         currentMissiles = maxMissiles;
         pM = GetComponent<PlayerMovement>();
         pDash = GetComponent<PlayerDash>();
+        camController = mainCamera.transform.parent.GetComponent<CameraController>();
 
         StartCoroutine(ChargeLaser());
-        
+        coroutine = StartCoroutine(OutOfCombatMode());
     }
 
     private void Update()
@@ -99,14 +103,12 @@ public class AttackHandler : MonoBehaviour
             if (objectInHand != null)
             {
                 StartCoroutine(ThrowObject());
-                Debug.Log("Throw");
             }
             else
             {
                 if (Input.GetKey(KeyCode.S))
                 {
                     hitType = 1;
-                    Debug.Log("Kick");
                 }
                 else if (Input.GetKey(KeyCode.Space))
                 {
@@ -116,29 +118,28 @@ public class AttackHandler : MonoBehaviour
                 else
                 {
                     hitType = 0;
-                    Debug.Log("Normal");
                 }
 
                 StartCoroutine(MeleeAttack());
-                Debug.Log("Melee");
             }
         }
 
         if (InputController.Instance.SecondaryAttack() && canShootMissile && pDash.isDashing == false)
         {
             StartCoroutine(ShootMissiles());
-            Debug.Log("Missile");
         }
 
         if (InputController.Instance.SpecialAttack() && pDash.isDashing == false && canUseLaser)
         {
             StartCoroutine(UseLaser());
-            Debug.Log("Laser");
         }
     }
 
     private IEnumerator MeleeAttack()
     {
+        StopCoroutine(coroutine);
+        coroutine = null;
+        camController.inCombat = true;
         isAttacking = true;
         attackCollider.gameObject.SetActive(true);
         isPunching = true;
@@ -148,6 +149,7 @@ public class AttackHandler : MonoBehaviour
         attackCollider.gameObject.SetActive(false);
         isAttacking = false ;
         isPunching = false ;
+        coroutine = StartCoroutine(OutOfCombatMode());
     }
 
     private IEnumerator ThrowObject()
@@ -185,6 +187,7 @@ public class AttackHandler : MonoBehaviour
         isAttacking = true;
         canShootMissile = false;
         pM.lockMovement = true;
+
         //animator
         yield return new WaitForSeconds(0.2f);
 
@@ -208,6 +211,7 @@ public class AttackHandler : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         pM.lockMovement = false;
+
         yield return new WaitForSeconds(missileCooldown);
         canShootMissile = true;
     }
@@ -216,6 +220,7 @@ public class AttackHandler : MonoBehaviour
     {
         isAttacking = true;
         canUseLaser = false;
+        camController.lockMainCamera = true;
         //animator
         pM.lockMovement = true;
         LineRenderer laser = Instantiate(laserPrefab, laserOrigin.position, laserOrigin.rotation);
@@ -242,8 +247,10 @@ public class AttackHandler : MonoBehaviour
         StartCoroutine(ChargeLaser());
         isAttacking = false;
         pM.lockMovement = false;
+        camController.lockMainCamera = false;
 
-        
+
+
         //yield return new WaitForSeconds(laserCooldown);
         //canUseLaser = true;
 
@@ -262,6 +269,12 @@ public class AttackHandler : MonoBehaviour
         canUseLaser = true;
     }
 
+    public IEnumerator OutOfCombatMode()
+    {
+        
+        yield return waitFor;
+        camController.inCombat = false;
+    }
 
     private void OnDrawGizmos()
     {

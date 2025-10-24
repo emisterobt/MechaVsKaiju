@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class SmoothBlink : MonoBehaviour
 {
-    private MeshRenderer lidRenderer;
+    // Usamos 'Renderer', que es la clase base para MeshRenderer y SkinnedMeshRenderer.
+    // Esto asegura que podemos acceder al material y a las UVs en ambos casos.
+    private Renderer lidRenderer;
     private const int FRAME_COUNT = 4; // Índices: 0, 1, 2, 3
 
     // --- VARIABLES PÚBLICAS CONTROLABLES EN UNITY ---
@@ -20,7 +22,23 @@ public class SmoothBlink : MonoBehaviour
 
     void Awake()
     {
-        lidRenderer = GetComponent<MeshRenderer>();
+        // 1. Intenta conseguir el SkinnedMeshRenderer (el más probable después del rigging)
+        lidRenderer = GetComponent<SkinnedMeshRenderer>();
+
+        // 2. Si falló, intenta conseguir un MeshRenderer (el original o si fue exportado estático)
+        if (lidRenderer == null)
+        {
+            lidRenderer = GetComponent<MeshRenderer>();
+        }
+
+        // 3. Si ambos fallan, muestra el error FATAL.
+        if (lidRenderer == null)
+        {
+            Debug.LogError("FATAL: El script 'SmoothBlink' requiere un MeshRenderer o SkinnedMeshRenderer en el GameObject '" + gameObject.name + "' para funcionar con UV Offset.", this);
+            enabled = false;
+            return;
+        }
+
         // Aseguramos que el ojo inicie en el estado abierto (Frame 3)
         SetNewFrame(FRAME_COUNT - 1);
     }
@@ -65,7 +83,7 @@ public class SmoothBlink : MonoBehaviour
 
     void SetNewFrame(int frameIndex)
     {
-        // Calcula el offset y lo aplica al material
+        // Calcula el offset y lo aplica al material (esto funciona para ambos Renderers)
         float xOffset = frameIndex * (1f / FRAME_COUNT);
         Vector2 offset = new Vector2(xOffset, 0f);
         lidRenderer.material.SetTextureOffset("_MainTex", offset);

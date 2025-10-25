@@ -38,7 +38,17 @@ public class BuildingHealthHandler : MonoBehaviour , IDamageable
         collider.enabled = false;
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.gameObject.CompareTag("Enemy"))
+        {
+            return;
+        }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(actualHealth);
+        }
+    }
     private int RandomNumber()
     {
 

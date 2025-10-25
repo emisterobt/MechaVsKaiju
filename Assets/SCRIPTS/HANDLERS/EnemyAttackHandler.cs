@@ -8,7 +8,7 @@ public class EnemyAttackHandler : MonoBehaviour
     public int attacksRemaining = 3;
 
     public EnemyMovement eMove;
-
+    private KaijuAnimationController animCtrl;
 
     [Header("Flame Attack")]
     public Transform flameOrigin;
@@ -28,6 +28,7 @@ public class EnemyAttackHandler : MonoBehaviour
     private void Start()
     {
         eMove = GetComponent<EnemyMovement>();
+        animCtrl = GetComponent<KaijuAnimationController>();
     }
 
     private void Update()
@@ -57,11 +58,13 @@ public class EnemyAttackHandler : MonoBehaviour
     {
         isAttacking = true;
         attacksDone += 1;
-        yield return new WaitForSeconds(.6f);
-        //Do animation
+        yield return new WaitForSeconds(1.2f);
+        animCtrl.AttackColaAnim();
         tailCollider.gameObject.SetActive(true);
+        animCtrl.WalkAnim(false);
         eMove.agent.isStopped = true;
         yield return new WaitForSeconds(1f);
+        animCtrl.WalkAnim(true);
         tailCollider.gameObject.SetActive(false);
         eMove.agent.isStopped = false;
         yield return new WaitForSeconds(tailCooldown);
@@ -72,13 +75,16 @@ public class EnemyAttackHandler : MonoBehaviour
     {
         isAttacking = true;
         yield return new WaitForSeconds(flameChargeTime);
-        //Do Animation
+        animCtrl.AttackFireAnim();
         Debug.Log("Lanzando Fuego");
         //flame Instance o Active
         eMove.agent.isStopped = true;
+        animCtrl.WalkAnim(false);
         yield return new WaitForSeconds(flameDuration);
-        isAttacking = false;
+        animCtrl.WalkAnim(true);
         attacksDone = 0;
         eMove.agent.isStopped = false;
+        yield return new WaitForSeconds(tailCooldown);
+        isAttacking = false;
     }
 }

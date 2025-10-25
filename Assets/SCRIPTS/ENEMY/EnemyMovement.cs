@@ -17,17 +17,22 @@ public class EnemyMovement : MonoBehaviour
     private float distanceToEnd;
     public float initialDistance;
 
+    private KaijuAnimationController animCntrl;
+    private bool isMoving = false;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         initialDistance = Vector3.Distance(transform.position, endPoint.position);
+        animCntrl = GetComponent<KaijuAnimationController>();
     }
 
     private void Update()
     {
         PlayerChase();
         WalkToEndPoint();
+        animCntrl.WalkAnim(isMoving);
     }
 
     public void WalkToEndPoint()
@@ -39,9 +44,13 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             agent.SetDestination(endPoint.position);
+            isMoving = true;
+
 
             if (agent.hasPath && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance <= agent.stoppingDistance)
             {
+                isMoving = false;
+                //Cuando llega al destino
             }
         }
     }
@@ -53,6 +62,7 @@ public class EnemyMovement : MonoBehaviour
             followPlayer = true;
             transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
             agent.SetDestination(player.position);
+            isMoving = true;
         }
         else
         {
@@ -72,4 +82,6 @@ public class EnemyMovement : MonoBehaviour
 
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
+
+
 }

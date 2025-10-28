@@ -24,6 +24,9 @@ public class PlayerAnimationController : MonoBehaviour
         BasicAnimations();
         Dash();
         Attack();
+        Laser();
+        isBlocking();
+        Misil();
 
     }
 
@@ -51,7 +54,20 @@ public class PlayerAnimationController : MonoBehaviour
         anim.SetInteger("Attack", attackHandler.hitType);
     }
 
+    public void Laser()
+    {
+        anim.SetBool("Laser", attackHandler.isUsingLaser);
+    }
 
+    public void Misil()
+    {
+        anim.SetBool("Misil",attackHandler.isShootMissile);
+    }
+
+    public void isBlocking()
+    {
+        anim.SetBool("isBlocking", attackHandler.isBlocking);
+    }
 
 
 

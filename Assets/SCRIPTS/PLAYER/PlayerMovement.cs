@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 [RequireComponent(typeof(CheckGround), typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
@@ -74,6 +75,27 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
     }
 
+    public void PushAway(float impulse)
+    {
+        StartCoroutine(Launch(impulse));
+    }
+    public IEnumerator Launch(float impulse)
+    {
+        lockMovement = true;
+        float elapsedTime = 0f;
+        Debug.Log("P");
 
+        while (elapsedTime < 1f)
+        {
+            rb.useGravity = false;
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+            rb.AddForce(-transform.forward * impulse, ForceMode.Force);
+            elapsedTime += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
 
+        rb.useGravity = true;
+        lockMovement = false;
+        Debug.Log("movimiento habilitado");
+    }
 }

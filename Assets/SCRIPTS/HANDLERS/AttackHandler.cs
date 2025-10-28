@@ -29,7 +29,7 @@ public class AttackHandler : MonoBehaviour
     public float laserCooldown;
     public bool canUseLaser = false;
     public LineRenderer laserPrefab;
-    public bool isUsingLaser;
+    public bool isUsingLaser = false;
     public float timer;
 
     [Header("Missiles")]
@@ -40,7 +40,7 @@ public class AttackHandler : MonoBehaviour
     public float explosionRadius;
     public float missileCooldown;
     private bool canShootMissile = true;
-    public bool isShootMissile;
+    public bool isShootMissile = false;
     public int currentMissiles;
 
     [Header("Blocking/Defense")]
@@ -90,7 +90,6 @@ public class AttackHandler : MonoBehaviour
         if (InputController.Instance.Blocking())
         {
             isBlocking = true;
-            Debug.Log("Is Blocking");
             return;
         }
         else
@@ -187,7 +186,7 @@ public class AttackHandler : MonoBehaviour
         isAttacking = true;
         canShootMissile = false;
         pM.lockMovement = true;
-
+        isShootMissile = true;
         //animator
         yield return new WaitForSeconds(0.2f);
 
@@ -211,6 +210,7 @@ public class AttackHandler : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         pM.lockMovement = false;
+        isShootMissile = false;
 
         yield return new WaitForSeconds(missileCooldown);
         canShootMissile = true;
@@ -221,8 +221,9 @@ public class AttackHandler : MonoBehaviour
         isAttacking = true;
         canUseLaser = false;
         camController.lockMainCamera = true;
-        //animator
+        isUsingLaser = true;
         pM.lockMovement = true;
+        yield return new WaitForSeconds(.5f);
         LineRenderer laser = Instantiate(laserPrefab, laserOrigin.position, laserOrigin.rotation);
         laser.transform.SetParent(laserOrigin);
 
@@ -246,6 +247,7 @@ public class AttackHandler : MonoBehaviour
         Destroy(laser.gameObject);
         StartCoroutine(ChargeLaser());
         isAttacking = false;
+        isUsingLaser=false;
         pM.lockMovement = false;
         camController.lockMainCamera = false;
 

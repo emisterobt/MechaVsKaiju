@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: ca0f2c5ee734504438cbf477dd6eb410
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2041808390773793087
+    second: Nubes_txt_0
+  - first:
+      213: -4163786285540346265
+    second: Nubes_txt_1
+  - first:
+      213: 5161039645190097466
+    second: Nubes_txt_2
+  - first:
+      213: 5613959548069886519
+    second: Nubes_txt_3
+  - first:
+      213: -5650272595796770607
+    second: Nubes_txt_4
+  - first:
+      213: -5358810947640519664
+    second: Nubes_txt_5
+  - first:
+      213: 1587085820540207647
+    second: Nubes_txt_6
+  - first:
+      213: 5429329398423797902
+    second: Nubes_txt_7
+  - first:
+      213: -262994062862449643
+    second: Nubes_txt_8
+  - first:
+      213: 3662048294836917024
+    second: Nubes_txt_9
+  - first:
+      213: -6335427218288359748
+    second: Nubes_txt_10
+  - first:
+      213: -7277891242366144679
+    second: Nubes_txt_11
+  - first:
+      213: -7723935765675241033
+    second: Nubes_txt_12
+  - first:
+      213: 6317763857927039519
+    second: Nubes_txt_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nubes_txt_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 921
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce1488261a0aa3e0800000000000000
+      internalID: -2041808390773793087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 584
+        width: 321
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76679b91f624736c0800000000000000
+      internalID: -4163786285540346265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 899
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a83438632bf9740800000000000000
+      internalID: 5161039645190097466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_3
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 606
+        width: 408
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a3e16077ac8ed40800000000000000
+      internalID: 5613959548069886519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 579
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0c863b2033691b0800000000000000
+      internalID: -5650272595796770607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_5
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 551
+        width: 79
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0149967d5dda1a5b0800000000000000
+      internalID: -5358810947640519664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_6
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 565
+        width: 70
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f12cb512526760610800000000000000
+      internalID: 1587085820540207647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_7
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 108
+        width: 359
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80c2a1725ad85b40800000000000000
+      internalID: 5429329398423797902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_8
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 360
+        width: 93
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5140c011b48a95cf0800000000000000
+      internalID: -262994062862449643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_9
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 390
+        width: 107
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0235414958532d230800000000000000
+      internalID: 3662048294836917024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_10
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 9
+        width: 370
+        height: 456
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6c491f28a0418a0800000000000000
+      internalID: -6335427218288359748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_11
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 276
+        width: 70
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95fe6d8997cbffa90800000000000000
+      internalID: -7277891242366144679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_12
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 18
+        width: 95
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b11ef228511fc490800000000000000
+      internalID: -7723935765675241033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nubes_txt_13
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 26
+        width: 71
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1aea8e71c43da750800000000000000
+      internalID: 6317763857927039519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Nubes_txt_0: -2041808390773793087
+      Nubes_txt_1: -4163786285540346265
+      Nubes_txt_10: -6335427218288359748
+      Nubes_txt_11: -7277891242366144679
+      Nubes_txt_12: -7723935765675241033
+      Nubes_txt_13: 6317763857927039519
+      Nubes_txt_2: 5161039645190097466
+      Nubes_txt_3: 5613959548069886519
+      Nubes_txt_4: -5650272595796770607
+      Nubes_txt_5: -5358810947640519664
+      Nubes_txt_6: 1587085820540207647
+      Nubes_txt_7: 5429329398423797902
+      Nubes_txt_8: -262994062862449643
+      Nubes_txt_9: 3662048294836917024
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

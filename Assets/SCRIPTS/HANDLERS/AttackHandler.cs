@@ -10,7 +10,8 @@ public class AttackHandler : MonoBehaviour
     public Transform laserOrigin;
     public Transform attackCollider;
 
-    public GameObject missilePrefab;
+    public GameObject missileRPrefab;
+    public GameObject missileLPrefab;
 
     [Header("Melee Attack")]
     public float meleeDamage;
@@ -20,7 +21,7 @@ public class AttackHandler : MonoBehaviour
     [Header("Throw Attack")]
     public float throwForce;
     public GameObject objectInHand;
-    public bool isThrowing;//probablemente use triigetr en animation
+    public bool isThrowing;
 
     [Header("Laser Attack")]
     public float laserRange;
@@ -136,9 +137,9 @@ public class AttackHandler : MonoBehaviour
 
     private IEnumerator MeleeAttack()
     {
-        StopCoroutine(coroutine);
-        coroutine = null;
-        camController.inCombat = true;
+        //StopCoroutine(coroutine);
+        //coroutine = null;
+        //camController.inCombat = true;
         isAttacking = true;
         attackCollider.gameObject.SetActive(true);
         isPunching = true;
@@ -148,12 +149,13 @@ public class AttackHandler : MonoBehaviour
         attackCollider.gameObject.SetActive(false);
         isAttacking = false ;
         isPunching = false ;
-        coroutine = StartCoroutine(OutOfCombatMode());
+        //coroutine = StartCoroutine(OutOfCombatMode());
     }
 
     private IEnumerator ThrowObject()
     {
         isAttacking = true;
+        isThrowing = true;
         //animator throw
 
         yield return new WaitForSeconds(0.3f);
@@ -179,6 +181,7 @@ public class AttackHandler : MonoBehaviour
 
         objectInHand = null;
         isAttacking = false;
+        isThrowing = false ;
     }
 
     private IEnumerator ShootMissiles()
@@ -190,10 +193,10 @@ public class AttackHandler : MonoBehaviour
         //animator
         yield return new WaitForSeconds(0.2f);
 
-        if (missilePrefab != null && missilePointL != null && missilePointR != null && currentMissiles > 0)
+        if (missileRPrefab != null && missileLPrefab != null && missilePointL != null && missilePointR != null && currentMissiles > 0)
         {
-            GameObject missileL = Instantiate(missilePrefab, missilePointL.position, missilePointL.rotation);
-            GameObject missileR = Instantiate(missilePrefab, missilePointR.position, missilePointR.rotation);
+            GameObject missileL = Instantiate(missileLPrefab, missilePointL.position, missilePointL.rotation);
+            GameObject missileR = Instantiate(missileRPrefab, missilePointR.position, missilePointR.rotation);
             Rigidbody rbL = missileL.GetComponent<Rigidbody>();
             Rigidbody rbR = missileR.GetComponent<Rigidbody>();
 
@@ -224,8 +227,7 @@ public class AttackHandler : MonoBehaviour
         isUsingLaser = true;
         pM.lockMovement = true;
         yield return new WaitForSeconds(.5f);
-        LineRenderer laser = Instantiate(laserPrefab, laserOrigin.position, laserOrigin.rotation);
-        laser.transform.SetParent(laserOrigin);
+        GameObject laser = laserOrigin.GetChild(0).gameObject;
 
         float timer = 0f;
         while (timer < laserDuration)
@@ -236,15 +238,13 @@ public class AttackHandler : MonoBehaviour
 
             laserOrigin.LookAt(puntoObjetivo);
 
-            laser.SetPosition(0, Vector3.zero);
-            laser.SetPosition(1, new Vector3(0,0,50f));
-
+            laser.SetActive(true);
 
             timer += Time.deltaTime;
             yield return null;
         }
 
-        Destroy(laser.gameObject);
+        laser.SetActive(false);
         StartCoroutine(ChargeLaser());
         isAttacking = false;
         isUsingLaser=false;

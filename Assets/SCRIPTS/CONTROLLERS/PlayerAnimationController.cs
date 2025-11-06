@@ -27,6 +27,7 @@ public class PlayerAnimationController : MonoBehaviour
         Laser();
         isBlocking();
         Misil();
+        Throw();
 
     }
 
@@ -69,6 +70,14 @@ public class PlayerAnimationController : MonoBehaviour
         anim.SetBool("isBlocking", attackHandler.isBlocking);
     }
 
+    public void Throw()
+    {
+        anim.SetBool("doThrow", attackHandler.isThrowing);
+    }
 
+    public void RecieveDamage()
+    {
+        anim.SetTrigger("isDamaged");
+    }
 
 }

@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackHndlr: {fileID: 0}
-  explosionEffect: {fileID: 7928642050422716393, guid: 5b8a7654815a0e74cb69ccd7db6ad1be, type: 3}
+  explosionEffect: {fileID: 4186030177429508698, guid: c7607334f39685043bf58945ab2e4051, type: 3}
 --- !u!1001 &241915230772412208
 PrefabInstance:
   m_ObjectHideFlags: 0

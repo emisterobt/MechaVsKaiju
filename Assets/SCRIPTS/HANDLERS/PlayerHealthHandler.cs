@@ -6,10 +6,12 @@ public class PlayerHealthHandler : MonoBehaviour, IDamageable
     public float actualHealth;
 
     private AttackHandler attackHandler;
+    private PlayerAnimationController pAnim;
     private void Start()
     {
         actualHealth = maxHealth;
         attackHandler = GetComponent<AttackHandler>();
+        pAnim = GetComponent<PlayerAnimationController>();
     }
 
     private void Update()
@@ -28,6 +30,7 @@ public class PlayerHealthHandler : MonoBehaviour, IDamageable
         else
         {
             actualHealth -= damage;
+            pAnim.RecieveDamage();
         }
 
         if (actualHealth <= 0)

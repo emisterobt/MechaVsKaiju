@@ -73,7 +73,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Lumin: 0.55
+    - _Lumin: 0.358
     - _MaxLight: 0.641
     - _Metallic: 0
     - _MinLight: 0.603

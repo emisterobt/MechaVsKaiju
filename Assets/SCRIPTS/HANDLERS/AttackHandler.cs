@@ -149,7 +149,7 @@ public class AttackHandler : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         attackCollider.gameObject.SetActive(false);
         isPunching = false ;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         isAttacking = false ;
         pM.lockMovement = false;
         //coroutine = StartCoroutine(OutOfCombatMode());

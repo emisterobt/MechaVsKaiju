@@ -140,15 +140,18 @@ public class AttackHandler : MonoBehaviour
         //StopCoroutine(coroutine);
         //coroutine = null;
         //camController.inCombat = true;
+        pM.lockMovement = true;
         isAttacking = true;
         attackCollider.gameObject.SetActive(true);
         isPunching = true;
         //animator attack
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         attackCollider.gameObject.SetActive(false);
-        isAttacking = false ;
         isPunching = false ;
+        yield return new WaitForSeconds(0.5f);
+        isAttacking = false ;
+        pM.lockMovement = false;
         //coroutine = StartCoroutine(OutOfCombatMode());
     }
 

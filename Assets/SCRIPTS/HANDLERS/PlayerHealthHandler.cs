@@ -42,6 +42,7 @@ public class PlayerHealthHandler : MonoBehaviour, IDamageable
     public void OnDeath()
     {
         //Animacion derrota
+        StartCoroutine(GameManager.Instance.GameOver());
     }
 
     public float GetHealth(float healthRecovered)

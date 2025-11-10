@@ -39,6 +39,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isPunching
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isImpulsing
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3672976897860052521}
   m_Solo: 0
@@ -256,9 +259,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isImpulsing
     m_EventTreshold: 0
-  - m_ConditionMode: 4
-    m_ConditionEvent: Attack
-    m_EventTreshold: 2
+  - m_ConditionMode: 2
+    m_ConditionEvent: isPunching
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2251821015875413755}
   m_Solo: 0
@@ -649,9 +652,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isImpulsing
     m_EventTreshold: 0
-  - m_ConditionMode: 4
-    m_ConditionEvent: Attack
-    m_EventTreshold: 2
+  - m_ConditionMode: 2
+    m_ConditionEvent: isPunching
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2251821015875413755}
   m_Solo: 0
@@ -1664,6 +1667,9 @@ AnimatorStateTransition:
     m_EventTreshold: 2
   - m_ConditionMode: 1
     m_ConditionEvent: isPunching
+    m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: isImpulsing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3672976897860052521}

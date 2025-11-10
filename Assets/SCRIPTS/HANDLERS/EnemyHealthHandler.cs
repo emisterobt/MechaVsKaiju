@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyHealthHandler : MonoBehaviour, IDamageable
 {
@@ -25,6 +26,12 @@ public class EnemyHealthHandler : MonoBehaviour, IDamageable
 
     public void OnDeath()
     {
-        Destroy(this.gameObject);
+        StartCoroutine(GameManager.Instance.Victory());
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        KaijuAnimationController animCntrl = GetComponent<KaijuAnimationController>();
+
+        animCntrl.StunnedAnim(true);
+        agent.isStopped = true;
+        
     }
 }

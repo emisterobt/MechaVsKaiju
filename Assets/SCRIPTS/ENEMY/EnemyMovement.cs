@@ -51,6 +51,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 isMoving = false;
                 //Cuando llega al destino
+                StartCoroutine(GameManager.Instance.GameOver());
             }
         }
     }

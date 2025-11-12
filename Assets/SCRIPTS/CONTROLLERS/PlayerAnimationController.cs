@@ -28,6 +28,7 @@ public class PlayerAnimationController : MonoBehaviour
         isBlocking();
         Misil();
         Throw();
+        JumpHolding();
 
     }
 
@@ -41,6 +42,11 @@ public class PlayerAnimationController : MonoBehaviour
     public void TriggerJump()
     {
         anim.SetTrigger("isImpulsing");
+    }
+
+    public void JumpHolding()
+    {
+        anim.SetBool("JumpHold", InputController.Instance.JumpHold());
     }
 
     public void Dash()

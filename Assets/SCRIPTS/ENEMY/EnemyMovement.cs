@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,6 +21,9 @@ public class EnemyMovement : MonoBehaviour
     private KaijuAnimationController animCntrl;
     private bool isMoving = false;
 
+    [SerializeField] private float stunTime;
+    [SerializeField] public bool isStunned = false;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -30,9 +34,18 @@ public class EnemyMovement : MonoBehaviour
 
     private void Update()
     {
-        PlayerChase();
-        WalkToEndPoint();
-        animCntrl.WalkAnim(isMoving);
+        if (isStunned)
+        {
+            StartCoroutine(Stunned());
+            return;
+        }
+        else
+        {
+            PlayerChase();
+            WalkToEndPoint();
+            animCntrl.WalkAnim(isMoving);
+        }
+
     }
 
     public void WalkToEndPoint()
@@ -84,5 +97,14 @@ public class EnemyMovement : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 
-
+    public IEnumerator Stunned()
+    {
+        isStunned = true;
+        animCntrl.StunnedAnim(isStunned);
+        agent.isStopped = true;
+        yield return new WaitForSeconds(stunTime);
+        isStunned = false;
+        agent.isStopped = false;
+        animCntrl.StunnedAnim(isStunned);
+    }
 }

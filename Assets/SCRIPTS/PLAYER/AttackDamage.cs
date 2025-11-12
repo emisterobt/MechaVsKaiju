@@ -28,6 +28,15 @@ public class AttackDamage : MonoBehaviour
             }
         }
 
+        if (type == DamageType.Laser)
+        {
+            if (other.CompareTag("Enemy"))
+            {
+                EnemyMovement enemyMovement = other.GetComponent<EnemyMovement>();
+                enemyMovement.isStunned = true;
+            }
+        }
+
 
         
     }
@@ -47,8 +56,11 @@ public class AttackDamage : MonoBehaviour
                 other.gameObject.GetComponent<IDamageable>().TakeDamage(attackHandler.laserDamage * 0.02f);
             }
 
+
+
         }
     }
+
 
     public enum DamageType
     {

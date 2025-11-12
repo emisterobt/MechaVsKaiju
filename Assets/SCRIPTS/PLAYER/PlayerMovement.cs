@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody rb;
     private PlayerAnimationController playerAnims;
+    private AttackHandler attackHandler;
     public CheckGround grndChk;
     public bool lockMovement = false;
     [SerializeField] private bool isJumping = false;
@@ -24,13 +25,18 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         grndChk = GetComponent<CheckGround>();
         playerAnims = GetComponent<PlayerAnimationController>();
+        attackHandler = GetComponent<AttackHandler>();
     }
 
     void Update()
     {
         if (lockMovement != true)
         {
-            Movement();
+
+            if (!InputController.Instance.JumpHold())
+            {
+                Movement();
+            }
             Jump();
         }
 
@@ -53,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        if (InputController.Instance.Jump() && grndChk.IsGrounded() && isJumping == false)
+        if (InputController.Instance.Jump() && grndChk.IsGrounded() && isJumping == false || InputController.Instance.JumpHold() && InputController.Instance.MainAttack() && grndChk.IsGrounded() && isJumping == false)
         {
             playerAnims.TriggerJump();
             isJumping = true;

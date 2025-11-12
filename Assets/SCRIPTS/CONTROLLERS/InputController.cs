@@ -23,7 +23,12 @@ public class InputController : MonoBehaviour
 
     public bool Jump()
     {
-        return Input.GetKeyDown(actualInputConfig.jump);
+        return Input.GetKeyUp(actualInputConfig.jump);
+    }
+
+    public bool JumpHold()
+    {
+        return Input.GetKey(actualInputConfig.jump);
     }
 
     public bool RunInput()

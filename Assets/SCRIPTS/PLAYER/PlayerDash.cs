@@ -19,6 +19,8 @@ public class PlayerDash : MonoBehaviour
     private CheckGround grndCheck;
     private PlayerMovement pM;
 
+    public GameObject dashParticles;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -36,6 +38,7 @@ public class PlayerDash : MonoBehaviour
 
     private IEnumerator DashCoroutine()
     {
+        dashParticles.SetActive(true);
         canDash = false;
         isDashing = true;
         float elapsedTime = 0f;
@@ -53,6 +56,7 @@ public class PlayerDash : MonoBehaviour
         }
 
         rb.useGravity = true;
+        dashParticles.SetActive(false);
         isDashing=false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.ComponentModel;
 using UnityEngine;
 
 public class AttackHandler : MonoBehaviour
@@ -63,7 +62,7 @@ public class AttackHandler : MonoBehaviour
     private Vector3 puntoObjetivo;
 
     private Coroutine coroutine;
-    
+
     private WaitForSeconds waitFor = new WaitForSeconds(1f);
     private void Start()
     {
@@ -110,7 +109,7 @@ public class AttackHandler : MonoBehaviour
                 {
                     hitType = 1;
                 }
-                else if (Input.GetKey(KeyCode.Space))
+                else if (InputController.Instance.JumpHold())
                 {
                     hitType = 2;
                     Debug.Log("Upper");
@@ -121,8 +120,10 @@ public class AttackHandler : MonoBehaviour
                 }
 
                 StartCoroutine(MeleeAttack());
+
             }
         }
+
 
         if (InputController.Instance.SecondaryAttack() && canShootMissile && pDash.isDashing == false)
         {
@@ -148,10 +149,11 @@ public class AttackHandler : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
         attackCollider.gameObject.SetActive(false);
-        isPunching = false ;
+        isPunching = false;
         yield return new WaitForSeconds(0.25f);
-        isAttacking = false ;
+        isAttacking = false;
         pM.lockMovement = false;
+        hitType = 0;
         //coroutine = StartCoroutine(OutOfCombatMode());
     }
 
@@ -174,17 +176,17 @@ public class AttackHandler : MonoBehaviour
             carObject.isThrown = true;
 
             rb.AddForce(mainCamera.transform.forward * throwForce, ForceMode.Impulse);
-            rb.AddForce(mainCamera.transform.up * throwForce/3, ForceMode.Impulse);
+            rb.AddForce(mainCamera.transform.up * throwForce / 3, ForceMode.Impulse);
         }
 
-        if(collider != null)
+        if (collider != null)
         {
             collider.enabled = true;
         }
 
         objectInHand = null;
         isAttacking = false;
-        isThrowing = false ;
+        isThrowing = false;
     }
 
     private IEnumerator ShootMissiles()
@@ -204,7 +206,7 @@ public class AttackHandler : MonoBehaviour
             Rigidbody rbR = missileR.GetComponent<Rigidbody>();
 
 
-            if(rbL != null && rbR != null)
+            if (rbL != null && rbR != null)
             {
                 rbL.AddForce(mainCamera.transform.forward * missileForce, ForceMode.Impulse);
                 rbR.AddForce(mainCamera.transform.forward * missileForce, ForceMode.Impulse);
@@ -236,7 +238,7 @@ public class AttackHandler : MonoBehaviour
         while (timer < laserDuration)
         {
             ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            puntoObjetivo =  ray.origin + ray.direction * laserRange;
+            puntoObjetivo = ray.origin + ray.direction * laserRange;
 
 
             laserOrigin.LookAt(puntoObjetivo);
@@ -250,7 +252,7 @@ public class AttackHandler : MonoBehaviour
         laser.SetActive(false);
         StartCoroutine(ChargeLaser());
         isAttacking = false;
-        isUsingLaser=false;
+        isUsingLaser = false;
         pM.lockMovement = false;
         camController.lockMainCamera = false;
 
@@ -276,7 +278,7 @@ public class AttackHandler : MonoBehaviour
 
     public IEnumerator OutOfCombatMode()
     {
-        
+
         yield return waitFor;
         camController.inCombat = false;
     }

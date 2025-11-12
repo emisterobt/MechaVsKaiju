@@ -6252,7 +6252,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -Infinity, y: 2.5243547e-29, z: 0, w: 2.69e-43}
+  m_BoundingSphereOverride: {x: 1.2551e-41, y: 2.524355e-29, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -19440,6 +19440,7 @@ Transform:
   m_Children:
   - {fileID: 2083294075}
   - {fileID: 705373958}
+  - {fileID: 707362339}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &321843282
@@ -19486,6 +19487,8 @@ MonoBehaviour:
     m_Bits: 8
   followPlayer: 0
   initialDistance: 0
+  stunTime: 5
+  isStunned: 0
 --- !u!114 &321843284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47134,6 +47137,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impulseForce: 1000
+--- !u!1 &707362338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 707362339}
+  - component: {fileID: 707362340}
+  m_Layer: 6
+  m_Name: "Da\xF1oAEdificios"
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &707362339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707362338}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.74, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 321843281}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &707362340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707362338}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &708870279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7996719290864535781, guid: 01746065489700b49812743fb7886b31, type: 3}
@@ -72036,6 +72092,7 @@ MonoBehaviour:
   dashDuration: 1
   useMoveDirection: 0
   isDashing: 0
+  dashParticles: {fileID: 1206013535}
 --- !u!114 &1062786606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72082,7 +72139,7 @@ MonoBehaviour:
   laserDamage: 1
   laserDuration: 2
   laserCooldown: 40
-  canUseLaser: 0
+  canUseLaser: 1
   laserPrefab: {fileID: 878252584431941055, guid: a1f2fb086413f9046937de394582fcd0, type: 3}
   isUsingLaser: 0
   timer: 0
@@ -82214,7 +82271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1206013536
 ParticleSystemRenderer:
   serializedVersion: 6

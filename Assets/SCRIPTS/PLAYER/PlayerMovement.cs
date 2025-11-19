@@ -32,12 +32,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (lockMovement != true)
         {
-
-            if (!InputController.Instance.JumpHold())
+            if (grndChk.IsGrounded() && InputController.Instance.JumpHold())
+            {
+                Jump();
+            }
+            else
             {
                 Movement();
+                Jump();
             }
-            Jump();
+            
         }
 
 

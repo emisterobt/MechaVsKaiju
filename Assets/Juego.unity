@@ -6242,7 +6242,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.2551e-41, y: 2.524355e-29, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 6.92e-43, y: 1.16e-43, z: 0, w: 7.9048755e-28}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -82464,6 +82464,7 @@ MonoBehaviour:
   useMoveDirection: 0
   isDashing: 0
   dashParticles: {fileID: 1206013535}
+  dashParticlesGlow: {fileID: 413512071}
 --- !u!114 &1062786606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111033,7 +111034,7 @@ AudioSource:
   m_GameObject: {fileID: 1386830572}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8077641738049731596, guid: b38ac34abc206654f8c5e20e607df235, type: 2}
   m_audioClip: {fileID: 8300000, guid: c9b2abc958caca3498dc37db61d4ab8d, type: 3}
   m_Resource: {fileID: 8300000, guid: c9b2abc958caca3498dc37db61d4ab8d, type: 3}
   m_PlayOnAwake: 1
@@ -137270,6 +137271,113 @@ MonoBehaviour:
   minWaitTime: 1.53
   maxWaitTime: 3.29
   frameSpeed: 0.0229
+--- !u!1 &1728201468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1728201469}
+  - component: {fileID: 1728201470}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1728201469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728201468}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 223.94603, y: 0.40813, z: 323.12207}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728201470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728201468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e0d7512f844de14da7d8c17b9e0fc2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidos:
+  - audioName: ImpactoCaida
+    audioClip: {fileID: 8300000, guid: a004f6f8c5bc8f0419267f16c9b6e319, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: Laser
+    audioClip: {fileID: 8300000, guid: 2da90a6e360967a4a8e648300033f496, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: MisilExp
+    audioClip: {fileID: 8300000, guid: baa131beca1882d4c83ad72a18ad895c, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: Kaiju1
+    audioClip: {fileID: 8300000, guid: bb854911befe90a4cb221655ee9899cc, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: Kaiju2
+    audioClip: {fileID: 8300000, guid: 1dfa75973204b18478abb7f506e8690b, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: KaijuFuego
+    audioClip: {fileID: 8300000, guid: b0a62797b4036cb49a0defdf5cd236fd, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: KaijuCola
+    audioClip: {fileID: 8300000, guid: 91212e3f1799fb64ba8d7a97f106f5b2, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: LanzarMisil
+    audioClip: {fileID: 8300000, guid: 50b722f218b6b1a46bf0f0f16a82a173, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: Temporal
+    audioClip: {fileID: 8300000, guid: 79571c2b3848f5d4d9b361b6b400f39e, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: InicioLaser
+    audioClip: {fileID: 8300000, guid: 9a096ffd59921324285550ab3142dda2, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: MuerteMecha
+    audioClip: {fileID: 8300000, guid: 9769fdea13ffa024d8be2a932a116fef, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: MechaWalk
+    audioClip: {fileID: 8300000, guid: 1a6416261158f014bad76d66311fc3bf, type: 3}
+    volume: 1
+    loop: 1
+    audioSource: {fileID: 0}
+  mixer: {fileID: 24100000, guid: b38ac34abc206654f8c5e20e607df235, type: 2}
+  sfxs: {fileID: 3913000834107138070, guid: b38ac34abc206654f8c5e20e607df235, type: 2}
 --- !u!1 &1732115439
 GameObject:
   m_ObjectHideFlags: 0
@@ -199219,6 +199327,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 88444728}
   - {fileID: 1362487034}
+  - {fileID: 1728201469}
+  - {fileID: 1386830574}
   - {fileID: 1062786602}
   - {fileID: 321843281}
   - {fileID: 8094027686658026647}
@@ -199266,6 +199376,5 @@ SceneRoots:
   - {fileID: 1127600177}
   - {fileID: 540370621}
   - {fileID: 1384232139}
-  - {fileID: 1386830574}
   - {fileID: 609056056}
   - {fileID: 2105098926}

@@ -55,6 +55,7 @@ public class AttackHandler : MonoBehaviour
     private Camera mainCamera;
     private PlayerMovement pM;
     private PlayerDash pDash;
+    private CheckGround grndChck;
     private CameraController camController;
 
     private Ray ray;
@@ -72,7 +73,7 @@ public class AttackHandler : MonoBehaviour
         pM = GetComponent<PlayerMovement>();
         pDash = GetComponent<PlayerDash>();
         camController = mainCamera.transform.parent.GetComponent<CameraController>();
-
+        grndChck = GetComponent<CheckGround>();
         StartCoroutine(ChargeLaser());
         coroutine = StartCoroutine(OutOfCombatMode());
     }
@@ -85,7 +86,7 @@ public class AttackHandler : MonoBehaviour
 
     private void AttackType()
     {
-        if (isAttacking) return;
+        if (isAttacking || !grndChck.IsGrounded()) return;
 
         if (InputController.Instance.Blocking())
         {
@@ -197,6 +198,7 @@ public class AttackHandler : MonoBehaviour
         isShootMissile = true;
         //animator
         yield return new WaitForSeconds(0.2f);
+        AudioManager.Instance.Play("LanzarMisil");
 
         if (missileRPrefab != null && missileLPrefab != null && missilePointL != null && missilePointR != null && currentMissiles > 0)
         {
@@ -233,6 +235,7 @@ public class AttackHandler : MonoBehaviour
         pM.lockMovement = true;
         yield return new WaitForSeconds(.5f);
         GameObject laser = laserOrigin.GetChild(0).gameObject;
+        AudioManager.Instance.Play("Laser");
 
         float timer = 0f;
         while (timer < laserDuration)

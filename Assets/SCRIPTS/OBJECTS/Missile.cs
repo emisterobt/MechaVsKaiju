@@ -20,6 +20,7 @@ public class Missile : MonoBehaviour
             GameObject expEffct = Instantiate(explosionEffect, transform.position, transform.rotation);
             Destroy(expEffct,1);
         }
+        AudioManager.Instance.Play("MisilExp");
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, attackHndlr.explosionRadius);
 

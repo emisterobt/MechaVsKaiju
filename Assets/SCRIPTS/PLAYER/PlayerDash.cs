@@ -20,6 +20,7 @@ public class PlayerDash : MonoBehaviour
     private PlayerMovement pM;
 
     public GameObject dashParticles;
+    public GameObject dashParticlesGlow;
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class PlayerDash : MonoBehaviour
 
     private void Update()
     {
-        if (InputController.Instance.Dash() && !grndCheck.IsGrounded() && canDash && pM.lockMovement == false)
+        if (InputController.Instance.Dash() && !grndCheck.IsGrounded() && canDash && pM.lockMovement == false && !isDashing)
         {
             StartCoroutine(DashCoroutine());
         }
@@ -39,24 +40,26 @@ public class PlayerDash : MonoBehaviour
     private IEnumerator DashCoroutine()
     {
         dashParticles.SetActive(true);
+        dashParticlesGlow.SetActive(true);
         canDash = false;
         isDashing = true;
         float elapsedTime = 0f;
 
 
-        CalculateDirection();
+        //CalculateDirection();
 
         while (elapsedTime < dashDuration)
         {
             rb.useGravity = false;
             rb.linearVelocity = new Vector3(rb.linearVelocity.x,0,rb.linearVelocity.z);
-            rb.AddForce(dashDirection * dashForce, ForceMode.Force);
-            elapsedTime += Time.fixedDeltaTime;
+            rb.AddForce(transform.forward * dashForce, ForceMode.Force);
+            elapsedTime += Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }
 
         rb.useGravity = true;
         dashParticles.SetActive(false);
+        dashParticlesGlow.SetActive(false);
         isDashing=false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;

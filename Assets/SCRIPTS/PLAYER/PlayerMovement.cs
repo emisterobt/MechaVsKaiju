@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public bool lockMovement = false;
     [SerializeField] private bool isJumping = false;
 
+    public float magnitude;
+    public bool playWalkSound = false;
     public bool inGround;
     void Awake()
     {
@@ -30,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+
+
         if (lockMovement != true)
         {
             if (grndChk.IsGrounded() && InputController.Instance.JumpHold())
@@ -59,6 +63,10 @@ public class PlayerMovement : MonoBehaviour
     public void Movement()
     {
         rb.linearVelocity = transform.rotation * new Vector3(InputController.Instance.HorizontalMovement() * ActualSpeed(), rb.linearVelocity.y, InputController.Instance.VerticalMovement() * ActualSpeed());
+        magnitude = rb.linearVelocity.magnitude;
+
+        AudioWalking() ;
+
     }
 
     public void Jump()
@@ -107,5 +115,29 @@ public class PlayerMovement : MonoBehaviour
         rb.useGravity = true;
         lockMovement = false;
         Debug.Log("movimiento habilitado");
+    }
+
+    private void AudioWalking()
+    {
+        if (magnitude > 3 && grndChk.IsGrounded())
+        {
+            playWalkSound = true;
+            Debug.Log("mechaWalk");
+        }
+        else
+        {
+            playWalkSound = false;
+            Debug.Log("solo");
+        }
+
+        if (playWalkSound == false)
+        {
+            AudioManager.Instance.Stop("MechaWalk");
+        }
+        else
+        {
+            AudioManager.Instance.Play("MechaWalk");
+
+        }
     }
 }

@@ -16,6 +16,7 @@ public class EnemyAttackHandler : MonoBehaviour
     public float flameRange;
     public float flameCoolDown;
     public float flameChargeTime;
+    public ParticleSystem flameParticle;
 
     [Header("Tail Attack")]
     public float tailDamage;
@@ -60,6 +61,7 @@ public class EnemyAttackHandler : MonoBehaviour
         attacksDone += 1;
         yield return new WaitForSeconds(1.2f);
         animCtrl.AttackColaAnim();
+        AudioManager.Instance.Play("KaijuCola");
         tailCollider.gameObject.SetActive(true);
         animCtrl.WalkAnim(false);
         eMove.agent.isStopped = true;
@@ -75,13 +77,15 @@ public class EnemyAttackHandler : MonoBehaviour
     {
         isAttacking = true;
         yield return new WaitForSeconds(flameChargeTime);
+        flameParticle.gameObject.SetActive(true);
         animCtrl.AttackFireAnim();
-        Debug.Log("Lanzando Fuego");
+        AudioManager.Instance.Play("KaijuFuego");
         //flame Instance o Active
         eMove.agent.isStopped = true;
         animCtrl.WalkAnim(false);
         yield return new WaitForSeconds(flameDuration);
         animCtrl.WalkAnim(true);
+        flameParticle.gameObject.SetActive(false);
         attacksDone = 0;
         eMove.agent.isStopped = false;
         yield return new WaitForSeconds(tailCooldown);

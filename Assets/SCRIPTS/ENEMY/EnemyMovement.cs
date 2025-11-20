@@ -24,6 +24,12 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float stunTime;
     [SerializeField] public bool isStunned = false;
 
+
+    [Header("EndGame")]
+    [SerializeField] private GameObject atomicBomb;
+    [SerializeField] private float timeToEnd;
+
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -64,6 +70,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 isMoving = false;
                 //Cuando llega al destino
+                StartCoroutine(ReachedDestiny());
                 StartCoroutine(GameManager.Instance.GameOver());
             }
         }
@@ -107,4 +114,12 @@ public class EnemyMovement : MonoBehaviour
         agent.isStopped = false;
         animCntrl.StunnedAnim(isStunned);
     }
+
+    public IEnumerator ReachedDestiny()
+    {
+        yield return new WaitForSeconds(timeToEnd);
+        atomicBomb.SetActive(true);
+
+    }
+
 }

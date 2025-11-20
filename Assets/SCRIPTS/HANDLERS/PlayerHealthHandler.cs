@@ -42,6 +42,7 @@ public class PlayerHealthHandler : MonoBehaviour, IDamageable
     public void OnDeath()
     {
         //Animacion derrota
+        AudioManager.Instance.Play("MuerteMecha");
         StartCoroutine(GameManager.Instance.GameOver());
     }
 

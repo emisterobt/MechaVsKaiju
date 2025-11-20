@@ -6242,7 +6242,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.92e-43, y: 1.16e-43, z: 0, w: 7.9048755e-28}
+  m_BoundingSphereOverride: {x: -1.7014118e+38, y: -525.53613, z: 0, w: 3.4092776e+12}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -22697,6 +22697,8 @@ MonoBehaviour:
   initialDistance: 0
   stunTime: 5
   isStunned: 0
+  atomicBomb: {fileID: 1395510456}
+  timeToEnd: 2
 --- !u!114 &321843284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22714,10 +22716,11 @@ MonoBehaviour:
   attacksRemaining: 3
   eMove: {fileID: 0}
   flameOrigin: {fileID: 0}
-  flameDuration: 1.5
+  flameDuration: 3
   flameRange: 0
   flameCoolDown: 0
   flameChargeTime: 0.5
+  flameParticle: {fileID: 669254755}
   tailDamage: 5
   tailCooldown: 5
   tailCollider: {fileID: 705373958}
@@ -34374,6 +34377,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 5215610917604695296, guid: 55274e2a9220cb345955bd14446cfa38, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     - target: {fileID: 5406006427223966549, guid: 55274e2a9220cb345955bd14446cfa38, type: 3}
       propertyPath: m_Name
       value: police (1)
@@ -51742,7 +51749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &669254754
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -94518,6 +94525,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 9194666389035411945, guid: 0d0ed22565228d04fb4f0de0164349fd, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -117211,6 +117222,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62f96c4dd2bc33c4ea7271c6178f60b6, type: 3}
+--- !u!1 &1395510456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 947541041134044949, guid: 18ec3ec2983f0fe44ab9a2b12edce1bd, type: 3}
+  m_PrefabInstance: {fileID: 1648586898684346607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1396056447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121347,6 +121363,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 4493180473401380345, guid: bdc4cbde0afc04e42bdfb012e4388bd0, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     - target: {fileID: 8445384427537282935, guid: bdc4cbde0afc04e42bdfb012e4388bd0, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -124981,6 +125001,7 @@ MonoBehaviour:
   damageCollision: 2
   isThrown: 0
   attackHandler: {fileID: 1062786607}
+  explosionParticle: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
 --- !u!54 &1500031775
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -134357,6 +134378,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 6260293256480873708, guid: 02e26d287cfab0f419c857e36d91975d, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -135237,6 +135262,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 2620373360777195763, guid: 570a5a28445b25b428a1f64586baf8ae, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     - target: {fileID: 3386871629572283709, guid: 570a5a28445b25b428a1f64586baf8ae, type: 3}
       propertyPath: m_LocalScale.x
       value: 91.74705
@@ -178898,6 +178927,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 9194666389035411945, guid: 0d0ed22565228d04fb4f0de0164349fd, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -179269,6 +179302,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 54483308824432817, guid: 02a3d5733e6cadb40afa11ebb28062b7, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     - target: {fileID: 4573471729378985637, guid: 02a3d5733e6cadb40afa11ebb28062b7, type: 3}
       propertyPath: m_Name
       value: AutoBusEscolar
@@ -180525,6 +180562,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 6260293256480873708, guid: 02e26d287cfab0f419c857e36d91975d, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -180640,6 +180681,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 8200849579124715365, guid: fd44b2d216a65e540bbb0e1224e7918d, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -181091,6 +181136,10 @@ PrefabInstance:
     - target: {fileID: 947541041134044949, guid: 18ec3ec2983f0fe44ab9a2b12edce1bd, type: 3}
       propertyPath: m_Name
       value: BombaAtomica
+      objectReference: {fileID: 0}
+    - target: {fileID: 947541041134044949, guid: 18ec3ec2983f0fe44ab9a2b12edce1bd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8052389199929169584, guid: 18ec3ec2983f0fe44ab9a2b12edce1bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -185690,6 +185739,7 @@ MonoBehaviour:
   damageCollision: 2
   isThrown: 0
   attackHandler: {fileID: 1062786607}
+  explosionParticle: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
 --- !u!54 &4454542310799895168
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -186608,6 +186658,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 4493180473401380345, guid: bdc4cbde0afc04e42bdfb012e4388bd0, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     - target: {fileID: 8445384427537282935, guid: bdc4cbde0afc04e42bdfb012e4388bd0, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -191646,6 +191700,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 7774775971502242649, guid: 475b61d9f40cc30459aad49e1991379d, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     - target: {fileID: 7785071153833795711, guid: 475b61d9f40cc30459aad49e1991379d, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -192630,6 +192688,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 5215610917604695296, guid: 55274e2a9220cb345955bd14446cfa38, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     - target: {fileID: 5406006427223966549, guid: 55274e2a9220cb345955bd14446cfa38, type: 3}
       propertyPath: m_Name
       value: police
@@ -197792,6 +197854,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 2620373360777195763, guid: 570a5a28445b25b428a1f64586baf8ae, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     - target: {fileID: 3386871629572283709, guid: 570a5a28445b25b428a1f64586baf8ae, type: 3}
       propertyPath: m_LocalScale.x
       value: 91.74705
@@ -198248,6 +198314,10 @@ PrefabInstance:
       propertyPath: attackHandler
       value: 
       objectReference: {fileID: 1062786607}
+    - target: {fileID: 2945151256809072773, guid: 9f08e0b61717f6e4dbf76e1f292da6f3, type: 3}
+      propertyPath: explosionParticle
+      value: 
+      objectReference: {fileID: 5327416727677404099, guid: a5231ecad6026dc4f8b4f8ca68ba7d39, type: 3}
     - target: {fileID: 3605663211606008911, guid: 9f08e0b61717f6e4dbf76e1f292da6f3, type: 3}
       propertyPath: m_IsKinematic
       value: 0

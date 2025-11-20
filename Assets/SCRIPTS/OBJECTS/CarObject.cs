@@ -6,6 +6,8 @@ public class CarObject : MonoBehaviour, IInteractable
     public bool isThrown = false;
     public AttackHandler attackHandler;
 
+    public GameObject explosionParticle;
+
     private void Start()
     {
         attackHandler = GameObject.FindFirstObjectByType<AttackHandler>();
@@ -39,11 +41,15 @@ public class CarObject : MonoBehaviour, IInteractable
         if (collision.gameObject.CompareTag("Enemy") && isThrown)
         {
             collision.gameObject.GetComponent<IDamageable>().TakeDamage(damageCollision);
+            GameObject explosion = Instantiate(explosionParticle, transform.position, transform.rotation);
+            Destroy(explosion, 1);
             isThrown = false;// cambiar a destroy tal vez?
         }
 
         else if (collision.gameObject.CompareTag("Untagged"))//Cambiar a Ground cuando este
         {
+            GameObject explosion = Instantiate(explosionParticle, transform.position, transform.rotation);
+            Destroy(explosion, 1);
             isThrown = false ;//Cambiar a detrpy si es necesario
         }
     }

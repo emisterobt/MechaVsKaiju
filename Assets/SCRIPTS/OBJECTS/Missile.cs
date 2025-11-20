@@ -44,6 +44,9 @@ public class Missile : MonoBehaviour
     public IEnumerator DestroyTimer()
     {
         yield return new WaitForSeconds(attackHndlr.missileDuration);
+        GameObject expEffct = Instantiate(explosionEffect, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1f);
+        Destroy(expEffct);
         Destroy(this.gameObject);
     }
 

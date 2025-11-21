@@ -11,12 +11,12 @@ public class MenuButtons : MonoBehaviour
 
     public void Creditos()
     {
-        Debug.Log("Abriendo Creditos");
+        SceneManager.LoadScene("Creditos");
     }
 
     public void Configuracion()
     {
-        Debug.Log("Abriendo Configuracion");
+        SceneManager.LoadScene("Configuracion");
     }
 
     public void Salir()

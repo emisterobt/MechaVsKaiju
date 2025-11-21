@@ -17,5 +17,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/EscenaDerrota.unity
     guid: d7419d08c87fe974c9b9aa5004b4c140
+  - enabled: 1
+    path: Assets/Creditos.unity
+    guid: 57b88cfa679d77442b541789160ef417
+  - enabled: 1
+    path: Assets/NuclearLOSE.unity
+    guid: 2c7632b42eae6d44cb57e701a0067d09
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

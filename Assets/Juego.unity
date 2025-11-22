@@ -6284,7 +6284,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.3484321, y: 0.3484321, z: 0.3484321, w: 0.3484321}
+  m_BoundingSphereOverride: {x: 1.4e-43, y: -1.4696319e-18, z: 8.41e-43, w: 6.19812e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -23340,6 +23340,7 @@ MonoBehaviour:
   flameRange: 0
   flameCoolDown: 0
   flameChargeTime: 0.5
+  flameDps: 1
   flameParticle: {fileID: 669254755}
   tailDamage: 5
   tailCooldown: 5
@@ -57906,7 +57907,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.0925, z: 0.214}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1909619029}
   m_Father: {fileID: 949051899}
   m_LocalEulerAnglesHint: {x: 106.446, y: 0, z: 0}
 --- !u!1001 &671131123
@@ -89659,7 +89661,7 @@ MonoBehaviour:
   laserDamage: 1
   laserDuration: 2
   laserCooldown: 40
-  canUseLaser: 1
+  canUseLaser: 0
   laserPrefab: {fileID: 878252584431941055, guid: a1f2fb086413f9046937de394582fcd0, type: 3}
   isUsingLaser: 0
   timer: 0
@@ -117921,7 +117923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29dba73b32dca694d94e1d731ea73421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canFinish: 0
+  canFinish: 1
   isInPause: 0
 --- !u!1001 &1364526400
 PrefabInstance:
@@ -145777,6 +145779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728201469}
   - component: {fileID: 1728201470}
+  - component: {fileID: 1728201471}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -145813,7 +145816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sonidos:
   - audioName: ImpactoCaida
-    audioClip: {fileID: 8300000, guid: a004f6f8c5bc8f0419267f16c9b6e319, type: 3}
+    audioClip: {fileID: 8300000, guid: 6dcf725a7754660439d5eb7680b4383c, type: 3}
     volume: 1
     loop: 0
     audioSource: {fileID: 0}
@@ -145872,8 +145875,59 @@ MonoBehaviour:
     volume: 1
     loop: 1
     audioSource: {fileID: 0}
+  - audioName: ImpactoPunch
+    audioClip: {fileID: 8300000, guid: 3410c6f7038508b419dd890cae76b829, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: ImpactoKick
+    audioClip: {fileID: 8300000, guid: c6cb67c3f6830254c8f7bf5244b99858, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: ImpactoUpper
+    audioClip: {fileID: 8300000, guid: edb0e4adec212994db427471d03bdced, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: Upper
+    audioClip: {fileID: 8300000, guid: 0e5d827c3548e3b48adb8990a5976081, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: Kick
+    audioClip: {fileID: 8300000, guid: 2969a656d19cd134388eeb9d58424691, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: Punch
+    audioClip: {fileID: 8300000, guid: ac3399e735a4a12428f4b8b2bcaf8784, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
+  - audioName: Throw
+    audioClip: {fileID: 8300000, guid: f8025a6049af5ad4da2b1f703ba740be, type: 3}
+    volume: 1
+    loop: 0
+    audioSource: {fileID: 0}
   mixer: {fileID: 24100000, guid: b38ac34abc206654f8c5e20e607df235, type: 2}
   sfxs: {fileID: 3913000834107138070, guid: b38ac34abc206654f8c5e20e607df235, type: 2}
+--- !u!114 &1728201471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728201468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa7caed61225c54997742f2b4fcfd0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: b38ac34abc206654f8c5e20e607df235, type: 2}
+  sfxsVolume: 1
+  musicVolume: 1
+  masterVolume: 1
 --- !u!1 &1732115439
 GameObject:
   m_ObjectHideFlags: 0
@@ -164947,6 +165001,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1081400574856978945, guid: 3f90a3595b9c65445893338c49746e65, type: 3}
   m_PrefabInstance: {fileID: 542367566}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1909619028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909619029}
+  - component: {fileID: 1909619030}
+  - component: {fileID: 1909619031}
+  m_Layer: 0
+  m_Name: CollisionFuego
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1909619029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909619028}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 669254756}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1909619030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909619028}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2, y: 0.2, z: 0.65523523}
+  m_Center: {x: -5.420409e-16, y: 0.00000014972727, z: 0.3419513}
+--- !u!114 &1909619031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909619028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a6a84c3255080d4ca588fbc0f1be416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1910130026
 PrefabInstance:
   m_ObjectHideFlags: 0

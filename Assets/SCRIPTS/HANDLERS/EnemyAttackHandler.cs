@@ -16,6 +16,7 @@ public class EnemyAttackHandler : MonoBehaviour
     public float flameRange;
     public float flameCoolDown;
     public float flameChargeTime;
+    public float flameDps;
     public ParticleSystem flameParticle;
 
     [Header("Tail Attack")]

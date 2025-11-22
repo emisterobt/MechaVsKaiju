@@ -25,6 +25,8 @@ public class AttackDamage : MonoBehaviour
             if (damgeable != null)
             {
                 other.GetComponent<IDamageable>().TakeDamage(attackHandler.meleeDamage);
+                AudioManager.Instance.Play("ImpactoPunch");
+
             }
         }
 

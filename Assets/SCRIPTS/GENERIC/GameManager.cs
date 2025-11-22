@@ -51,4 +51,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public IEnumerator NuclearLoss()
+    {
+        if (canFinish == false)
+        {
+            yield return null;
+        }
+        else
+        {
+            yield return new WaitForSeconds(5f);
+            SceneManager.LoadScene("NuclearLOSE");
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
 }

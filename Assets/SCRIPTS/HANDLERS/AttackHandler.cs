@@ -110,15 +110,19 @@ public class AttackHandler : MonoBehaviour
                 if (Input.GetKey(KeyCode.S))
                 {
                     hitType = 1;
+                    AudioManager.Instance.Play("Kick");
+
                 }
                 else if (InputController.Instance.JumpHold())
                 {
                     hitType = 2;
-                    Debug.Log("Upper");
+                    AudioManager.Instance.Play("Upper");
                 }
                 else
                 {
                     hitType = 0;
+                    AudioManager.Instance.Play("Punch");
+
                 }
 
                 StartCoroutine(MeleeAttack());
@@ -166,7 +170,7 @@ public class AttackHandler : MonoBehaviour
         //animator throw
 
         yield return new WaitForSeconds(0.3f);
-
+        AudioManager.Instance.Play("Throw");
         objectInHand.transform.SetParent(null);
         CarObject carObject = objectInHand.GetComponent<CarObject>();
         Rigidbody rb = objectInHand.GetComponent<Rigidbody>();

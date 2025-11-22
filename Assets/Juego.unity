@@ -6284,7 +6284,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1.7014118e+38, y: -525.53613, z: 0, w: 3.4092776e+12}
+  m_BoundingSphereOverride: {x: 0.3484321, y: 0.3484321, z: 0.3484321, w: 0.3484321}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -20502,6 +20502,8 @@ MonoBehaviour:
   laserCharge: {fileID: 1722520135}
   laserChargeCount: {fileID: 116257932}
   missileCount: {fileID: 121574541}
+  pauseScreen: {fileID: 1546556425}
+  isPaused: 0
 --- !u!1001 &279713173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89588,6 +89590,7 @@ MonoBehaviour:
   grndChk: {fileID: 0}
   lockMovement: 0
   isJumping: 0
+  wasJumping: 0
   magnitude: 0
   playWalkSound: 0
   inGround: 0
@@ -89670,6 +89673,7 @@ MonoBehaviour:
   currentMissiles: 0
   damageReduction: 0.5
   isBlocking: 0
+  camController: {fileID: 2057177701}
 --- !u!114 &1062786608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114571,11 +114575,11 @@ Transform:
   m_GameObject: {fileID: 1312464677}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6499939, y: 3.2899988, z: -11.429993}
+  m_LocalPosition: {x: 1.6499834, y: 3.2899988, z: -11.42999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2057177700}
+  m_Father: {fileID: 1648660150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1312464681
 MonoBehaviour:
@@ -117918,6 +117922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFinish: 0
+  isInPause: 0
 --- !u!1001 &1364526400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130750,7 +130755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1546556426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -139394,6 +139399,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4998567906908313873, guid: 008f5f2c54c24294fbfd20ecfbfb938d, type: 3}
   m_PrefabInstance: {fileID: 1648548388}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1648660149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648660150}
+  m_Layer: 0
+  m_Name: rotator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648660150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648660149}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1312464680}
+  m_Father: {fileID: 2057177700}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1650234369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7996719290864535781, guid: 01746065489700b49812743fb7886b31, type: 3}
@@ -175139,7 +175176,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1705004221}
-  - {fileID: 1312464680}
+  - {fileID: 1648660150}
   m_Father: {fileID: 1062786602}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2057177701
@@ -175164,8 +175201,8 @@ MonoBehaviour:
   player: {fileID: 0}
   lockMainCamera: 0
   inCombat: 0
-  sideCamera: {fileID: 173973298}
   mainCamera: {fileID: 1312464679}
+  rotator: {fileID: 1648660150}
 --- !u!1001 &2057494053
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public bool canFinish;// Temporal para probar
+    public bool isInPause;
 
     private void Awake()
     {

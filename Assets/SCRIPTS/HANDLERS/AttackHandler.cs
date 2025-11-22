@@ -56,6 +56,7 @@ public class AttackHandler : MonoBehaviour
     private PlayerMovement pM;
     private PlayerDash pDash;
     private CheckGround grndChck;
+    [SerializeField]
     private CameraController camController;
 
     private Ray ray;
@@ -72,7 +73,7 @@ public class AttackHandler : MonoBehaviour
         currentMissiles = maxMissiles;
         pM = GetComponent<PlayerMovement>();
         pDash = GetComponent<PlayerDash>();
-        camController = mainCamera.transform.parent.GetComponent<CameraController>();
+        
         grndChck = GetComponent<CheckGround>();
         StartCoroutine(ChargeLaser());
         coroutine = StartCoroutine(OutOfCombatMode());
@@ -230,7 +231,7 @@ public class AttackHandler : MonoBehaviour
     {
         isAttacking = true;
         canUseLaser = false;
-        camController.lockMainCamera = true;
+        
         isUsingLaser = true;
         pM.lockMovement = true;
         yield return new WaitForSeconds(.5f);
@@ -238,13 +239,15 @@ public class AttackHandler : MonoBehaviour
         AudioManager.Instance.Play("Laser");
 
         float timer = 0f;
+        ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        puntoObjetivo = ray.origin + ray.direction * laserRange;
+
+
+        laserOrigin.LookAt(puntoObjetivo);
+        camController.lockMainCamera = true;
         while (timer < laserDuration)
         {
-            ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-            puntoObjetivo = ray.origin + ray.direction * laserRange;
-
-
-            laserOrigin.LookAt(puntoObjetivo);
+           
 
             laser.SetActive(true);
 
@@ -283,7 +286,7 @@ public class AttackHandler : MonoBehaviour
     {
 
         yield return waitFor;
-        camController.inCombat = false;
+        //camController.inCombat = false;
     }
 
     private void OnDrawGizmos()

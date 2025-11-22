@@ -32,8 +32,14 @@ public class HudController : MonoBehaviour
     public TextMeshProUGUI laserChargeCount;
     public TextMeshProUGUI missileCount;
 
+    [Header("Pause")]
+    [SerializeField] private GameObject pauseScreen;
+    [SerializeField] private bool isPaused = false;
+
+
+
     private void Start()
-    {
+    {      
         attackHandler = FindAnyObjectByType<AttackHandler>();
         pHealth = FindAnyObjectByType<PlayerHealthHandler>();
         eHealth = FindAnyObjectByType<EnemyHealthHandler>();
@@ -45,6 +51,8 @@ public class HudController : MonoBehaviour
 
         _enemyHealthMaxRightMask = _enemyHealthBarRect.rect.width - _enemyHealthBarMask.padding.x - _enemyHealthBarMask.padding.z;
         _enemyHealthInitialRightMask = _enemyHealthBarMask.padding.z;
+
+        
     }
     private void Update()
     {
@@ -53,6 +61,7 @@ public class HudController : MonoBehaviour
         UpdateLaser();
         UpdateMissileCount();
         UpdateEnemyDistance();
+        PauseGame();
     }
 
     private void UpdatePlayerHealth()
@@ -65,7 +74,7 @@ public class HudController : MonoBehaviour
         //playerHealth.maxValue = pHealth.maxHealth;
         //playerHealth.value = pHealth.actualHealth;
 
-        var targetWidth = pHealth.actualHealth * _playerHealthMaxRightMask/ pHealth.maxHealth;
+        var targetWidth = pHealth.actualHealth * _playerHealthMaxRightMask / pHealth.maxHealth;
         var newRightMask = _playerHealthMaxRightMask + _playerHealthInitialRightMask - targetWidth;
         var padding = _playerHealthBarMask.padding;
         padding.z = newRightMask;
@@ -135,4 +144,21 @@ public class HudController : MonoBehaviour
         enemyDistance.maxValue = eMove.initialDistance;
         enemyDistance.value = eMove.initialDistance - eMove.CalculateDistanceToEnd() + eMove.agent.stoppingDistance;
     }
+
+    public void PauseGame()
+    {
+        Debug.Log("esperando para pausar");
+
+        if (InputController.Instance.Pauses())
+        {
+            Debug.Log("Pausado");
+            isPaused = !isPaused;
+            Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+            pauseScreen.SetActive(isPaused);
+            GameManager.Instance.isInPause = isPaused;
+            Time.timeScale = isPaused ? 0 : 1;
+        }
+
+    }
+
 }

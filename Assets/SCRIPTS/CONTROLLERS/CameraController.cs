@@ -20,8 +20,9 @@ public class CameraController : MonoBehaviour
     private Quaternion iniCamPos;
 
     [Header("Cameras")]
-    public Camera sideCamera;
+    //public Camera sideCamera;
     public Camera mainCamera;
+    public Transform rotator;
 
     void Start()
     {
@@ -36,18 +37,21 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (inCombat == true)
         {
             LockCameraRotation();
             OnCombat();
         }
-        else if (lockMainCamera == true)
+        else if (lockMainCamera == true || GameManager.Instance.isInPause == true)
         {
             LockCameraRotation();
-            
+            ChangeToSpecificAngle(new Vector3(10f, -45f, 0f));
+
         }
         else
         {
+            ResetRotator();
             OutOfCombat();
             RotateCamera();
         }
@@ -68,14 +72,14 @@ public class CameraController : MonoBehaviour
 
     public void OnCombat()
     {
-        sideCamera.gameObject.SetActive(true);
+        //sideCamera.gameObject.SetActive(true);
         mainCamera.gameObject.SetActive(false);
     }
 
     public void OutOfCombat()
     {
         mainCamera.gameObject.SetActive(true);
-        sideCamera.gameObject.SetActive(false);
+        //sideCamera.gameObject.SetActive(false);
     }
 
     public void LockCameraRotation()
@@ -84,4 +88,15 @@ public class CameraController : MonoBehaviour
         player.localRotation = player.localRotation;
 
     }
+
+    public void ChangeToSpecificAngle(Vector3 newAngle)
+    {
+        rotator.localRotation = Quaternion.Euler(newAngle);
+    }
+
+    public void ResetRotator()
+    {
+        rotator.localRotation = Quaternion.Euler(0,0,0);
+    }
+
 }

@@ -6,7 +6,7 @@ public class InputController : MonoBehaviour
 
     public InputSO actualInputConfig;
 
-    private void Start()
+    private void Awake()
     {
         Instance = this;
     }
@@ -73,5 +73,10 @@ public class InputController : MonoBehaviour
     public bool Blocking()
     {
         return Input.GetKey(actualInputConfig.block);
+    }
+
+    public bool Pauses()
+    {
+        return Input.GetKeyDown(actualInputConfig.pauser);
     }
 }

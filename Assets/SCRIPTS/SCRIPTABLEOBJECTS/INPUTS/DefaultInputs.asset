@@ -21,3 +21,4 @@ MonoBehaviour:
   secondaryAttack: 102
   specialAttack: 101
   block: 304
+  pauser: 27

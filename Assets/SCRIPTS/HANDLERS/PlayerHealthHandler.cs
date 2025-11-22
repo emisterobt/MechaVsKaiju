@@ -14,13 +14,6 @@ public class PlayerHealthHandler : MonoBehaviour, IDamageable
         pAnim = GetComponent<PlayerAnimationController>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            TakeDamage(2);
-        }
-    }
     public void TakeDamage(float damage)
     {
         if (attackHandler.isBlocking == true)

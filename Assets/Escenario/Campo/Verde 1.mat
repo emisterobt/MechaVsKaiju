@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Verde
+  m_Name: Verde 1
   m_Shader: {fileID: 4800000, guid: 128c5f1edaefa4c4fb3f9f7a4615edb2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -76,11 +76,11 @@ Material:
     - _Lumin: 0
     - _MaxLight: 1
     - _Metallic: 0
-    - _MinLight: 0
+    - _MinLight: 0.614
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0
-    - _OtlWidth: 1
+    - _OtlWidth: 1.35
     - _Parallax: 0.02
     - _Segmented: 1
     - _ShnIntense: 0
@@ -90,12 +90,12 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 3
+    - _Steps: 7.5
     - _StpSmooth: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.11599783, g: 0.38679248, b: 0.093049124, a: 1}
+    - _Color: {r: 0.1782218, g: 0.5915973, b: 0.8396226, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _OtlColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShnColor: {r: 1, g: 1, b: 0, a: 1}

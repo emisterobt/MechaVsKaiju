@@ -24,6 +24,11 @@ public class MenuButtons : MonoBehaviour
         Application.Quit();
     }
 
+    public void ComoJugar()
+    {
+        SceneManager.LoadScene("ComoJugar");
+    }
+
     public void IrAMenu()
     {
         SceneManager.LoadScene("MenuPrincipal");

@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.Stop("MechaWalk");
             yield return new WaitForSeconds(5f);
             SceneManager.LoadScene("EscenaDerrota");
             Cursor.lockState = CursorLockMode.None;
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.Stop("MechaWalk");
             yield return new WaitForSeconds(5f);
             SceneManager.LoadScene("EscenaVictoria");
             Cursor.lockState = CursorLockMode.None;
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            AudioManager.Instance.Stop("MechaWalk");
             yield return new WaitForSeconds(5f);
             SceneManager.LoadScene("NuclearLOSE");
             Cursor.lockState = CursorLockMode.None;

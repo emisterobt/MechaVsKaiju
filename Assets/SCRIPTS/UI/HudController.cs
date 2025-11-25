@@ -36,6 +36,8 @@ public class HudController : MonoBehaviour
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private bool isPaused = false;
 
+    [Header("Config")]
+    [SerializeField] private GameObject configMenu;
 
 
     private void Start()
@@ -160,5 +162,17 @@ public class HudController : MonoBehaviour
         }
 
     }
+
+    public void OpenConfigMenu()
+    {
+        //configMenu.SetActive(true);
+    }
+    
+    public void CloseConfigMenu()
+    {
+        configMenu.SetActive(false);
+    }
+
+
 
 }

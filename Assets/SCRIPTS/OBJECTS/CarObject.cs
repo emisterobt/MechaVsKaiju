@@ -43,7 +43,7 @@ public class CarObject : MonoBehaviour, IInteractable
             collision.gameObject.GetComponent<IDamageable>().TakeDamage(damageCollision);
             GameObject explosion = Instantiate(explosionParticle, transform.position, transform.rotation);
             Destroy(explosion, 1);
-            isThrown = false;// cambiar a destroy tal vez?
+            Destroy(this.gameObject, 1f);
         }
 
         else if (collision.gameObject.CompareTag("Untagged"))//Cambiar a Ground cuando este

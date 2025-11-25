@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    public GameObject configMenu;
+
+
     public void Jugar()
     {
         SceneManager.LoadScene("Juego");
@@ -16,7 +19,7 @@ public class MenuButtons : MonoBehaviour
 
     public void Configuracion()
     {
-        SceneManager.LoadScene("Configuracion");
+        //configMenu.SetActive(true);
     }
 
     public void Salir()
@@ -32,5 +35,10 @@ public class MenuButtons : MonoBehaviour
     public void IrAMenu()
     {
         SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    public void CloseConfg()
+    {
+        configMenu.SetActive(false);
     }
 }

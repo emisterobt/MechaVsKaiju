@@ -46,7 +46,7 @@ public class CameraController : MonoBehaviour
         else if (lockMainCamera == true || GameManager.Instance.isInPause == true)
         {
             LockCameraRotation();
-            ChangeToSpecificAngle(new Vector3(10f, -45f, 0f));
+            ChangeToSpecificAngle(new Vector3(12f, -134f, -0.1f));
 
         }
         else

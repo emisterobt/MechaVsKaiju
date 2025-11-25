@@ -29,6 +29,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private GameObject atomicBomb;
     [SerializeField] private float timeToEnd;
 
+    [SerializeField] private GameObject cameraExp;
 
     void Start()
     {
@@ -119,6 +120,8 @@ public class EnemyMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToEnd);
         atomicBomb.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        cameraExp.gameObject.SetActive(true);
 
     }
 

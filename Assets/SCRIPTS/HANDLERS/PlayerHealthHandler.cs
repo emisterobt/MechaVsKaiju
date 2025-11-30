@@ -23,6 +23,7 @@ public class PlayerHealthHandler : MonoBehaviour, IDamageable
         else
         {
             actualHealth -= damage;
+            
             pAnim.RecieveDamage();
         }
 

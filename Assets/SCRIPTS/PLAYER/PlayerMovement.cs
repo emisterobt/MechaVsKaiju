@@ -39,17 +39,18 @@ public class PlayerMovement : MonoBehaviour
         {
            
 
-            if (grndChk.IsGrounded() && InputController.Instance.JumpHold())
+            if (grndChk.IsGrounded() && !InputController.Instance.JumpHold())
             {
                 Jump();
-                magnitude = 0f; 
+                Movement();
             }
             else
             {
-                Movement();
+
                 Jump();
+                magnitude = 0f;
             }
-            
+
         }
          AudioWalking();
 
@@ -99,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void JumpDelay()
     {
+        rb.linearVelocity = Vector3.zero;
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isJumping = false;
         wasJumping = true;

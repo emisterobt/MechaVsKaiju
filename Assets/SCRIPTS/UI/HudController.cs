@@ -159,6 +159,11 @@ public class HudController : MonoBehaviour
             pauseScreen.SetActive(isPaused);
             GameManager.Instance.isInPause = isPaused;
             Time.timeScale = isPaused ? 0 : 1;
+
+            if (isPaused)
+            {
+                AudioManager.Instance.Stop("MechaWalk");
+            }
         }
 
     }

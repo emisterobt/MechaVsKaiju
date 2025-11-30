@@ -51,7 +51,8 @@ public class PlayerDash : MonoBehaviour
         while (elapsedTime < dashDuration)
         {
             rb.useGravity = false;
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x,0,rb.linearVelocity.z);
+            //rb.linearVelocity = new Vector3(rb.linearVelocity.x,0,rb.linearVelocity.z);
+            rb.linearVelocity = new Vector3(0,0,0);
             rb.AddForce(transform.forward * dashForce, ForceMode.Force);
             elapsedTime += Time.deltaTime;
             yield return new WaitForFixedUpdate();

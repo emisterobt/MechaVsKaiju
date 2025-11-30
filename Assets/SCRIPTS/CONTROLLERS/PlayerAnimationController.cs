@@ -74,6 +74,8 @@ public class PlayerAnimationController : MonoBehaviour
     public void isBlocking()
     {
         anim.SetBool("isBlocking", attackHandler.isBlocking);
+        attackHandler.shield.SetActive(attackHandler.isBlocking);
+        pm.lockMovement = attackHandler.isBlocking;
     }
 
     public void Throw()

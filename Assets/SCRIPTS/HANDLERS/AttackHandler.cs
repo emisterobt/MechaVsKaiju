@@ -16,6 +16,8 @@ public class AttackHandler : MonoBehaviour
     public float meleeDamage;
     public bool isPunching;
     public int hitType;
+    public float meleeCooldown;
+    public float meleeTimer;
 
     [Header("Throw Attack")]
     public float throwForce;
@@ -47,6 +49,7 @@ public class AttackHandler : MonoBehaviour
     [Range(0f, 1f)]
     public float damageReduction;
     public bool isBlocking = false;
+    public GameObject shield;
 
 
     private bool isAttacking = false;
@@ -66,6 +69,9 @@ public class AttackHandler : MonoBehaviour
     private Coroutine coroutine;
 
     private WaitForSeconds waitFor = new WaitForSeconds(1f);
+
+    public TypeOfAttack type;
+
     private void Start()
     {
         //animator = GetComponent<Animator>();
@@ -144,23 +150,25 @@ public class AttackHandler : MonoBehaviour
 
     private IEnumerator MeleeAttack()
     {
-        //StopCoroutine(coroutine);
-        //coroutine = null;
-        //camController.inCombat = true;
         pM.lockMovement = true;
         isAttacking = true;
         attackCollider.gameObject.SetActive(true);
         isPunching = true;
-        //animator attack
 
         yield return new WaitForSeconds(0.3f);
         attackCollider.gameObject.SetActive(false);
         isPunching = false;
-        yield return new WaitForSeconds(0.25f);
+        //yield return new WaitForSeconds(0.25f);
+        meleeTimer = meleeCooldown;
+        while (meleeTimer > 0)
+        {
+            meleeTimer -= Time.deltaTime;
+            yield return null;
+        }
+
         isAttacking = false;
         pM.lockMovement = false;
         hitType = 0;
-        //coroutine = StartCoroutine(OutOfCombatMode());
     }
 
     private IEnumerator ThrowObject()
@@ -300,6 +308,11 @@ public class AttackHandler : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawRay(ray.origin, ray.direction * laserRange);
+    }
+
+    public enum TypeOfAttack
+    {
+        Melee,Laser, Kick
     }
 
 }

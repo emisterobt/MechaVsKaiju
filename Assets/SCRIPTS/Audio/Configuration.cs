@@ -37,9 +37,9 @@ public class Configuration : MonoBehaviour
 
     private void Start()
     {
-        master = GameObject.Find("SliderMainAudio").GetComponent<Slider>();
-        music = GameObject.Find("SliderMusic").GetComponent<Slider>();
-        sfxs = GameObject.Find("SliderSFXs").GetComponent<Slider>();
+        //master = GameObject.Find("SliderMainAudio").GetComponent<Slider>();
+        //music = GameObject.Find("SliderMusic").GetComponent<Slider>();
+        //sfxs = GameObject.Find("SliderSFXs").GetComponent<Slider>();
         music.value = musicVolume;
         sfxs.value = sfxsVolume;
         master.value = masterVolume;

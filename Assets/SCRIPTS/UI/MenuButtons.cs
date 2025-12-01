@@ -19,7 +19,7 @@ public class MenuButtons : MonoBehaviour
 
     public void Configuracion()
     {
-        //configMenu.SetActive(true);
+        SceneManager.LoadScene("Configuracion");
     }
 
     public void Salir()

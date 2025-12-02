@@ -2002,6 +2002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CONFIGURACION
       objectReference: {fileID: 0}
+    - target: {fileID: 8482696779663437407, guid: d81653a57212d0e4e8006439367de48b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8661677679595369839, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3085,6 +3089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CREDITOS
       objectReference: {fileID: 0}
+    - target: {fileID: 8482696779663437407, guid: d81653a57212d0e4e8006439367de48b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8661677679595369839, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3412,6 +3420,10 @@ PrefabInstance:
     - target: {fileID: 7286019551773996666, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_Name
       value: ComoJUGAR
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482696779663437407, guid: d81653a57212d0e4e8006439367de48b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8661677679595369839, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -5081,7 +5093,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 222e1d05359e0e54297554be767a1f59, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -5898,7 +5910,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f377135984c54e146af1d240c6bf7de7, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -7164,7 +7176,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ae659ec0ac949ae40a249dc743d70614, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -7531,7 +7543,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a3cd5fc8f3b9112499151a8fc1997769, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -8880,7 +8892,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cf08cc6327c3ec045a62182ca4ff86a0, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -9212,6 +9224,10 @@ PrefabInstance:
     - target: {fileID: 7286019551773996666, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_Name
       value: SALIR
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482696779663437407, guid: d81653a57212d0e4e8006439367de48b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8661677679595369839, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -10321,6 +10337,10 @@ PrefabInstance:
     - target: {fileID: 7286019551773996666, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_Name
       value: INICIAR MISION
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482696779663437407, guid: d81653a57212d0e4e8006439367de48b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8661677679595369839, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

@@ -1837,6 +1837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e18c2c3b43b1f442a3711c3c9619541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  configMenu: {fileID: 0}
 --- !u!1 &772991176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,6 +2021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SALIR
       objectReference: {fileID: 0}
+    - target: {fileID: 8482696779663437407, guid: d81653a57212d0e4e8006439367de48b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8661677679595369839, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2185,7 +2190,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d590cd18bd448d649a81116ff2c9088c, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -4294,7 +4299,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 71cc6ffc235cf034298b280132c04355, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -5365,6 +5370,10 @@ PrefabInstance:
     - target: {fileID: 7286019551773996666, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_Name
       value: INICIAR MISION
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482696779663437407, guid: d81653a57212d0e4e8006439367de48b, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8661677679595369839, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

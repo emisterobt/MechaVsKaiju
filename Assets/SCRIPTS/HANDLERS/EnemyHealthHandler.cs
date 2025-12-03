@@ -6,12 +6,15 @@ public class EnemyHealthHandler : MonoBehaviour, IDamageable
     public float maxHealth;
     public float actualHealth;
 
-    private KaijuAnimationController animCtrl;
+    public GameObject fireWorks;
 
+    private KaijuAnimationController animCtrl;
+    private EnemyAttackHandler attackHandler;
     private void Start()
     {
         actualHealth = maxHealth;
         animCtrl = GetComponent<KaijuAnimationController>();
+        attackHandler = GetComponent<EnemyAttackHandler>();
     }
 
     public void TakeDamage(float damage)
@@ -26,12 +29,15 @@ public class EnemyHealthHandler : MonoBehaviour, IDamageable
 
     public void OnDeath()
     {
+        fireWorks.SetActive(true);
+        attackHandler.stopAttacks = true;
         StartCoroutine(GameManager.Instance.Victory());
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         KaijuAnimationController animCntrl = GetComponent<KaijuAnimationController>();
 
         animCntrl.StunnedAnim(true);
         agent.isStopped = true;
+        agent.speed = 0f;
         
     }
 }

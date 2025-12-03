@@ -88,4 +88,9 @@ public class PlayerAnimationController : MonoBehaviour
         anim.SetTrigger("isDamaged");
     }
 
+    public void isDead()
+    {
+        anim.SetBool("IsDead", true);
+    }
+
 }

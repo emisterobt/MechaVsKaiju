@@ -25,7 +25,7 @@ public class EnemyAttackHandler : MonoBehaviour
     [SerializeField]
     private Transform tailCollider;
 
-
+    public bool stopAttacks = false;
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class EnemyAttackHandler : MonoBehaviour
 
     private void Update()
     {
-        if (eMove == null)
+        if (eMove == null || stopAttacks == true)
         {
             return;
         }

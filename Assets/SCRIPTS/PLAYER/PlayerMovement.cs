@@ -109,6 +109,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void PushAway(float impulse)
     {
+        if(attackHandler.isBlocking == true)
+        {
+            return;
+        }
         StartCoroutine(Launch(impulse));
     }
     public IEnumerator Launch(float impulse)

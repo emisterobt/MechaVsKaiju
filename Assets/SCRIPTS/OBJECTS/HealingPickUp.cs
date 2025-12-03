@@ -10,6 +10,7 @@ public class HealingPickUp : MonoBehaviour
 
             if (pHandler != null && pHandler.actualHealth < pHandler.maxHealth)
             {
+                AudioManager.Instance.Play("Curar");
                 pHandler.actualHealth = pHandler.maxHealth;
                 Destroy(this.gameObject);
             }

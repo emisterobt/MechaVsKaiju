@@ -79,7 +79,7 @@ public class AttackHandler : MonoBehaviour
         currentMissiles = maxMissiles;
         pM = GetComponent<PlayerMovement>();
         pDash = GetComponent<PlayerDash>();
-        
+        meleeTimer = meleeCooldown;
         grndChck = GetComponent<CheckGround>();
         StartCoroutine(ChargeLaser());
         coroutine = StartCoroutine(OutOfCombatMode());
@@ -159,16 +159,17 @@ public class AttackHandler : MonoBehaviour
         attackCollider.gameObject.SetActive(false);
         isPunching = false;
         //yield return new WaitForSeconds(0.25f);
-        meleeTimer = meleeCooldown;
-        while (meleeTimer > 0)
+        meleeTimer = 0;
+        while (meleeTimer < meleeCooldown)
         {
-            meleeTimer -= Time.deltaTime;
+            meleeTimer += Time.deltaTime;
             yield return null;
         }
 
         isAttacking = false;
         pM.lockMovement = false;
         hitType = 0;
+        meleeTimer = meleeCooldown;
     }
 
     private IEnumerator ThrowObject()
@@ -179,6 +180,8 @@ public class AttackHandler : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
         AudioManager.Instance.Play("Throw");
+        AudioManager.Instance.Stop("CarAlarm");
+        AudioManager.Instance.Stop("KidsScream");
         objectInHand.transform.SetParent(null);
         CarObject carObject = objectInHand.GetComponent<CarObject>();
         Rigidbody rb = objectInHand.GetComponent<Rigidbody>();
@@ -228,6 +231,10 @@ public class AttackHandler : MonoBehaviour
             }
 
             currentMissiles -= 2;
+        }
+        else if (currentMissiles <= 0)
+        {
+            AudioManager.Instance.Play("SinMunicion");
         }
         isAttacking = false;
 
@@ -292,6 +299,7 @@ public class AttackHandler : MonoBehaviour
             yield return null;
         }
         canUseLaser = true;
+        AudioManager.Instance.Play("LaserCargado");
     }
 
     public IEnumerator OutOfCombatMode()

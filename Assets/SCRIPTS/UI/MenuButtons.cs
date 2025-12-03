@@ -10,6 +10,10 @@ public class MenuButtons : MonoBehaviour
     public void Jugar()
     {
         SceneManager.LoadScene("Juego");
+        Time.timeScale = 1.0f;
+        GameManager.Instance.isInPause = false;
+        GameObject menuMusic = AudioManager.Instance.transform.GetChild(0).gameObject;
+        menuMusic.SetActive(false);
     }
 
     public void Creditos()
@@ -35,8 +39,14 @@ public class MenuButtons : MonoBehaviour
     public void IrAMenu()
     {
         SceneManager.LoadScene("MenuPrincipal");
+        GameObject menuMusic = AudioManager.Instance.transform.GetChild(0).gameObject;
+        menuMusic.SetActive(true);
     }
 
+    public void PlayCursorSound()
+    {
+        AudioManager.Instance.Play("Cursor");
+    }
     public void CloseConfg()
     {
         configMenu.SetActive(false);

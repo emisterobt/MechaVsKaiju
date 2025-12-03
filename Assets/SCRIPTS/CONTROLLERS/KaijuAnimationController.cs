@@ -34,5 +34,14 @@ public class KaijuAnimationController : MonoBehaviour
         animator.SetTrigger("Hit");
     }
 
+    public void OnKaijuWin()
+    {
+        animator.SetBool("Winner", true);
+    }
+
+    public void OnKaijuCerca(bool cerca)
+    {
+        animator.SetBool("Cerca", cerca);
+    }
     
 }

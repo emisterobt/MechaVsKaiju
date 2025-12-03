@@ -24,6 +24,14 @@ public class CarObject : MonoBehaviour, IInteractable
             isThrown = false;
             attackHandler.objectInHand = this.gameObject;
             transform.SetParent(attackHandler.mechaHand);
+            if (this.gameObject.name.StartsWith("AutoBus"))
+            {
+                AudioManager.Instance.Play("KidsScream");
+            }
+            else
+            {
+                AudioManager.Instance.Play("CarAlarm");
+            }
             transform.position = attackHandler.mechaHand.position;
             Rigidbody rb = transform.GetComponent<Rigidbody>();
             Collider collider = transform.GetComponent<Collider>();
@@ -43,12 +51,14 @@ public class CarObject : MonoBehaviour, IInteractable
             collision.gameObject.GetComponent<IDamageable>().TakeDamage(damageCollision);
             GameObject explosion = Instantiate(explosionParticle, transform.position, transform.rotation);
             Destroy(explosion, 1);
+            AudioManager.Instance.Play("AutoExplosion");
             Destroy(this.gameObject, 1f);
         }
 
         else if (collision.gameObject.CompareTag("Untagged"))//Cambiar a Ground cuando este
         {
             GameObject explosion = Instantiate(explosionParticle, transform.position, transform.rotation);
+            AudioManager.Instance.Play("AutoExplosion");
             Destroy(explosion, 1);
             isThrown = false ;//Cambiar a detrpy si es necesario
         }

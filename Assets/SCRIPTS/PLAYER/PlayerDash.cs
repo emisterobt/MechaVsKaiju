@@ -43,6 +43,7 @@ public class PlayerDash : MonoBehaviour
         dashParticlesGlow.SetActive(true);
         canDash = false;
         isDashing = true;
+        AudioManager.Instance.Play("Dash");
         float elapsedTime = 0f;
 
 
@@ -62,6 +63,7 @@ public class PlayerDash : MonoBehaviour
         dashParticles.SetActive(false);
         dashParticlesGlow.SetActive(false);
         isDashing=false;
+        AudioManager.Instance.Stop("Dash");
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }

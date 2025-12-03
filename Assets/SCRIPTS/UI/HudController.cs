@@ -32,6 +32,16 @@ public class HudController : MonoBehaviour
     public TextMeshProUGUI laserChargeCount;
     public TextMeshProUGUI missileCount;
 
+    public Slider meleePunch;
+    public Slider meleeKick;
+    public Slider meleeUpper;
+    public Slider jump;
+
+    public TextMeshProUGUI meleePunchCount;
+    public TextMeshProUGUI meleeKickCount;
+    public TextMeshProUGUI meleeUpperCount;
+    public TextMeshProUGUI jumpCount;
+
     [Header("Pause")]
     [SerializeField] private GameObject pauseScreen;
     [SerializeField] private bool isPaused = false;
@@ -39,7 +49,10 @@ public class HudController : MonoBehaviour
     [Header("Config")]
     [SerializeField] private GameObject configMenu;
 
-
+    private void Awake()
+    {
+        isPaused = false;
+    }
     private void Start()
     {      
         attackHandler = FindAnyObjectByType<AttackHandler>();
@@ -53,7 +66,6 @@ public class HudController : MonoBehaviour
 
         _enemyHealthMaxRightMask = _enemyHealthBarRect.rect.width - _enemyHealthBarMask.padding.x - _enemyHealthBarMask.padding.z;
         _enemyHealthInitialRightMask = _enemyHealthBarMask.padding.z;
-
         
     }
     private void Update()
@@ -64,6 +76,7 @@ public class HudController : MonoBehaviour
         UpdateMissileCount();
         UpdateEnemyDistance();
         PauseGame();
+        MeleeAttacksCooldownUpdate();
     }
 
     private void UpdatePlayerHealth()
@@ -178,6 +191,21 @@ public class HudController : MonoBehaviour
         configMenu.SetActive(false);
     }
 
+    public void MeleeAttacksCooldownUpdate()
+    {
+        meleeKick.maxValue = attackHandler.meleeCooldown;
+        meleePunch.maxValue = attackHandler.meleeCooldown;
+        meleeUpper.maxValue = attackHandler.meleeCooldown;
+        meleeKick.value = attackHandler.meleeTimer;
+        meleePunch.value = attackHandler.meleeTimer;
+        meleeUpper.value = attackHandler.meleeTimer;
 
+        int percentageCharge = (int)((attackHandler.meleeTimer * 100) / attackHandler.meleeCooldown);
+
+        meleePunchCount.text = $"{percentageCharge}%";
+        meleeUpperCount.text = $"{percentageCharge}%";
+        meleeKickCount.text = $"{percentageCharge}%";
+
+    }
 
 }

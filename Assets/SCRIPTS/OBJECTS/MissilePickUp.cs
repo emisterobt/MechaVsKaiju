@@ -10,6 +10,7 @@ public class MissilePickUp : MonoBehaviour
 
             if (aHandler != null && aHandler.currentMissiles < aHandler.maxMissiles)
             {
+                AudioManager.Instance.Play("Recarga");
                 aHandler.currentMissiles = aHandler.maxMissiles;
                 Destroy(this.gameObject);
             }

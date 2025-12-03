@@ -46,8 +46,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            AudioManager.Instance.Stop("MechaWalk");
+
             yield return new WaitForSeconds(5f);
+            AudioManager.Instance.Stop("MechaWalk");
             SceneManager.LoadScene("EscenaVictoria");
             Cursor.lockState = CursorLockMode.None;
         }

@@ -105,6 +105,7 @@ MonoBehaviour:
   damageCollision: 2
   isThrown: 0
   attackHandler: {fileID: 0}
+  explosionParticle: {fileID: 0}
 --- !u!65 &6758236399265879003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -220,6 +221,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d1e1a2cf6b785324da612b18e1cfd677, type: 3}
       propertyPath: m_Name
       value: Camion_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d1e1a2cf6b785324da612b18e1cfd677, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

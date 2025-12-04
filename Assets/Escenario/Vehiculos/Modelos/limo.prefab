@@ -125,6 +125,7 @@ MonoBehaviour:
   damageCollision: 2
   isThrown: 0
   attackHandler: {fileID: 0}
+  explosionParticle: {fileID: 0}
 --- !u!54 &3605663211606008911
 Rigidbody:
   m_ObjectHideFlags: 0

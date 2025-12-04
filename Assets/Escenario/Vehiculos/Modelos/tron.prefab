@@ -152,3 +152,4 @@ MonoBehaviour:
   damageCollision: 2
   isThrown: 0
   attackHandler: {fileID: 0}
+  explosionParticle: {fileID: 0}

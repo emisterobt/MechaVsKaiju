@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
         else
         {
             AudioManager.Instance.Stop("MechaWalk");
+            AudioManager.Instance.Stop("KidsScream");
+            AudioManager.Instance.Stop("CarAlarm");
             yield return new WaitForSeconds(5f);
             SceneManager.LoadScene("EscenaDerrota");
             Cursor.lockState = CursorLockMode.None;
@@ -49,6 +51,8 @@ public class GameManager : MonoBehaviour
 
             yield return new WaitForSeconds(5f);
             AudioManager.Instance.Stop("MechaWalk");
+            AudioManager.Instance.Stop("KidsScream");
+            AudioManager.Instance.Stop("CarAlarm");
             SceneManager.LoadScene("EscenaVictoria");
             Cursor.lockState = CursorLockMode.None;
         }
@@ -63,6 +67,8 @@ public class GameManager : MonoBehaviour
         else
         {
             AudioManager.Instance.Stop("MechaWalk");
+            AudioManager.Instance.Stop("KidsScream");
+            AudioManager.Instance.Stop("CarAlarm");
             yield return new WaitForSeconds(5f);
             SceneManager.LoadScene("NuclearLOSE");
             Cursor.lockState = CursorLockMode.None;

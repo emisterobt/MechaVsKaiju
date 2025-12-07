@@ -24,11 +24,14 @@ public class CameraController : MonoBehaviour
     public Camera mainCamera;
     public Transform rotator;
 
+    private PlayerMovement pM;
+
     void Start()
     {
         if (player == null)
         {
             player = transform.parent;
+            pM = player.GetComponent<PlayerMovement>();
         }
         Cursor.lockState = CursorLockMode.Locked;
         iniCamPos = transform.localRotation;
@@ -38,10 +41,10 @@ public class CameraController : MonoBehaviour
     void Update()
     {
 
-        if (inCombat == true)
+        if (pM.died == true)
         {
             LockCameraRotation();
-            OnCombat();
+            //OnCombat();
         }
         else if (lockMainCamera == true || GameManager.Instance.isInPause == true)
         {
@@ -84,7 +87,7 @@ public class CameraController : MonoBehaviour
 
     public void LockCameraRotation()
     {
-        transform.localRotation = Quaternion.Euler(iniCamPos.x,transform.localRotation.y, transform.localRotation.z);
+        transform.localRotation = Quaternion.Euler(iniCamPos.x, transform.localRotation.y, transform.localRotation.z);
         player.localRotation = player.localRotation;
 
     }
@@ -96,7 +99,7 @@ public class CameraController : MonoBehaviour
 
     public void ResetRotator()
     {
-        rotator.localRotation = Quaternion.Euler(0,0,0);
+        rotator.localRotation = Quaternion.Euler(0, 0, 0);
     }
 
 }

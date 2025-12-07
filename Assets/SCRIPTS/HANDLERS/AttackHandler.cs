@@ -87,6 +87,11 @@ public class AttackHandler : MonoBehaviour
 
     private void Update()
     {
+        if(pM.died == true)
+        {
+            return;
+        }
+
         AttackType();
         ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
     }
@@ -107,9 +112,12 @@ public class AttackHandler : MonoBehaviour
 
         if (InputController.Instance.MainAttack() && pDash.isDashing == false)
         {
-            if (objectInHand != null)
+            if (objectInHand != null )
             {
-                StartCoroutine(ThrowObject());
+                if (!InputController.Instance.JumpHold())
+                {
+                    StartCoroutine(ThrowObject());
+                }
             }
             else
             {

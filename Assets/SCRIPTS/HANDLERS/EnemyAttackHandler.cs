@@ -27,6 +27,8 @@ public class EnemyAttackHandler : MonoBehaviour
 
     public bool stopAttacks = false;
 
+    private Coroutine attack;
+
     private void Start()
     {
         eMove = GetComponent<EnemyMovement>();
@@ -35,7 +37,7 @@ public class EnemyAttackHandler : MonoBehaviour
 
     private void Update()
     {
-        if (eMove == null || stopAttacks == true)
+        if (eMove == null || stopAttacks == true || eMove.isStunned == true)
         {
             return;
         }
@@ -45,16 +47,17 @@ public class EnemyAttackHandler : MonoBehaviour
             {
                 if (attacksDone < attacksRemaining)
                 {
-                    StartCoroutine(MeleeAttack());
+                    attack = StartCoroutine(MeleeAttack());
                 }
                 else if (attacksDone == attacksRemaining && isAttacking == false)
                 {
-                    StartCoroutine(Flame());
+                    attack = StartCoroutine(Flame());
                 }
             }
 
         }
     }
+
 
     private IEnumerator MeleeAttack()
     {

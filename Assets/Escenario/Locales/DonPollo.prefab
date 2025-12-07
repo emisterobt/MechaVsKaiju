@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 759967017013324432}
   - component: {fileID: 8317682741415717683}
   - component: {fileID: 5825323878975548937}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: DonPollo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 666445363064664505}
   - component: {fileID: 5155878641695528050}
   - component: {fileID: 3867633291764618551}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: DonPollo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5298881344662646258, guid: 68611abae0492bd47bceb7116790dc55, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5298881344662646258, guid: 68611abae0492bd47bceb7116790dc55, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -360,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7768645863417463938, guid: 254130a2ebeffa44dacafba93c50dc82, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7768645863417463938, guid: 254130a2ebeffa44dacafba93c50dc82, type: 3}
       propertyPath: m_StaticEditorFlags

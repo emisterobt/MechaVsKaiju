@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody rb;
     private PlayerAnimationController playerAnims;
     private AttackHandler attackHandler;
+    private PlayerHealthHandler healthHandler;
     public CheckGround grndChk;
     public bool lockMovement = false;
     [SerializeField] private bool isJumping = false;
@@ -23,21 +24,26 @@ public class PlayerMovement : MonoBehaviour
     public float magnitude;
     public bool playWalkSound = false;
     public bool inGround;
+
+    public bool died = false;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         grndChk = GetComponent<CheckGround>();
         playerAnims = GetComponent<PlayerAnimationController>();
         attackHandler = GetComponent<AttackHandler>();
+        healthHandler = GetComponent<PlayerHealthHandler>();
     }
 
     void Update()
     {
-
+        if(died == true)
+        {
+            return;
+        }
 
         if (lockMovement != true)
         {
-           
 
             if (grndChk.IsGrounded() && !InputController.Instance.JumpHold())
             {
@@ -81,13 +87,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        if (InputController.Instance.Jump() && grndChk.IsGrounded() && isJumping == false || InputController.Instance.JumpHold() && InputController.Instance.MainAttack() && grndChk.IsGrounded() && isJumping == false)
+        if(healthHandler.tookDmg == false)
         {
-            playerAnims.TriggerJump();
-            isJumping = true;
-            wasJumping = false ;
-            Invoke("JumpDelay", 0.3f);
+            if (InputController.Instance.Jump() && grndChk.IsGrounded() && isJumping == false || InputController.Instance.JumpHold() && InputController.Instance.MainAttack() && grndChk.IsGrounded() && isJumping == false)
+            {
+                playerAnims.TriggerJump();
+                isJumping = true;
+                wasJumping = false;
+                Invoke("JumpDelay", 0.3f);
+            }
         }
+
     }
 
 
@@ -123,7 +133,8 @@ public class PlayerMovement : MonoBehaviour
         while (elapsedTime < 1f)
         {
             rb.useGravity = false;
-            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+            //rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+            rb.linearVelocity = new Vector3(0, 0, 0);
             rb.AddForce(-transform.forward * impulse, ForceMode.Force);
             elapsedTime += Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6412224116978877686}
   - component: {fileID: 7484300464153242441}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 1351927691208619189}
   - component: {fileID: 5955391027718559540}
   - component: {fileID: 4316657925465683734}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Feria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5400195001365641561}
   - component: {fileID: 6886101945341488371}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 8378252194507212956}
   - component: {fileID: 1773847599707324073}
   - component: {fileID: 4037007549943343228}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Feria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4834692442906422780}
   - component: {fileID: 2641966518200712533}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5298881344662646258, guid: 68611abae0492bd47bceb7116790dc55, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5298881344662646258, guid: 68611abae0492bd47bceb7116790dc55, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -486,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7768645863417463938, guid: 254130a2ebeffa44dacafba93c50dc82, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7768645863417463938, guid: 254130a2ebeffa44dacafba93c50dc82, type: 3}
       propertyPath: m_StaticEditorFlags

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3039304459167892089}
   - component: {fileID: 7625283209039739002}
   - component: {fileID: 5511253328203032805}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Estadio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4880733182716639163}
   - component: {fileID: 7012952415184272132}
   - component: {fileID: 5282729694948779375}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Estadio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -304,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_StaticEditorFlags

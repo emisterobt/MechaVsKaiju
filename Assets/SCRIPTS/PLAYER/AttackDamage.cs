@@ -5,11 +5,13 @@ using UnityEngine;
 public class AttackDamage : MonoBehaviour
 {
     private AttackHandler attackHandler;
+    private EnemyAttackHandler enemyAttackHandler;
     public DamageType type;
 
     private void Start()
     {
         attackHandler = FindAnyObjectByType<AttackHandler>();
+        enemyAttackHandler = FindAnyObjectByType<EnemyAttackHandler>();
     }
 
     private void OnTriggerEnter(Collider other)

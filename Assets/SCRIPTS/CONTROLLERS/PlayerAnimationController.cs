@@ -68,14 +68,23 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void Misil()
     {
-        anim.SetBool("Misil",attackHandler.isShootMissile);
+        anim.SetBool("Misil", attackHandler.isShootMissile);
     }
 
     public void isBlocking()
     {
         anim.SetBool("isBlocking", attackHandler.isBlocking);
-        attackHandler.shield.SetActive(attackHandler.isBlocking);
-        pm.lockMovement = attackHandler.isBlocking;
+        if (attackHandler.isBlocking && pm.died == false)
+        {
+            attackHandler.shield.SetActive(attackHandler.isBlocking);
+            pm.lockMovement = true;
+
+        }
+        else
+        {
+            attackHandler.shield.SetActive(attackHandler.isBlocking);
+            pm.lockMovement = false;
+        }
     }
 
     public void Throw()

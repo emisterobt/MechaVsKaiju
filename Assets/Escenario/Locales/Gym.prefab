@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3569959595601369878}
   - component: {fileID: 6950176347810252167}
   - component: {fileID: 2595902167667035139}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Gym
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 7668725317316987358}
   - component: {fileID: 4941132318729786640}
   - component: {fileID: 315577686204371475}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Gym
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7768645863417463938, guid: 254130a2ebeffa44dacafba93c50dc82, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7768645863417463938, guid: 254130a2ebeffa44dacafba93c50dc82, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -338,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5298881344662646258, guid: 68611abae0492bd47bceb7116790dc55, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5298881344662646258, guid: 68611abae0492bd47bceb7116790dc55, type: 3}
       propertyPath: m_StaticEditorFlags

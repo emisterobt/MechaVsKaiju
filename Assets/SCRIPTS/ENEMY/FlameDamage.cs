@@ -4,24 +4,35 @@ using static AttackDamage;
 public class FlameDamage : MonoBehaviour
 {
     private EnemyAttackHandler eAtk;
+    private PlayerHealthHandler pH;
 
     private void Start()
     {
         eAtk = FindFirstObjectByType<EnemyAttackHandler>();
+        pH = FindFirstObjectByType<PlayerHealthHandler>();
     }
 
-    private void OnTriggerStay(Collider other)
+
+
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerHealthHandler>().StartDamageOverTime(eAtk.flameDps, eAtk.flameCoolDown, eAtk.flameDuration);
+        }
+    }
 
-            IDamageable damgeable = other.GetComponent<IDamageable>();
-            if (other.CompareTag("Enemy"))
-            {
-                return;
-            }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<PlayerHealthHandler>().StopDamageOverTime();
+        }
+    }
 
-            if (damgeable != null)
-            {
-                other.gameObject.GetComponent<IDamageable>().TakeDamage(eAtk.flameDps * 0.02f);
-            }
+    private void OnDisable()
+    {
+        pH.StopDamageOverTime();
+
     }
 }

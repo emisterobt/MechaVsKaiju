@@ -30,6 +30,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private GameObject atomicBomb;
     public float timeToEnd;
     public float nuclerHealth;
+    public float nuclerMaxHealth;
+
     [SerializeField] private GameObject cameraExp;
 
     private Coroutine reachedDestinyCoroutine;
@@ -42,6 +44,7 @@ public class EnemyMovement : MonoBehaviour
         initialDistance = Vector3.Distance(transform.position, endPoint.position);
         animCntrl = GetComponent<KaijuAnimationController>();
         nuclerHealth = timeToEnd;
+        nuclerMaxHealth = nuclerHealth;
     }
 
     private void Update()
@@ -78,13 +81,11 @@ public class EnemyMovement : MonoBehaviour
             {
                 isMoving = false;
 
-                // Solo activar si no estaba ya activo
                 if (!cerca)
                 {
                     cerca = true;
                     animCntrl.OnKaijuCerca(cerca);
 
-                    // Iniciar la corrutina solo si no está ya corriendo
                     if (!isCountdownRunning)
                     {
                         StartDestinyCountdown();
@@ -95,19 +96,16 @@ public class EnemyMovement : MonoBehaviour
     }
     private void UpdateCercaState()
     {
-        // Si está cerca pero el agente se ha alejado del punto final
         if (cerca && agent.remainingDistance > agent.stoppingDistance + 0.5f)
         {
             cerca = false;
             animCntrl.OnKaijuCerca(cerca);
 
-            // Detener la corrutina pero mantener el valor de nuclerHealth
             StopDestinyCountdown();
         }
     }
     private void StartDestinyCountdown()
     {
-        // Detener cualquier corrutina existente
         if (reachedDestinyCoroutine != null)
         {
             StopCoroutine(reachedDestinyCoroutine);
@@ -136,7 +134,6 @@ public class EnemyMovement : MonoBehaviour
             agent.SetDestination(player.position);
             isMoving = true;
 
-            // Si está persiguiendo al jugador y estaba cerca, detener la cuenta regresiva
             if (cerca)
             {
                 cerca = false;
@@ -169,7 +166,6 @@ public class EnemyMovement : MonoBehaviour
         animCntrl.StunnedAnim(isStunned);
         agent.isStopped = true;
 
-        // Detener la cuenta regresiva si está aturdido
         if (cerca)
         {
             StopDestinyCountdown();
@@ -180,7 +176,6 @@ public class EnemyMovement : MonoBehaviour
         agent.isStopped = false;
         animCntrl.StunnedAnim(isStunned);
 
-        // Reanudar la cuenta regresiva si sigue cerca
         if (cerca && !isCountdownRunning)
         {
             StartDestinyCountdown();
@@ -195,7 +190,6 @@ public class EnemyMovement : MonoBehaviour
             yield return null;
         }
 
-        // Solo activar la bomba si la cuenta regresiva llegó a cero
         if (nuclerHealth <= 0 && cerca)
         {
             atomicBomb.SetActive(true);

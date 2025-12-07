@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6081062021544657759}
   - component: {fileID: 645744455182900566}
   - component: {fileID: 6081360845884565392}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Edificios2_Edificio_Vertical (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4171345211684766272}
   - component: {fileID: 38118303455485125}
   - component: {fileID: 424413616318283345}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Edificios2_Edificio_Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 7220387223032031607}
   - component: {fileID: 4471499041775963579}
   - component: {fileID: 430455577476056200}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Edificios2_Edificio_Vertical (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 4018710688526578833}
   - component: {fileID: 2405811162587754928}
   - component: {fileID: 1000704523199795126}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Edificio Vertical 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 5352707426235368421}
   - component: {fileID: 875464803312772955}
   - component: {fileID: 2958610356647998302}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Edificios2_Edificio_Vertical (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172514550690802003}
   - component: {fileID: 1888687212803985663}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Edificio Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 4135415762665426585}
   - component: {fileID: 2380361727891607094}
   - component: {fileID: 2142242038168493408}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Edificios2_Edificio_Vertical (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 6899930735441377015}
   - component: {fileID: 4698807663293716159}
   - component: {fileID: 8270784814965527958}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Edificios2_Techo_Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 38433926973653796, guid: 75df351fdce4980468191460ae97f829, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -762,7 +762,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 232680518287689781, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 232680518287689781, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -774,7 +774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5166623066180377525, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5166623066180377525, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -782,7 +782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5558476687985994237, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5558476687985994237, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -830,7 +830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7098569103110375915, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7098569103110375915, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -838,7 +838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8123644318229091515, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8123644318229091515, guid: 3bee82ecb82bae545a652ed47006ec09, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -868,7 +868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 38433926973653796, guid: 694d467cc8200774ca37d8dce4aedf4f, type: 3}
       propertyPath: m_StaticEditorFlags

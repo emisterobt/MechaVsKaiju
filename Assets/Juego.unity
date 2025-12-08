@@ -27646,6 +27646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8108b5c31f7cd4c8f318eb519202fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitParticle: {fileID: 0}
   type: 1
 --- !u!4 &263734175 stripped
 Transform:
@@ -52962,7 +52963,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -127647,6 +127648,7 @@ MonoBehaviour:
   currentMissiles: 0
   damageReduction: 1
   isBlocking: 0
+  lockMovebyBlock: 0
   shield: {fileID: 1338028761}
   camController: {fileID: 2057177701}
   type: 0
@@ -171127,7 +171129,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -192216,6 +192218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8108b5c31f7cd4c8f318eb519202fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitParticle: {fileID: 1594565357}
   type: 1
 --- !u!1001 &1562874267
 PrefabInstance:
@@ -196477,6 +196480,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 696487041}
     m_Modifications:
     - target: {fileID: 1465841826671920598, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465841826671920598, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 0.5
       objectReference: {fileID: 0}
@@ -196547,6 +196554,10 @@ PrefabInstance:
     - target: {fileID: 1465841826671920598, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].tangentMode
       value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394145451525035184, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
+      propertyPath: looping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2394145451525035184, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
@@ -196664,9 +196675,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4282884721405660071, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5240377162495801237, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
       propertyPath: m_Name
       value: Hit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5240377162495801237, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -196681,6 +196700,11 @@ PrefabInstance:
 --- !u!4 &1594565356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3257300635728839273, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
+  m_PrefabInstance: {fileID: 1594565355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1594565357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5240377162495801237, guid: c93844413467ecc4eb07675cc9da79fa, type: 3}
   m_PrefabInstance: {fileID: 1594565355}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1594851300 stripped
@@ -213258,7 +213282,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1728201469}
   - component: {fileID: 1728201470}
-  - component: {fileID: 1728201471}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -213447,25 +213470,9 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   mixer: {fileID: 24100000, guid: b38ac34abc206654f8c5e20e607df235, type: 2}
   sfxs: {fileID: 3913000834107138070, guid: b38ac34abc206654f8c5e20e607df235, type: 2}
---- !u!114 &1728201471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1728201468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffa7caed61225c54997742f2b4fcfd0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: b38ac34abc206654f8c5e20e607df235, type: 2}
   sfxsVolume: 1
   musicVolume: 1
   masterVolume: 1
-  master: {fileID: 0}
-  music: {fileID: 0}
-  sfxs: {fileID: 0}
 --- !u!1 &1728345300
 GameObject:
   m_ObjectHideFlags: 0
@@ -238549,7 +238556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Insertar Texto
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -245491,7 +245498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Name
+  m_text: '
 
 '
   m_isRightToLeft: 0
@@ -247748,7 +247755,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -265594,6 +265601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8108b5c31f7cd4c8f318eb519202fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitParticle: {fileID: 0}
   type: 0
 --- !u!4 &2073597794 stripped
 Transform:

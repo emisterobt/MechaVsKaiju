@@ -49,6 +49,7 @@ public class AttackHandler : MonoBehaviour
     [Range(0f, 1f)]
     public float damageReduction;
     public bool isBlocking = false;
+    public bool lockMovebyBlock = false;
     public GameObject shield;
 
 

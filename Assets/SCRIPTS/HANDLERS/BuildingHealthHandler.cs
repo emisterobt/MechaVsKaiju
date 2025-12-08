@@ -1,13 +1,17 @@
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class BuildingHealthHandler : MonoBehaviour , IDamageable
+public class BuildingHealthHandler : MonoBehaviour, IDamageable
 {
     public float maxHealth;
     public float actualHealth;
     public Animator anim;
     public ParticleSystem particle;
     public ParticleSystem particle2;
+
+    
+    public static bool playingDerrumbe = false;
 
     public GameObject[] escombros;
     private void Start()
@@ -33,7 +37,13 @@ public class BuildingHealthHandler : MonoBehaviour , IDamageable
         particle.Play();
         particle2.Play();
         anim.SetBool("isFalling", true);
-        Instantiate(escombros[RandomNumber()],particle.transform.position,Quaternion.Euler(0,0,0));
+        if (playingDerrumbe == false)
+        {
+            AudioManager.Instance.Play("Derrumbe");
+            playingDerrumbe = true;
+            StartCoroutine(ResetDerrumbeSound());
+        }
+        Instantiate(escombros[RandomNumber()], particle.transform.position, Quaternion.Euler(0, 0, 0));
         Collider collider = GetComponent<Collider>();
         collider.enabled = false;
     }
@@ -55,5 +65,11 @@ public class BuildingHealthHandler : MonoBehaviour , IDamageable
         int escombro = Random.Range(0, escombros.Length);
 
         return escombro;
+    }
+
+    public static IEnumerator ResetDerrumbeSound()
+    {
+        yield return new WaitForSeconds(3f);
+        playingDerrumbe = false;
     }
 }

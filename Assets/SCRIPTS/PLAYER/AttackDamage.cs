@@ -1,11 +1,10 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 public class AttackDamage : MonoBehaviour
 {
     private AttackHandler attackHandler;
     private EnemyAttackHandler enemyAttackHandler;
+    public GameObject hitParticle;
     public DamageType type;
 
     private void Start()
@@ -27,6 +26,14 @@ public class AttackDamage : MonoBehaviour
             if (damgeable != null)
             {
                 other.GetComponent<IDamageable>().TakeDamage(attackHandler.meleeDamage);
+                if (other.CompareTag("Enemy"))
+                {
+                    if (hitParticle != null)
+                    {
+                        hitParticle.SetActive(true);
+
+                    }
+                }
                 AudioManager.Instance.Play("ImpactoPunch");
 
             }
@@ -42,12 +49,12 @@ public class AttackDamage : MonoBehaviour
         }
 
 
-        
+
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if(type == DamageType.Laser)
+        if (type == DamageType.Laser)
         {
             IDamageable damgeable = other.GetComponent<IDamageable>();
             if (other.CompareTag("Player"))
@@ -65,7 +72,15 @@ public class AttackDamage : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        if (hitParticle == null)
+        {
+            return ;
 
+        }
+        hitParticle.SetActive(false);
+    }
     public enum DamageType
     {
         Laser, Melee

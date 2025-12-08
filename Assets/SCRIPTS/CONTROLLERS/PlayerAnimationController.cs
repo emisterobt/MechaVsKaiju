@@ -78,12 +78,18 @@ public class PlayerAnimationController : MonoBehaviour
         {
             attackHandler.shield.SetActive(attackHandler.isBlocking);
             pm.lockMovement = true;
+            attackHandler.lockMovebyBlock = true;
 
         }
         else
         {
             attackHandler.shield.SetActive(attackHandler.isBlocking);
-            pm.lockMovement = false;
+            if (attackHandler.lockMovebyBlock)
+            {
+                pm.lockMovement = false;
+                attackHandler.lockMovebyBlock = false;
+            }
+
         }
     }
 

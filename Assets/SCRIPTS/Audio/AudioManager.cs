@@ -10,6 +10,13 @@ public class AudioManager : MonoBehaviour
     public AudioMixer mixer;
     public AudioMixerGroup sfxs;
 
+    [Range(0.0001f, 1f)]
+    public float sfxsVolume;
+    [Range(0.0001f, 1f)]
+    public float musicVolume;
+    [Range(0.0001f, 1f)]
+    public float masterVolume;
+
     private void Awake()
     {
 

@@ -44,7 +44,11 @@ public class AttackDamage : MonoBehaviour
             if (other.CompareTag("Enemy"))
             {
                 EnemyMovement enemyMovement = other.GetComponent<EnemyMovement>();
-                enemyMovement.isStunned = true;
+                if (enemyMovement != null)
+                {
+                    enemyMovement.isStunned = true;
+                }
+                
             }
         }
 

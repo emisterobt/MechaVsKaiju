@@ -199563,7 +199563,7 @@ MonoBehaviour:
   girlBCanvasGroup: {fileID: 2062284730}
   girlAImage: {fileID: 1274398409}
   girlBImage: {fileID: 2062284728}
-  typingSpeed: 0.05
+  typingSpeed: 0.04
   fadeDuration: 0.3
   _conversationData: []
   currentLineIndex: 0

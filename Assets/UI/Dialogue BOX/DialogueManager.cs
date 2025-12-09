@@ -32,9 +32,12 @@ public class DialogueManager : MonoBehaviour
     public float fadeDuration = 0.3f;
 
     // --- VARIABLES INTERNAS (NO APARECEN EN EL INSPECTOR) ---
-    private DialogueLine[] _conversationData; // Almacena la conversación activa
-    private int currentLineIndex = 0;
-    private bool isTyping = false;
+    [HideInInspector]
+    public DialogueLine[] _conversationData; // Almacena la conversación activa
+    [HideInInspector]
+    public int currentLineIndex = 0;
+    [HideInInspector]
+    public bool isTyping = false;
     private bool dialogueIsActive = false;
     private CanvasGroup activeCharacterGroup;
 
@@ -54,7 +57,7 @@ public class DialogueManager : MonoBehaviour
 
         dialogueBoxAnimator.SetTrigger("Abrir");
 
-        Invoke("ProcessNextLine", 0.5f);
+        Invoke("ProcessNextLine", 0.3f);
     }
 
     public void OnContinueClicked()
@@ -84,7 +87,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void EndDialogue()
+    public void EndDialogue()
     {
         dialogueBoxAnimator.SetTrigger("Cerrar");
         if (activeCharacterGroup != null) StartCoroutine(FadeCanvasGroup(activeCharacterGroup, 0f));
@@ -95,7 +98,7 @@ public class DialogueManager : MonoBehaviour
     // LÓGICA INTERNA DE FLUJO
     // =========================================================
 
-    private void ProcessNextLine()
+    public void ProcessNextLine()
     {
         nextIndicator.SetActive(false);
 

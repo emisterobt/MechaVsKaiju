@@ -25257,7 +25257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244264848}
   - component: {fileID: 244264849}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57055,7 +57055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498572183}
   - component: {fileID: 498572184}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105357,7 +105357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 42a5be5bc94ca674fba7e4880fb00921, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 42a5be5bc94ca674fba7e4880fb00921, type: 3}
       propertyPath: m_Layer
@@ -121654,7 +121654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1025257915}
   - component: {fileID: 1025257916}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127574,6 +127574,7 @@ MonoBehaviour:
   lockMovement: 0
   isJumping: 0
   wasJumping: 0
+  allowBlock: 1
   magnitude: 0
   playWalkSound: 0
   inGround: 0
@@ -127663,6 +127664,21 @@ MonoBehaviour:
   shield: {fileID: 1338028761}
   camController: {fileID: 2057177701}
   type: 0
+  chargedLaser:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1607682875}
+        m_TargetAssemblyTypeName: DialogueStarter, Assembly-CSharp
+        m_MethodName: LaserCargado
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1062786608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155376,7 +155392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244186408}
   - component: {fileID: 1244186409}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157855,7 +157871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d75e65d35da868449ebf3974ff02bd3, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d75e65d35da868449ebf3974ff02bd3, type: 3}
       propertyPath: m_TagString
@@ -157863,7 +157879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 8d75e65d35da868449ebf3974ff02bd3, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -165201,7 +165217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1334305065}
   - component: {fileID: 1334305066}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175626,7 +175642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d75e65d35da868449ebf3974ff02bd3, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d75e65d35da868449ebf3974ff02bd3, type: 3}
       propertyPath: m_TagString
@@ -175634,7 +175650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 8d75e65d35da868449ebf3974ff02bd3, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -192013,7 +192029,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1559494019}
   - component: {fileID: 1559494020}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199549,6 +199565,9 @@ MonoBehaviour:
   girlBImage: {fileID: 2062284728}
   typingSpeed: 0.05
   fadeDuration: 0.3
+  _conversationData: []
+  currentLineIndex: 0
+  isTyping: 0
 --- !u!114 &1607682875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199565,8 +199584,21 @@ MonoBehaviour:
   conversationData:
   - characterName: Morada
     portrait: {fileID: 21300000, guid: 3dbfed67b3d738645b50425c29519867, type: 3}
-    text: Esto es una Prueba
+    text: El Kaiju se dirige a la central nuclear.
     isGirlA: 0
+  - characterName: Roja
+    portrait: {fileID: 21300000, guid: 4259ac273e2028a4d9f33717828b640b, type: 3}
+    text: "\xA1Hay que detenerlo!"
+    isGirlA: 1
+  laserCargado:
+  - characterName: Morada
+    portrait: {fileID: 21300000, guid: 3dbfed67b3d738645b50425c29519867, type: 3}
+    text: "\xA1\xA1Cargamos el Laser!!"
+    isGirlA: 0
+  - characterName: Roja
+    portrait: {fileID: 21300000, guid: 4259ac273e2028a4d9f33717828b640b, type: 3}
+    text: Presiona E para usarlo.
+    isGirlA: 1
   continueKey: 49
 --- !u!1001 &1608419812
 PrefabInstance:
@@ -232978,7 +233010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d75e65d35da868449ebf3974ff02bd3, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d75e65d35da868449ebf3974ff02bd3, type: 3}
       propertyPath: m_TagString
@@ -232986,7 +233018,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 8d75e65d35da868449ebf3974ff02bd3, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

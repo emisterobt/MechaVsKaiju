@@ -18,8 +18,9 @@ public class PlayerMovement : MonoBehaviour
     private PlayerHealthHandler healthHandler;
     public CheckGround grndChk;
     public bool lockMovement = false;
-    [SerializeField] private bool isJumping = false;
-    [SerializeField] private bool wasJumping = false;
+    [SerializeField] public bool isJumping = false;
+    [SerializeField] public bool wasJumping = false;
+    public bool allowBlock = true;
 
     public float magnitude;
     public bool playWalkSound = false;
@@ -37,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(died == true)
+        if (died == true)
         {
             return;
         }
@@ -52,19 +53,28 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-
                 Jump();
                 magnitude = 0f;
             }
 
         }
-         AudioWalking();
+        AudioWalking();
 
+        if (InputController.Instance.JumpHold() || InputController.Instance.Jump())
+        {
+            allowBlock = false;
+            StartCoroutine(blockAllowed());
+        }
 
         if (rb.linearVelocity.y <= 0 && grndChk.IsGrounded())
         {
-            if(wasJumping == true)
+
+
+
+
+            if (wasJumping == true)
             {
+                isJumping = false;
                 wasJumping = false;
                 AudioManager.Instance.Play("ImpactoCaida");
             }
@@ -81,19 +91,18 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = transform.rotation * new Vector3(InputController.Instance.HorizontalMovement() * ActualSpeed(), rb.linearVelocity.y, InputController.Instance.VerticalMovement() * ActualSpeed());
         magnitude = rb.linearVelocity.magnitude;
 
-        
 
     }
 
     public void Jump()
     {
-        if(healthHandler.tookDmg == false)
+        if (healthHandler.tookDmg == false)
         {
             if (InputController.Instance.Jump() && grndChk.IsGrounded() && isJumping == false || InputController.Instance.JumpHold() && InputController.Instance.MainAttack() && grndChk.IsGrounded() && isJumping == false)
             {
                 playerAnims.TriggerJump();
+                allowBlock = false;
                 isJumping = true;
-                wasJumping = false;
                 Invoke("JumpDelay", 0.3f);
             }
         }
@@ -110,16 +119,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void JumpDelay()
     {
+        allowBlock = false;
         rb.linearVelocity = Vector3.zero;
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        isJumping = false;
         wasJumping = true;
 
     }
 
     public void PushAway(float impulse)
     {
-        if(attackHandler.isBlocking == true)
+        if (attackHandler.isBlocking == true || attackHandler.isUsingLaser == true)
         {
             return;
         }
@@ -160,5 +169,11 @@ public class PlayerMovement : MonoBehaviour
             AudioManager.Instance.Stop("MechaWalk");
             playWalkSound = false;
         }
+    }
+
+    private IEnumerator blockAllowed()
+    {
+        yield return new WaitForSeconds(1f);
+        allowBlock = true;
     }
 }

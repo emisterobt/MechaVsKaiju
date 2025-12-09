@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AttackHandler : MonoBehaviour
 {
@@ -72,6 +73,7 @@ public class AttackHandler : MonoBehaviour
     private WaitForSeconds waitFor = new WaitForSeconds(1f);
 
     public TypeOfAttack type;
+    public UnityEvent chargedLaser;
 
     private void Start()
     {
@@ -101,7 +103,7 @@ public class AttackHandler : MonoBehaviour
     {
         if (isAttacking || !grndChck.IsGrounded()) return;
 
-        if (InputController.Instance.Blocking())
+        if (InputController.Instance.Blocking() && pM.wasJumping != true && pM.isJumping != true && pM.allowBlock == true)
         {
             isBlocking = true;
             return;
@@ -309,6 +311,7 @@ public class AttackHandler : MonoBehaviour
         }
         canUseLaser = true;
         AudioManager.Instance.Play("LaserCargado");
+        chargedLaser?.Invoke();
     }
 
     public IEnumerator OutOfCombatMode()

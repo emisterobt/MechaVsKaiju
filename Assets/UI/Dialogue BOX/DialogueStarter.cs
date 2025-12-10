@@ -32,13 +32,13 @@ public class DialogueStarter : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(continueKey))
-        {
-            if (!dialogueHasStarted)
-            {
-                StartCoroutine(DialogoLaserCargado());
-            }
-        }
+        //if (Input.GetKeyDown(continueKey))
+        //{
+        //    if (!dialogueHasStarted)
+        //    {
+        //        StartCoroutine(DialogoLaserCargado());
+        //    }
+        //}
     }
     public void LaserCargado()
     {

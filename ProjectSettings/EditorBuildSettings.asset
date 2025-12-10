@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Configuracion.unity
     guid: acde300aaffdfa546b03722a09b66a97
+  - enabled: 1
+    path: Assets/EscenaIntroduccion.unity
+    guid: d93fd093e7eaa5042877cd095c0eb56c
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

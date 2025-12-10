@@ -9,7 +9,7 @@ public class MenuButtons : MonoBehaviour
 
     public void Jugar()
     {
-        SceneManager.LoadScene("Juego");
+        SceneManager.LoadScene("EscenaIntroduccion");
         Time.timeScale = 1.0f;
         GameManager.Instance.isInPause = false;
         GameObject menuMusic = AudioManager.Instance.transform.GetChild(0).gameObject;
@@ -40,7 +40,9 @@ public class MenuButtons : MonoBehaviour
     {
         SceneManager.LoadScene("MenuPrincipal");
         GameObject menuMusic = AudioManager.Instance.transform.GetChild(0).gameObject;
+        GameObject gameMusic = AudioManager.Instance.transform.GetChild(1).gameObject;
         menuMusic.SetActive(true);
+        gameMusic.SetActive(false);
     }
 
     public void PlayCursorSound()

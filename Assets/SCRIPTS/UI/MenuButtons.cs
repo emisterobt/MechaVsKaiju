@@ -53,4 +53,13 @@ public class MenuButtons : MonoBehaviour
     {
         configMenu.SetActive(false);
     }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("Juego");
+        Time.timeScale = 1.0f;
+        GameManager.Instance.isInPause = false;
+        GameObject menuMusic = AudioManager.Instance.transform.GetChild(0).gameObject;
+        menuMusic.SetActive(false);
+    }
 }

@@ -48,8 +48,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(8f);
             AudioManager.Instance.Stop("MechaWalk");
             AudioManager.Instance.Stop("KidsScream");
             AudioManager.Instance.Stop("CarAlarm");

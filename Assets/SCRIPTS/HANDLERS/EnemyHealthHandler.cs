@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +8,7 @@ public class EnemyHealthHandler : MonoBehaviour, IDamageable
     public float actualHealth;
 
     public GameObject fireWorks;
+    [SerializeField] private GameObject cameraExp;
 
     private KaijuAnimationController animCtrl;
     private EnemyAttackHandler attackHandler;
@@ -31,6 +33,7 @@ public class EnemyHealthHandler : MonoBehaviour, IDamageable
     {
         fireWorks.SetActive(true);
         attackHandler.stopAttacks = true;
+        StartCoroutine(ChangeCamera());
         StartCoroutine(GameManager.Instance.Victory());
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         KaijuAnimationController animCntrl = GetComponent<KaijuAnimationController>();
@@ -39,5 +42,11 @@ public class EnemyHealthHandler : MonoBehaviour, IDamageable
         agent.isStopped = true;
         agent.speed = 0f;
         
+    }
+
+    private IEnumerator ChangeCamera()
+    {
+        yield return new WaitForSeconds(2f);
+        cameraExp.gameObject.SetActive(true);
     }
 }

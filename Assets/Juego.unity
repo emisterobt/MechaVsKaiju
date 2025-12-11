@@ -33182,6 +33182,7 @@ MonoBehaviour:
   maxHealth: 500
   actualHealth: 0
   fireWorks: {fileID: 1687765122}
+  cameraExp: {fileID: 455619053}
 --- !u!4 &321843281
 Transform:
   m_ObjectHideFlags: 0
@@ -60663,6 +60664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: INICIAR MISION
       objectReference: {fileID: 0}
+    - target: {fileID: 7286019551773996666, guid: d81653a57212d0e4e8006439367de48b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8482696779663437407, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_UpdateMode
       value: 2
@@ -60685,7 +60690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8661677679595369839, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Jugar
+      value: Restart
       objectReference: {fileID: 0}
     - target: {fileID: 8661677679595369839, guid: d81653a57212d0e4e8006439367de48b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
